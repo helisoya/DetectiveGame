@@ -1,0 +1,14 @@
+SetCameraBetween(Lydia;Player)
+
+FocusCamera(Player)
+Dialog(Arthur;Do you have any idea where you may have lost the key ?;Player;false)
+
+FocusCamera(Lydia)
+Dialog(Lydia;Let me see... After I locked the gate, I went directly to the dock.;Lydia;false)
+Dialog(Lydia;You weren't there yet, so I figured I could wait near the well.;Lydia;false)
+Dialog(Lydia;After that, I waited for a bit. And then you arrived.;Lydia;false)
+
+FocusCamera(Player)
+Dialog(Arthur;I see. So the key might be somewhere around the well.;Player;false)
+Dialog(Arthur;<color=blue>I can use Left Control to highlight important objects.</color>;NONE;true)
+RefreshStoryObjects()

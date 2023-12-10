@@ -1,0 +1,7 @@
+SetCameraBetween(Sphere;Player)
+FocusCamera(Sphere)
+
+Choice
+A rock !;ChoiceTest_1
+WTF;ChoiceTest_2
+Return;EXIT

@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3249068bbfb16244196d2d3773cca7ca, type: 3}
+  m_Name: ANN_MURDER
+  m_EditorClassIdentifier: 
+  ID: ANN_MURDER
+  caseName: Ann's Death
+  evidences:
+  - {fileID: 11400000, guid: 02857c34e21aca543b91e396e7c8043e, type: 2}
+  - {fileID: 11400000, guid: 89bd949ac6942ff429fd152abcd5bed0, type: 2}
+  - {fileID: 11400000, guid: b6f2a65122b0c504ca95cda253978119, type: 2}
+  - {fileID: 11400000, guid: 69c4c380750a4a545b68c804c2debe61, type: 2}
+  questions:
+  - questionName: 'Ann was : '
+    awnsers:
+    - Burnt
+    - Shot
+    correctAwnser: 0
+  - questionName: 'The witch mark is :'
+    awnsers:
+    - Genuine
+    - A decoy
+    correctAwnser: 1
+  - questionName: 'The culprit is :'
+    awnsers:
+    - A human
+    - A witch
+    - Suicide
+    correctAwnser: 0
+  dialogToStartAfterwards: CASESOLVED_ANN_MURDER

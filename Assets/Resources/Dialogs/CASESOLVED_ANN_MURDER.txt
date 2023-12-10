@@ -1,0 +1,76 @@
+EndCase(ANN_MURDER)
+
+SetCameraBetween(Daniel;Player)
+
+FocusCamera(Player)
+Dialog(Arthur;I have a theory about what happened.;Player;false)
+
+FocusCamera(Daniel)
+Dialog(Daniel;Already ? Man ! You are really cut to be a detective.;Daniel;false)
+Dialog(Daniel;So, you figured out everything ? Who did it ?;Daniel;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Patience, brother. I don't know who did it, not yet.;Player;false)
+Dialog(Arthur;What I can conclude from my investigation, is that the culprit is definitly human.;Player;false)
+
+FocusCamera(Daniel)
+Dialog(Daniel;Really ? How did you know ?;Daniel;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Well, let's begin with what we know.;Player;false)
+Dialog(Arthur;Mother was lightly burnt, and died shortly afterward.;Player;false)
+Dialog(Arthur;She likely fought with her murderer, as shown by marks on her body.;Player;false)
+Dialog(Arthur;Nobody saw the event happen. Esther was the first to find the body long after the facts.;Player;false)
+Dialog(Arthur;What she saw, was Mother's dead body, and the witch's mark.;Player;false)
+Dialog(Arthur;When Father learnt the news, she deduced that the witch killed Mother.;Player;false)
+Dialog(Arthur;However, they didn't seem to notice the purple torn piece of clothing.;Player;false)
+Dialog(Arthur;This sums up about all the facts of the case.;Player;false)
+Dialog(Arthur;Now, to my conclusion : The witch couldn't have done it.;Player;false)
+Dialog(Arthur;We know that the witch supposedly is very powerful and malevolant. Often dismembering her victims.;Player;false)
+Dialog(Arthur;But here is where we have our problem : Mother fought with her murderer.;Player;false)
+
+FocusCamera(Daniel)
+Dialog(Daniel;Right. But how is it relevant ?;Daniel;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Hear me out. If you are a powerful witch, capable of killing someone in seconds.;Player;false)
+Dialog(Arthur;Why would you only burn lightly your victim ? And why would you fight with her ?;Player;false)
+Dialog(Arthur;If the with really did it. She would have killed Mother instantly.;Player;false)
+
+FocusCamera(Daniel)
+Dialog(Daniel;Oh, right.;Daniel;false)
+
+FocusCamera(Player)
+Dialog(Arthur;And don't forget the piece of clothing. Would the witch be that clumsy ?;Player;false)
+Dialog(Arthur;This is why I believe that the culprit is human.;Player;false)
+
+FocusCamera(Daniel)
+Dialog(Daniel;But how do you explain the mark, then ?;Daniel;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Simple. The mark is a decoy. The culprit painted it on the wall after killing Mother.;Player;false)
+Dialog(Arthur;They knew that if they did that, Father would blame the witch.;Player;false)
+
+FocusCamera(Daniel)
+Dialog(Daniel;And he wouldn't investigate further ! I see...;Daniel;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Right. So, in my opinion, the culprit is likely someone who knows Father well.;Player;false)
+Dialog(Arthur;They would also need to be able to access this room unnoticed.;Player;false)
+
+FocusCamera(Daniel)
+Dialog(Daniel;Wait, so you mean... One of the domestics did it ?;Daniel;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Probably. I'm not sure. But it's more likely than saying a witch did it.;Player;false)
+Dialog(Arthur;Well. I believe that we are finished here. We have to think about what we are going to do next.;Player;false)
+
+FocusCamera(Daniel)
+Dialog(Daniel;Right, we'll need to investigate the domestics. I can't believe one of them is a murderer.;Daniel;false)
+Dialog(Daniel;But let's get out of here first. We stayed in here for too long. People might get suspicious.;Daniel;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Right, let's go.;Player;true)
+
+SetSaveItem(STORY;17)
+RefreshStoryObjects()

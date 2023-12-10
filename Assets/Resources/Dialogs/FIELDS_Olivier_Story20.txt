@@ -1,0 +1,26 @@
+SetCameraBetween(Olivier;Player)
+
+UnlockBio(OLIVIER)
+
+FocusCamera(Player)
+Dialog(Arthur;Hello Olivier. Do you have a moment ?;Player;false)
+
+FocusCamera(Olivier)
+Dialog(Olivier;Ah, good morning Arthur. Good to see you.;Olivier;false)
+Dialog(Olivier;I apologise for not coming to greet you yesterday. I was up all night clearing the fields.;Olivier;false)
+Dialog(Olivier;The storm is coming later today, and I don't want to lose anything in the process.;Olivier;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Right, that's understandable. However, this isn't why I'm here.;Player;false)
+Dialog(Arthur;Do you happen to know where the key for the viewing point gate is ? The door is locked.;Player;false)
+
+FocusCamera(Olivier)
+Dialog(Olivier;The gate ! I knew I forgot something today.;Olivier;false)
+Dialog(Olivier;Well, I have the key on me. So you can have it.;Olivier;false)
+Dialog(Olivier;Your father insists on locking all gates at night. Not that it matters much.;Olivier;false)
+Dialog(Olivier;I often forget to close or open it. I rarely go there, you see.;Olivier;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Yes. Thank you. I'll make sure to give it back to you when I'm done.;Player;true)
+
+SetSaveItem(STORY;21)

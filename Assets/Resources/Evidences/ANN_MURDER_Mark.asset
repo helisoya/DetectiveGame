@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fee9fa131914b74d94ecdb7268d8635, type: 3}
+  m_Name: ANN_MURDER_Mark
+  m_EditorClassIdentifier: 
+  ID: ANN_MURDER_MARK
+  caseRef: {fileID: 11400000, guid: db5b4436e0443344eaf0512b49d35725, type: 2}
+  evidenceName: Witch's Mark
+  evidenceDesc: There is a witch mark in the room. Charles says the witch left it
+    here as a warning.
+  evidenceSmall: {fileID: 21300000, guid: d227ec7ee121be04382d134cbaac94b6, type: 3}
+  evidenceBig: {fileID: 21300000, guid: 1073e61c1039b764fa490da296e1f24d, type: 3}

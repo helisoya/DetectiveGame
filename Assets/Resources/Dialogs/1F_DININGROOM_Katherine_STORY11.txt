@@ -1,0 +1,15 @@
+SetCameraBetween(Katherine;Player)
+
+FocusCamera(Player)
+Dialog(Arthur;Katherine, I talked to Daniel like you asked me to.;Player;false)
+
+FocusCamera(Katherine)
+Dialog(Katherine;Glad to hear it ! I hope he didn't show you one of his latest "inventions".;Katherine;false)
+Dialog(Katherine;While you were away, he kept showing them to me...;Katherine;false)
+
+SetCameraBetween(Daniel;Player)
+FocusCamera(Daniel)
+Dialog(Daniel;Hey ! My inventions are incredible ! I'll be rich soon, just you wait.;Daniel;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Right...;Player;true)

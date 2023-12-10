@@ -1,0 +1,13 @@
+UnlockEvidence(ANN_MURDER_CLOTH)
+
+Dialog(Arthur;Strange, there is a thorn piece of clothing here.;Player;false)
+Dialog(Arthur;I wonder whose it is.;Player;false)
+
+SetCameraBetween(Daniel;Player)
+
+FocusCamera(Daniel)
+Dialog(Daniel;Maybe Mother managed to rip it off her murderer ?;Daniel;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Maybe. I'm not sure.;Player;false)
+Dialog(Arthur;<color=blue>But it's worth remembering. Who knows if it may come handy later.</color>;NONE;true)

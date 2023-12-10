@@ -1,0 +1,7 @@
+SetCameraBetween(Pearl;Player)
+
+FocusCamera(Pearl)
+Dialog(Pearl;Are we there yet, uncle ?;Pearl;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Not yet.;Player;true)

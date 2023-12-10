@@ -1,0 +1,7 @@
+FocusCamera(Player)
+Dialog(Arthur;A rock !;Player;false)
+
+FocusCamera(Sphere)
+Dialog(Rock;Hi.;NONE;true)
+
+LoadFile(ChoiceTest)

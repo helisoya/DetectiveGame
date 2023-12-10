@@ -1,0 +1,92 @@
+SetCameraBetween(Daniel;Player)
+
+UnlockBio(DANIEL)
+
+FocusCamera(Daniel)
+Dialog(Daniel;Arthur ! I'm so glad you finally made it here !;Daniel;false)
+Dialog(Daniel;I hope you had fun in Indochina these past few years.;Daniel;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Uh... well. I can't say it was "fun". Maybe interresting is a better word.;Player;false)
+Dialog(Arthur;But anyway, I'm here now. I'm glad to see you too.;Player;false)
+Dialog(Arthur;Katherine told me you wanted to see me ?;Player;false)
+
+FocusCamera(Daniel)
+Dialog(Daniel;Right ! But before, that, I wanted to say that you are really lucky.;Daniel;false)
+
+FocusCamera(Player)
+Dialog(Arthur;How so ?;Player;false)
+
+FocusCamera(Daniel)
+Dialog(Daniel;You didn't hear ? Apparently a big storm is coming tomorrow night.;Daniel;false)
+Dialog(Daniel;We will be cut out from the world for a few days.;Daniel;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Really ? This is unfortunate.;Player;false)
+Dialog(Arthur;But, is it related to what you want to talk about ?;Player;false)
+
+FocusCamera(Daniel)
+Dialog(Daniel;Well... not really to be honest...;Daniel;false)
+Dialog(Daniel;So, here is the thing. You never heard how mother died, do you ?;Daniel;false)
+
+FocusCamera(Player)
+Dialog(Arthur;No, I was only told she died sudently.;Player;false)
+Dialog(Arthur;<color=blue>I don't like where this is going.</color>;NONE;false)
+
+FocusCamera(Daniel)
+Dialog(Daniel;Well, she died in... how to say it ? Supicious circumstances ?;Daniel;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Suspicious ? What are you talking about ?;Player;false)
+Dialog(Arthur;Don't tell me... She was murdered ?;Player;false)
+
+FocusCamera(Daniel)
+Dialog(Daniel;Eh... well....;Daniel;false)
+
+UnlockBio(ESTHER)
+
+SetNPCHidden(Esther;false)
+SetCameraBetween(Esther;Player)
+
+FocusCamera(Esther)
+Dialog(Esther;There you are. I was looking for you.;Esther;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Esther. I see you are doing okay.;Player;false)
+
+FocusCamera(Esther)
+Dialog(Arthur;<color=blue>Esther is a domestic working here. She is mainly in charge of cleaning.</color>;Player;false)
+Dialog(Arthur;<color=blue>She was also helping my mother raise me and my siblings.</color>;Player;false)
+Dialog(Esther;Yes, thank you. I hope I did not interrupt anything ?;Esther;false)
+
+FocusCamera(Player)
+Dialog(Arthur;No, don't worry. What do you want to talk about ?;Player;false)
+Dialog(Arthur;<color=blue>I can't tell her about what Daniel told me. Not now.</color>;Player;false)
+
+FocusCamera(Esther)
+Dialog(Esther;That is a relief. I just came to tell you that dinner is almost ready.;Esther;false)
+Dialog(Esther;Everybody is in the dining room. You go before dinner is served.;Esther;false)
+
+FocusCamera(Player)
+Dialog(Arthur;I see. We'll be on our way. Thank you.;Player;true)
+
+SetNPCHidden(Esther;true)
+Wait(2)
+
+SetCameraBetween(Daniel;Player)
+
+FocusCamera(Daniel)
+Dialog(Daniel;Well, talk about bad timing. We can't continue our conversation now.;Daniel;false)
+Dialog(Daniel;If we are late for dinner. We won't hear the end of it.;Daniel;false)
+
+FocusCamera(Player)
+Dialog(Arthur;True. We should continue talking about this later.;Player;false)
+
+FocusCamera(Daniel)
+Dialog(Daniel;Alright, lead the way. I'll be right behind you.;Daniel;false)
+
+FocusCamera(Player)
+Dialog(Arthur;<color=blue>The dining room is on the first floor. It's on the right from the entrance.</color>;Player;true)
+
+SetSaveItem(STORY;10)
+SetNPCFollowPlayer(Daniel;true)

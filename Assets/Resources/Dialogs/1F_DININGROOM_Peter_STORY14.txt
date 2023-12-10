@@ -1,0 +1,14 @@
+SetCameraBetween(Peter;Player)
+
+FocusCamera(Peter)
+Dialog(Peter;Master Arthur, I trust that you enjoyed your breakfast ?;Peter;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Yes, thank you. One day, you'll have to teach me how you cook so well.;Player;false)
+
+FocusCamera(Peter)
+Dialog(Peter;Eh Eh. I think that I will have to teach you how to cook before.;Peter;false)
+Dialog(Peter;Eh Eh. I still remember when you tried to cook that turkey.;Peter;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Hey... In the end, it was cooked. It was just a little crispy.;Player;true)

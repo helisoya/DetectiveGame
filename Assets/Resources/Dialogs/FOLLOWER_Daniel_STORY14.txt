@@ -1,0 +1,56 @@
+SetCameraBetween(Daniel;Player)
+
+FocusCamera(Daniel)
+Dialog(Daniel;You came. So, what's up ?;Daniel;false)
+
+FocusCamera(Player)
+Dialog(Arthur;I want more informations on Mother's death, and if possible...;Player;false)
+
+FocusCamera(Daniel)
+Dialog(Daniel;You want to break into her room to investigate ?;Daniel;false)
+
+FocusCamera(Player)
+Dialog(Arthur;I know it's not... nice to Mother, disturbing her like that. But I have to know.;Player;false)
+Dialog(Arthur;If someone killed her. I have to know who.;Player;false)
+
+FocusCamera(Daniel)
+Dialog(Daniel;I get you. I wanted to do the same. You can guess how Father reacted...;Daniel;false)
+Dialog(Daniel;But, now we are two. I'm sure we can enter her room unnoticed.;Daniel;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Right, but first. I want to know about that witch mark Father talked about.;Player;false)
+
+FocusCamera(Daniel)
+Dialog(Daniel;Right. Here is the thing : the mark is real.;Daniel;false)
+
+FocusCamera(Player)
+Dialog(Arthur;What ?! Don't be ridiculous ! Are you going to tell me that the witch exists now ?;Player;false)
+
+FocusCamera(Daniel)
+Dialog(Daniel;Well, evidence show that a whoever did it, was either very talented, or a witch.;Daniel;false)
+Dialog(Daniel;Mother had burning marks, but no weapon capable of such marks was found.;Daniel;false)
+Dialog(Daniel;There is also the fact that she was alone at the time. So nobody knows who might have done it.;Daniel;false)
+Dialog(Daniel;In the end, nobody knows what happened. Just that Mother died and that her killer was nowhere to be found.;Daniel;false)
+
+FocusCamera(Player)
+Dialog(Arthur;I see... This is curious indeed.;Player;false)
+
+FocusCamera(Daniel)
+Dialog(Daniel;But I guess you'll want to see it for yourself.;Daniel;false)
+Dialog(Daniel;And I have just what we need to enter her room.;Daniel;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Is this a lockpick ?;Player;false)
+
+FocusCamera(Daniel)
+Dialog(Daniel;Yeah. We can use it to force her door open.;Daniel;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Good. Let's do it. We'll have to be careful not to be found though.;Player;false)
+
+FocusCamera(Daniel)
+Dialog(Daniel;Have faith, nobody will suspect a thing.;Daniel;false)
+Dialog(Daniel;Alright, lead the way. Mother's room in on the second floor, on the left.;Daniel;true)
+
+SetSaveItem(STORY;15)
+SetNPCFollowPlayer(Daniel;true)

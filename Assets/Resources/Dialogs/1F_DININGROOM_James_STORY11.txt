@@ -1,0 +1,35 @@
+SetCameraBetween(James;Player)
+
+FocusCamera(Player)
+Dialog(Arthur;Hello James.;Player;false)
+
+
+FocusCamera(James)
+Dialog(James;Ah, my lesser brother as finaly arrived.;James;false)
+Dialog(James;First you keep us waiting with your boat, then you keep us waiting for dinner.;James;false)
+Dialog(James;One day, you'll have to learn not to make people wait. You are in the army, for God's sake;James;false)
+
+FocusCamera(Player)
+Dialog(Arthur;I... don't really see the link here.;Player;false)
+Dialog(Arthur;<color=blue>He's always like that, so annoying...</color>;NONE;false)
+Dialog(Arthur;<color=blue>James is my older brother. He runs an arms factory.</color>;NONE;false)
+Dialog(Arthur;I suppose that your business is doing okay ?;Player;false)
+
+FocusCamera(James)
+Dialog(James;Okay ? Were you sleeping for the last few years ?;James;false)
+Dialog(James;Because of you, my profits have dropped by 50%.;James;false)
+
+FocusCamera(Player)
+Dialog(Arthur;That's sad. But I don't recall doing anything to your factory.;Player;false)
+
+FocusCamera(James)
+Dialog(James;Of course you did ! Where were you when the damn prussians invaded ?;James;false)
+Dialog(James;They sacked my factory, and my workers ran off ! All the profits, gone !;James;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Oh right, the war with Prussia. But you know I was stationned in Asia at the time.;Player;false)
+
+FocusCamera(James)
+Dialog(James;Always finding excuses to not help me. Typical.;James;false)
+Dialog(Arthur;<color=blue>I give up.</color>;NONE;true)
+

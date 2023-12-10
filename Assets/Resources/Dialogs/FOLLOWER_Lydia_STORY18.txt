@@ -1,0 +1,5 @@
+SetCameraBetween(Lydia;Player)
+
+FocusCamera(Lydia)
+Dialog(Lydia;Grace and Pearl are waiting for us in the garden.;Lydia;false)
+Dialog(Lydia;We'll talk more about what you did later.;Lydia;true)

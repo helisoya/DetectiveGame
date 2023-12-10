@@ -1,0 +1,78 @@
+PositionCamera(STORY_12_Position)
+PositionPlayer(STORY_12_PlayerPosition)
+
+FocusCamera(Player)
+Dialog(Arthur;Well, time to sleep. Tomorrow will be long.;Player;false)
+Dialog(Arthur;I'll have to talk to Daniel about that beforehand, though.;Player;false)
+Dialog(Arthur;<color=blue>He might know a way to enter Mother's room unnoticed.</color>;Player;false)
+
+SetNPCHidden(Lydia;false)
+
+Dialog(Lydia;Arthur ?;Lydia;false)
+
+SetCameraBetween(Player;Lydia)
+
+FocusCamera(Player)
+Dialog(Arthur;Lydia ? Do you need something from me ?;Player;false)
+
+FocusCamera(Lydia)
+Dialog(Lydia;Not really. I just wanted to talk to you about Master Charles.;Lydia;false)
+Dialog(Lydia;I overheard what he said when we served dinner. About Mistress Ann...;Lydia;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Ah, about the witch, right ?;Player;false)
+Dialog(Arthur;But it's just another one of his delusions, right ?;Player;false)
+Dialog(Arthur;<color=blue>I remember that once, he claimed for months that a dragon was living on the island...</color>;Player;false)
+
+FocusCamera(Lydia)
+Dialog(Lydia;I know that most of the time, he is delusional. But this time...;Lydia;false)
+Dialog(Lydia;Something's up, Arthur. It might very well be a witch.;Lydia;false)
+Dialog(Lydia;So... I just wanted to ask you, not to investigate it any further.;Lydia;false)
+
+FocusCamera(Player)
+Dialog(Arthur;What ? I barely did anything yet.;Player;false)
+
+FocusCamera(Lydia)
+Dialog(Lydia;Yet... I know you, Arthur. You are going to give it your all.;Lydia;false)
+Dialog(Lydia;But what you are up against isn't your average criminal. It's a witch.;Lydia;false)
+Dialog(Lydia;So, please. Don't endanger yourself... We... I don't want to mourn you too.;Lydia;false)
+
+FocusCamera(Player)
+Dialog(Arthur;I... right. Sorry...;Player;false)
+Dialog(Arthur;I'll refrain from investigating too much.;Player;false)
+Dialog(Arthur;<color=blue>She really cares, uh ?</color>;Player;false)
+
+FocusCamera(Lydia)
+Dialog(Lydia;Thank you, Arthur. It's good to hear that.;Lydia;false)
+Dialog(Lydia;Well, time for me to go. Have a good night.;Lydia;false)
+
+FocusCamera(Player)
+Dialog(Arthur;You too.;Player;true)
+
+Wait(1)
+SetNPCHidden(Lydia;true)
+
+FocusCamera(Player)
+Dialog(Arthur;I won't investigate "much"...;Player;false)
+Dialog(Arthur;<color=blueBut I'll still talk to Daniel, just to be sure.</color>;Player;false)
+Dialog(Arthur;Well... Time to go to sleep;Player;true)
+
+FadeBg(1;5)
+ChangeWeather(DAY)
+
+PositionPlayer(Bed_Position)
+PositionCamera(STORY_12_Position)
+RotationPlayer(120)
+
+Wait(2)
+
+FadeBg(0;5)
+
+
+FocusCamera(Player)
+Dialog(Arthur;Wow, I never slept this much before.;Player;false)
+Dialog(Arthur;Well, time to get breakfast. I should head to the dining room.;Player;true)
+
+
+SetSaveItem(STORY;13)
+RefreshStoryObjects()

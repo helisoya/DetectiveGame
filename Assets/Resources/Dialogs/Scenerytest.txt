@@ -1,0 +1,4 @@
+Dialog(Arthur;Just a rock.;Player;true)
+StartCase(TEST)
+UnlockEvidence(ROCK)
+

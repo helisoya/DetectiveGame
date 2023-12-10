@@ -1,0 +1,20 @@
+SetCameraBetween(Lydia;Player)
+
+FocusCamera(Player)
+Dialog(Arthur;I found the key. You dropped it near the well.;Player;false)
+
+FocusCamera(Lydia)
+Dialog(Lydia;Ah... I see. I suppose I was distracted.;Lydia;false)
+Dialog(Lydia;But thank you for finding it. I never knew you were such a gentleman.;Lydia;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Eh. Don't mention it. I only did what I had to do.;Player;false)
+
+FocusCamera(Lydia)
+Dialog(Lydia;Ah Ah. You really didn't change, did you ?;Lydia;false)
+Dialog(Lydia;Well, shall we go ?;Lydia;false)
+
+FocusCamera(Player)
+Dialog(Arthur;I'm right behind you.;Player;true)
+SetSaveItem(STORY;7)
+LoadMap(GARDEN)

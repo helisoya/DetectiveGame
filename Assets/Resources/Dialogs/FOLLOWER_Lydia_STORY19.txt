@@ -1,0 +1,5 @@
+SetCameraBetween(Lydia;Player)
+
+FocusCamera(Lydia)
+Dialog(Lydia;The viewing point is quite lovely this time of year.;Lydia;false)
+Dialog(Lydia;A shame that a storm is coming this afternoon though...;Lydia;true)

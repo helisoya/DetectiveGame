@@ -1,0 +1,21 @@
+FocusCamera(Player)
+Dialog(Arthur;So, everyone is already here, right ?;Player;false)
+
+FocusCamera(Robert)
+Dialog(Robert;Yes. Your father, Daniel and your sisters live on the island anyway.;Robert;false)
+Dialog(Robert;And your brother James arrived with his wife and daughter a few days ago.;Robert;false)
+
+FocusCamera(Player)
+Dialog(Arthur;James...;Player;false)
+Dialog(Arthur;<color=blue>My brother James is... special to say the least.</color>;NONE;false)
+Dialog(Arthur;<color=blue>As the older brother, he is the heir of father's fortune.</color>;NONE;false)
+Dialog(Arthur;<color=blue>This must have rubbed on him because he always act so annoyingly.</color>;NONE;false)
+
+FocusCamera(Robert)
+Dialog(Robert;If I may speak, master Arthur. Please try not to pick a fight with your brother.;Robert;false)
+Dialog(Robert;I know he can be troublesome sometimes, but this is a special occasion.;Robert;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Right. Mother wouldn't have wanted us to fight over such things.;Player;true)
+
+LoadFile(1F_HALLWAY_Robert_STORY9_Choice)

@@ -1,0 +1,6 @@
+SetCameraBetween(Daniel;Player)
+
+FocusCamera(Player)
+Dialog(Arthur;The door is open. We can get in.;Player;false)
+Dialog(Arthur;<color=blue>I have a bad feeling about this.</color>;Player;true)
+LoadMap(2F_ANNROOM)

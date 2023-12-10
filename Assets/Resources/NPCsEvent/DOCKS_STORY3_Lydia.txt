@@ -1,0 +1,5 @@
+SetDestination(Road1)
+SetDestination(Road2)
+SetDestination(Gate)
+SetRotation(0)
+SetSaveItem(STORY;4)

@@ -1,0 +1,26 @@
+SetCameraBetween(Mary;Player)
+
+
+FocusCamera(Player)
+Dialog(Arthur;Mary. Long time no see. How have you been ?;Player;false)
+Dialog(Arthur;<color=blue>Mary is my sister. She is almost the same age as me.</color>;NONE;false)
+
+FocusCamera(Mary)
+Dialog(Mary;How ? Can you not tell by looking ?;Mary;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Uh.... no ?;Player;false)
+
+FocusCamera(Mary)
+Dialog(Mary;It was an horrible year, let me tell you.;Mary;false)
+Dialog(Mary;Father introduced me to another one of my "pretenders".;Mary;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Don't tell me you...;Player;false)
+
+FocusCamera(Mary)
+Dialog(Mary;Of course ! I made it clear that I didn't want to hear about him ever again.;Mary;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Violence isn't always the awnser, you know ?;Player;false)
+Dialog(Arthur;<color=blue>Why does father keeps trying anyway ? It is getting ridiculous...</color>;NONE;true)

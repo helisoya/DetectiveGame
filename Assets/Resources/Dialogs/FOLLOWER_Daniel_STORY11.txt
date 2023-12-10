@@ -1,0 +1,5 @@
+SetCameraBetween(Daniel;Player)
+
+FocusCamera(Daniel)
+Dialog(Daniel;If you don't know what to do do. You can try talking to father.;Daniel;false)
+Dialog(Daniel;He... isn't himself though...;Daniel;true)

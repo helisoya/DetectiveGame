@@ -1,0 +1,9 @@
+SetCameraBetween(Daniel;Player)
+
+FocusCamera(Daniel)
+Dialog(Daniel;Hi my man !;Daniel;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Hello, my dear brother.;Player;true)
+
+UnlockBio(DANIEL)

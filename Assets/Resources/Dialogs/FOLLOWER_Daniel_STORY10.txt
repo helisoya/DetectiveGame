@@ -1,0 +1,5 @@
+SetCameraBetween(Daniel;Player)
+
+FocusCamera(Daniel)
+Dialog(Daniel;We should head to the dining room for now.;Daniel;false)
+Dialog(Daniel;If you don't remember where it is, use your map.;Daniel;true)

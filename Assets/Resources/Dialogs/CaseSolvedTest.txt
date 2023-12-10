@@ -1,0 +1,2 @@
+Dialog(Arthur;So rocks were illegal all along luigi !;Player;true)
+ChangeWeather(STORM)

@@ -1,0 +1,22 @@
+
+UnlockEvidence(ANN_MURDER_ANN)
+
+Dialog(Arthur;Mother.... I'm sorry....;Player;false)
+Dialog(Arthur;.....;Player;false)
+
+SetCameraBetween(Daniel;Player)
+
+FocusCamera(Daniel)
+Dialog(Daniel;We can still turn back, you know ?;Daniel;false)
+
+FocusCamera(Player)
+Dialog(Arthur;I... I'm good. I want to know.;Player;false)
+
+PositionCamera(Above_Ann)
+FocusCamera(Ann)
+
+Dialog(Arthur;So... let us see your injuries. Maybe I can find a clue.;Player;false)
+Dialog(Arthur;... She is lightly burnt on some places, mostly the face.;Player;false)
+Dialog(Arthur;Marks also seems to show she fought with someone. Maybe her attacker.;Player;false)
+Dialog(Arthur;....;Player;false)
+Dialog(Arthur;<color=blue>I hope it didn't hurt you too much...</color>;NONE;true)

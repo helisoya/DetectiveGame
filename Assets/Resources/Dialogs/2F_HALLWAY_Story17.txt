@@ -1,0 +1,36 @@
+SetNPCFollowPlayer(Daniel;false)
+SetNPCHidden(Daniel;true)
+
+SetCameraBetween(Lydia;Player)
+
+FocusCamera(Lydia)
+Dialog(Lydia;Arthur ? ... May I ask what were you doing in there ?;Lydia;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Oh. Uhm... Lydia... That's a surprise...;Player;false)
+
+FocusCamera(Lydia)
+Dialog(Lydia;So you didn't listen to me. I had a feeling you would...;Lydia;false)
+Dialog(Lydia;Were you alone ? Did you also drag your brother with you ?;Lydia;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Well, as you can... see ?;Player;false)
+Dialog(Arthur;<color=blue>Wait, where did he go ? Leaving me alone in a time like this ?</color>;NONE;false)
+
+FocusCamera(Lydia)
+Dialog(Lydia;Anyway, I have to go find Grace in the garden.;Lydia;false)
+Dialog(Lydia;Pearl wants to see the sea from the viewing point. And of course, her Mother won't do it herself.;Lydia;false)
+Dialog(Lydia;I would like you to come with me. Just to be sure you don't try anything reckless again.;Lydia;false)
+Dialog(Lydia;And, while we're at it. You'll also tell me what you've learnt.;Lydia;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Interrested in the mystery ?;Player;false)
+
+FocusCamera(Lydia)
+Dialog(Lydia;Not really. I just want to be sure you don't get endangered.;Lydia;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Alright. Let's go meet my aunt in the garden.;Player;true)
+
+SetSaveItem(STORY;18)
+SetNPCFollowPlayer(Lydia;true)

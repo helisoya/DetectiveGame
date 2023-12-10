@@ -1,0 +1,30 @@
+SetCameraBetween(Katherine;Player)
+
+FocusCamera(Katherine)
+Dialog(Katherine;Good morning, Arthur. It's unlike you to wake up this late.;Katherine;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Yes, the travel was more exhausting than I thought.;Player;false)
+
+FocusCamera(Katherine)
+Dialog(Katherine;It's true that travels between Asia and Europe are long.;Katherine;false)
+Dialog(Katherine;Anyway, do you plan to do something today ?;Katherine;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Not really. <color=blue>Aside from breaking into Mother's room.</color>;Player;false)
+Dialog(Arthur;Why do you ask ? Do you need help with something.;Player;false)
+
+FocusCamera(Katherine)
+Dialog(Katherine;No, not me. But I heard Pearl wanted to go to the viewing point.;Katherine;false)
+Dialog(Katherine;I have to help Mary with something, so I can't go with her.;Katherine;false)
+
+FocusCamera(Player)
+Dialog(Arthur;<color=blue>There is a viewing point near the manor. The view of the sea is beautiful.</color>;NONE;false)
+Dialog(Arthur;But in that case, can't Grace go with her ? I have something to do with Daniel myself.;Player;false)
+
+FocusCamera(Katherine)
+Dialog(Katherine;Well... you know Grace. She... doesn't care, as usual.;Katherine;false)
+Dialog(Katherine;But I think I'm going to ask Lydia, she might be able to go.;Katherine;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Alright.;Player;true)

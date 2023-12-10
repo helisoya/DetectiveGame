@@ -1,0 +1,5 @@
+SetCameraBetween(Daniel;Player)
+
+FocusCamera(Daniel)
+Dialog(Daniel;Mother's room is on the second floor.;Daniel;false)
+Dialog(Daniel;We'll have to lockpick the door though.;Daniel;true)

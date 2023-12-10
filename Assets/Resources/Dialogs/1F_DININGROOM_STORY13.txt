@@ -1,0 +1,60 @@
+PositionPlayer(STORY13_Player_Position)
+
+
+SetCameraBetween(Daniel;Player)
+
+FocusCamera(Daniel)
+Dialog(Daniel;Oh, good morning, Arthur. Did you sleep well ?;Daniel;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Good morning, brother. I slept well. Am I the last one to wake up ?;Player;false)
+
+SetCameraBetween(Peter;Player)
+
+FocusCamera(Peter)
+Dialog(Peter;Master Arthur, good morning. You are indeed the last one to wake up.;Peter;false)
+Dialog(Peter;Master Daniel was getting anxious. You never slept that much before.;Peter;false)
+
+SetCameraBetween(Daniel;Player)
+
+FocusCamera(Daniel)
+Dialog(Daniel;Ah Ah... right.... Well; it's not my fault. You usually are the first to wake up.;Daniel;false)
+
+FocusCamera(Player)
+Dialog(Arthur;True. The travel must have been more exhausting that I thought.;Player;false)
+
+SetCameraBetween(Peter;Player)
+
+FocusCamera(Peter)
+Dialog(Peter;Anyway, I will be back with your breakfast shortly.;Peter;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Thank you, Peter.;Player;false)
+
+SetCameraBetween(Daniel;Player)
+
+FocusCamera(Player)
+Dialog(Arthur;Brother. I want to talk to you about... you know what.;Player;false)
+
+FocusCamera(Daniel)
+Dialog(Daniel;... I knew you would. But not here.;Daniel;false)
+Dialog(Daniel;Meet me in the garden when you are finished eating. That way, nobody will hear us.;Daniel;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Alright. I'll be there.;Player;true)
+
+FadeBg(1;5)
+
+SetSaveItem(STORY;14)
+RefreshStoryObjects()
+PositionPlayer(STORY13_PlayerTable_Position)
+RotationPlayer(180)
+SetCameraInFrontOf(Player)
+
+Wait(2)
+
+FadeBg(0;5)
+
+FocusCamera(Player)
+Dialog(Arthur;I never had such a good breakfast in months.;Player;false)
+Dialog(Arthur;<color=blue>Okay, time to find Daniel. I can find him in the garden.</color>;NONE;true)

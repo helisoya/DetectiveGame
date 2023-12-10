@@ -1,0 +1,7 @@
+SetCameraBetween(Robert;Player)
+FocusCamera(Robert)
+
+Choice
+About you;1F_HALLWAY_Robert_STORY9_Choice1
+The others;1F_HALLWAY_Robert_STORY9_Choice2
+Return;EXIT

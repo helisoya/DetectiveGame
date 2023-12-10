@@ -1,0 +1,14 @@
+SetCameraBetween(Pearl;Player)
+
+FocusCamera(Player)
+Dialog(Arthur;Hi, Pearl. Something's wrong ?;Player;false)
+
+FocusCamera(Pearl)
+Dialog(Arthur;<color=blue>Pearl is my niece. She's the daughter of James and Grace. She isn't like them though.</color>;NONE;false)
+Dialog(Pearl;Uncle Arthur ! You are finally here !;Pearl;false)
+Dialog(Pearl;I'm so glad you came ! Are you going to tell me about your travels ?;Pearl;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Right. We'll see. I might have some interresting new stories to tell you.;Player;false)
+Dialog(Arthur;<color=blue>She likes stories. Since I have to travel the world, I always have stories to tell.</color>;NONE;true)
+

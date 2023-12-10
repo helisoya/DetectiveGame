@@ -1,0 +1,19 @@
+SetCameraBetween(Grace;Player)
+
+FocusCamera(Player)
+Dialog(Arthur;Hi, Grace. I trust y-;Player;false)
+
+FocusCamera(Grace)
+Dialog(Grace;Is this how you treat a lady ? How disgraceful !;Grace;false)
+Dialog(Grace;Your late mother never taught you how to use your tongue ?;Grace;false)
+
+FocusCamera(Player)
+Dialog(Arthur;I... sorry...;Player;false)
+
+FocusCamera(Grace)
+Dialog(Arthur;<color=blue>Grace is the wife of James, my brother.</color>;NONE;false)
+Dialog(Arthur;<color=blue>She is... special to say the least.</color>;NONE;false)
+Dialog(Grace;Why are you looking at me ? Do you need something ?;Grace;false)
+
+FocusCamera(Player)
+Dialog(Arthur;No, I'm good.;Player;true)

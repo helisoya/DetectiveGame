@@ -1,0 +1,11 @@
+SetCameraBetween(Robert;Player)
+
+FocusCamera(Player)
+Dialog(Arthur;Robert ? Are you doing okay ?;Player;false)
+
+FocusCamera(Robert)
+Dialog(Robert;Yes, master Arthur. Don't pay attention to me, I am merely keeping an eye on your father.;Robert;false)
+Dialog(Robert;He's been acting strange as of late.;Robert;false)
+
+FocusCamera(Player)
+Dialog(Arthur;I see... <color=blue>I have to talk to father...</color>;Player;true)

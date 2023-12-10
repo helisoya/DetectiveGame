@@ -1,0 +1,79 @@
+PositionCamera(STORY_8_Position)
+PositionPlayer(STORY_8_PlayerPosition)
+
+UnlockBio(KATHERINE)
+UnlockBio(ROBERT)
+
+FocusCamera(Lydia)
+Dialog(Lydia;Arthur ? It seems people were waiting for you.;Lydia;false)
+
+FocusCamera(Robert)
+Dialog(Robert;Master Arthur, a pleasure to see you again.;Robert;false)
+Dialog(Robert;I take that the travel went well ?;Robert;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Likewise, Robert. The trip was long, but I'm here at last.;Player;false)
+
+FocusCamera(Robert)
+Dialog(Arthur;<color=blue>Robert is our butler. He mainly helps father in his experiments.</color>;NONE;false)
+
+FocusCamera(Player)
+Dialog(Arthur;And, I see that you waited for me here too, Katherine ?;Player;false)
+
+FocusCamera(Katherine)
+Dialog(Katherine;Of course ! I wouldn't miss the arrival of my brother.;Katherine;false)
+Dialog(Katherine;After all, it is not every day that you come back to the island.;Katherine;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Ah, well... It's true that Indochina isn't exactly next door.;Player;false)
+Dialog(Arthur;But I am here now. Just like when we were younger.;Player;false)
+
+FocusCamera(Katherine)
+Dialog(Katherine;Yeah ! I have so many things to talk to you about.;Katherine;false)
+Dialog(Katherine;But, I'll wait until tomorrow. You still have to recover from the boat trip.;Katherine;false)
+Dialog(Arthur;<color=blue>Katherine is my younger sister. She is the youngest sibling in the family.</color>;NONE;false)
+Dialog(Arthur;<color=blue>She is really kind. That's really refreshing, considering one my brother.</color>;NONE;false)
+
+FocusCamera(Lydia)
+Dialog(Lydia;Well... If you'll excuse me. I have to go help prepare the dinner.;Lydia;false)
+Dialog(Lydia;I believe you still remember where your room is, Arthur ?;Lydia;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Of course. Thank you.;Player;false)
+
+FocusCamera(Lydia)
+Dialog(Lydia;Alright. I'll see you in a few minutes then.;Lydia;true)
+
+SetNPCDestination(Lydia;STORY_8_LydiaEndPos)
+
+FocusCamera(Katherine)
+Dialog(Katherine;Oh, right ! I forgot to tell you something.;Katherine;false)
+
+FocusCamera(Player)
+Dialog(Arthur;What is it ?;Player;false)
+
+FocusCamera(Katherine)
+Dialog(Katherine;Daniel told me he wanted to talk to you.;Katherine;false)
+Dialog(Katherine;Last time I checked, he was in his room.;Katherine;false)
+
+FocusCamera(Player)
+Dialog(Arthur;...;Player;false)
+Dialog(Arthur;<color=blue>Daniel is my younger brother. The nice, but a little bit idiotic one.</color>;NONE;false)
+Dialog(Arthur;<color=blue>He always has weird ideas and plans, that he shares with me.</color>;NONE;false)
+Dialog(Arthur;But if that's the case, wouldn't it be more simple to come meet me here, like you did ?;Player;false)
+
+FocusCamera(Katherine)
+Dialog(Katherine;Hell if I know. This is Daniel we are talking about.;Katherine;false)
+Dialog(Katherine;You know how... chaotic he can be sometimes.;Katherine;false)
+
+FocusCamera(Robert)
+Dialog(Robert;If I may add, I believe to have seen master Daniel writing something for the past three hours.;Robert;false)
+Dialog(Robert;Maybe he wants to show you another one of his "inventions".;Robert;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Oh well, only one way to find out.;Player;false)
+Dialog(Arthur;<color=blue>Daniel's room is on the second floor. I should pay him a visit.</color>;NONE;false)
+Dialog(Arthur;<color=blue>If I ever get lost, I can use the map in my notebook using Tab</color>;NONE;true)
+
+SetSaveItem(STORY;9)
+RefreshStoryObjects()

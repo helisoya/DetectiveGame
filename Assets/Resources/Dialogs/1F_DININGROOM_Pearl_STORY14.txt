@@ -1,0 +1,18 @@
+SetCameraBetween(Pearl;Player)
+
+FocusCamera(Player)
+Dialog(Arthur;Did you like your breakfast, Pearl ?;Player;false)
+
+FocusCamera(Pearl)
+Dialog(Pearl;Yeah ! I like coming here, because food is tastier.;Pearl;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Oh, really ? It is better than your mom's ?;Player;false)
+
+FocusCamera(Pearl)
+Dialog(Pearl;Yeah. Mom's potatos are burnt half the time. So she hires a cook from time to time.;Pearl;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Oh... That's sad to hear.;Player;false)
+Dialog(Arthur;<color=blue>Good thing I don't get along with James...</color>;NONE;true)
+

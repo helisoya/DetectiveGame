@@ -1,0 +1,18 @@
+FocusCamera(Player)
+Dialog(Arthur;How are things going for you lately ?;Player;false)
+
+FocusCamera(Robert)
+Dialog(Robert;Me ? Master Arthur, you shouldn't worry about me.;Robert;false)
+Dialog(Robert;But, if you really want to know, I am doing okay.;Robert;false)
+Dialog(Robert;I can't say the same for your siblings though...;Robert;false)
+
+FocusCamera(Player)
+Dialog(Arthur;I see...;Player;false)
+
+FocusCamera(Robert)
+Dialog(Arthur;<color=blue>Good old robert never changes, uh ?</color>;NONE;false)
+Dialog(Arthur;<color=blue>He always put others before him. What a loyal butler.</color>;NONE;false)
+Dialog(Arthur;<color=blue>I guess this is why father hired him.</color>;NONE;false)
+Dialog(Robert;Do you require anything else, Master Arthur ?;Robert;true)
+
+LoadFile(1F_HALLWAY_Robert_STORY9_Choice)

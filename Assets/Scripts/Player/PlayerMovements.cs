@@ -1,0 +1,124 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.AI;
+
+public class PlayerMovements : MonoBehaviour
+{
+    [Header("Speed")]
+    [SerializeField] private float normalSpeed;
+    [SerializeField] private float runSpeed;
+    private float currentSpeed;
+    private bool canRun = true;
+
+
+    [Header("Components")]
+    private Transform cam;
+    [SerializeField] private Transform body;
+    [SerializeField] private Rigidbody rb;
+    [SerializeField] private Animator animator;
+    [SerializeField] private Transform startingPointsRoot;
+    [SerializeField] private Transform root;
+    private PlayerCameraManager camManager;
+    private List<GameObject> instanciatedFollowers;
+
+    public static PlayerMovements instance;
+
+    void Awake()
+    {
+        instance = this;
+    }
+
+    void Start()
+    {
+        cam = Camera.main.transform;
+        camManager = GetComponent<PlayerCameraManager>();
+        FindStartingPoint();
+    }
+
+
+    void FindStartingPoint()
+    {
+        Transform defaultStart = null;
+        Transform chosen = null;
+        string mapName = GameManager.instance.save_lastMap;
+
+
+
+        foreach (Transform child in startingPointsRoot)
+        {
+            if (child.name == "DEFAULT")
+            {
+                defaultStart = child;
+            }
+            else if (child.name.Equals(mapName))
+            {
+                chosen = child;
+                break;
+            }
+        }
+
+        if (chosen == null && defaultStart != null)
+        {
+            chosen = defaultStart;
+        }
+
+        if (chosen != null)
+        {
+            root.position = chosen.position;
+            root.eulerAngles = chosen.eulerAngles;
+        }
+
+        instanciatedFollowers = new List<GameObject>();
+        foreach (string follower in GameManager.instance.save_currentfollowers)
+        {
+            instanciatedFollowers.Add(Instantiate(Resources.Load<GameObject>("Followers/" + follower), transform.position, Quaternion.identity));
+        }
+
+    }
+
+    void Update()
+    {
+        if (DialogMaster.instance.inDialog)
+        {
+            animator.SetBool("Run", false);
+            animator.SetFloat("Speed", 0);
+            return;
+        }
+
+        bool running = Input.GetKey(KeyCode.LeftShift) && canRun;
+
+        currentSpeed = running ? runSpeed : normalSpeed;
+
+
+
+        Vector3 moveDirection = cam.forward * Input.GetAxis("Vertical");
+        moveDirection += cam.right * Input.GetAxis("Horizontal");
+        moveDirection.Normalize();
+        moveDirection *= currentSpeed;
+        moveDirection.y = rb.velocity.y;
+
+        rb.velocity = moveDirection;
+
+        bool moving = (moveDirection.x != 0 || moveDirection.z != 0);
+        animator.SetBool("Run", running);
+        animator.SetFloat("Speed", moving ? 2 : 0);
+
+        if (!camManager.isInFirstPerson && moving)
+        {
+            body.forward = moveDirection;
+        }
+
+    }
+
+    void LateUpdate()
+    {
+        body.eulerAngles = new Vector3(0, body.eulerAngles.y, 0);
+    }
+
+    public void SetPosition(Vector3 position)
+    {
+        body.position = position;
+    }
+
+}

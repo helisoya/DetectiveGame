@@ -1,0 +1,11 @@
+SetCameraBetween(Daniel;Player)
+
+FocusCamera(Player)
+Dialog(Arthur;This is it. Can you give me a lockpick ?;Player;false)
+
+FocusCamera(Daniel)
+Dialog(Daniel;Here. Try not to break it.;Daniel;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Okay, here goes nothing...;Player;true)
+StartLockPickMiniGame(DOORS_ANNROOM_STORY15_DONE)

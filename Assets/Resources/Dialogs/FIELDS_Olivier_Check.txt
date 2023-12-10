@@ -1,0 +1,2 @@
+If(STORY;=;20)FIELDS_Olivier_Story20
+LoadFile(FIELDS_Olivier_Story19)

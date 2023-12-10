@@ -1,0 +1,12 @@
+PositionCamera(STORY11_Middle_Position)
+FocusCamera(Mary)
+
+UnlockBio(MARY)
+UnlockBio(JAMES)
+UnlockBio(PEARL)
+UnlockBio(GRACE)
+UnlockBio(CHARLES)
+
+Dialog(Daniel;Well, here we are... Dinner wasn't served yet, though.;Daniel;false)
+Dialog(Arthur;Yes. Oh well, I guess I can greet everyone in the meantime.;Player;true)
+SetSaveItem(STORY;11)

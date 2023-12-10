@@ -1,0 +1,36 @@
+SetCameraBetween(Daniel;Player)
+
+UnlockEvidence(ANN_MURDER_DANIEL)
+
+FocusCamera(Player)
+Dialog(Arthur;Could you tell me again what happened here ? I don't want to miss anything.;Player;false)
+
+FocusCamera(Daniel)
+Dialog(Daniel;Alright. Let's start with what we know.;Daniel;false)
+Dialog(Daniel;Mother was killed her a few months ago. She was also lightly burnt.;Daniel;false)
+Dialog(Daniel;As you can see, a mark was left by the perpetrator.;Daniel;false)
+Dialog(Daniel;Father believes that it is a witch mark.;Daniel;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Was there anyone around when it all happened ?;Player;false)
+
+FocusCamera(Daniel)
+Dialog(Daniel;No. Besides, the door was locked and almost nobody can open it.;Daniel;false)
+
+FocusCamera(Player)
+Dialog(Arthur;I see... Who can open this door ?;Player;false)
+
+FocusCamera(Daniel)
+Dialog(Daniel;Mother, Father and the domestics. Although, Father was busy in the study at the time.;Daniel;false)
+Dialog(Daniel;He was reading an old egyptian book he had just bought. He was the last one to learn the tragic news.;Daniel;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Right. It wouldn't make any sense for Father to kill Mother, right ?;Player;false)
+Dialog(Arthur;But then, I must conclude that a domestic found her body ?;Player;false)
+
+FocusCamera(Daniel)
+Dialog(Daniel;Right. It was almost time for dinner at the time. Esther went to her room to check on her. And well...;Daniel;false)
+
+FocusCamera(Player)
+Dialog(Arthur;So Esther was the one to find the body.;Player;false)
+Dialog(Arthur;These informations will come in handy. Thank you.;Player;true)

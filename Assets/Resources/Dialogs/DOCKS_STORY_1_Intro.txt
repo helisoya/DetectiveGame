@@ -1,0 +1,27 @@
+FadeBg(1;999)
+ChangeWeather(EVENING)
+Dialog(Arthur;<color=blue>My name is Arthur Lazare, french officer. The year is 1872.</color>;Player;false)
+Dialog(Arthur;<color=blue>I received a telegram two months ago stating that my mother had died.</color>;Player;false)
+Dialog(Arthur;<color=blue>Of course, I decided to come back to pay my respect.</color>;Player;false)
+Dialog(Arthur;<color=blue>The travel was long, as I was stationed in Indochina.</color>;Player;false)
+Dialog(Arthur;<color=blue>But, now, I am finally home. On the Island of Lazar. Home of the Lazar family.</color>;Player;false)
+Dialog(Arthur;<color=blue>All my relatives have gathered here together. It is quite the family reunion.</color>;Player;false)
+Dialog(Arthur;<color=blue>It's time for me to-</color>;Player;true)
+
+SetCameraBetween(Lydia;Player)
+UnlockBio(LYDIA)
+FocusCamera(Lydia)
+FadeBg(0;5)
+
+Dialog(???;Hey ! Are you listening, Arthur ?;Lydia;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Uh ? Oh. Hi, Lydia.;Player;false)
+
+FocusCamera(Lydia)
+Dialog(Arthur;<color=blue>This is Lydia, one of the domestic here on the island.</color>;NONE;false)
+Dialog(Arthur;<color=blue>She started working here a couple of years ago.</color>;NONE;false)
+Dialog(Arthur;<color=blue>And well... I must admit.... I kinda like her...</color>;NONE;false)
+Dialog(Lydia;Hey ! What are you doing ? Come closer, I won't bite !;Lydia;true)
+
+SetSaveItem(STORY;2)

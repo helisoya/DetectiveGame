@@ -1,0 +1,4 @@
+SetDestination(Doors)
+Hide()
+SetSaveItem(STORY;8)
+RefreshStoryObjects()

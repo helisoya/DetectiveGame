@@ -1,0 +1,1 @@
+Dialog(Arthur;I need to find Olivier in order to open this gate.;Player;true)

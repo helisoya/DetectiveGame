@@ -1,0 +1,4 @@
+If(STORY;=;2)DOCKS_Lydia_Story2
+If(STORY;=;4)DOCKS_Lydia_Story4
+If(STORY;=;5)DOCKS_Lydia_Story5
+If(STORY;=;6)DOCKS_Lydia_Story6

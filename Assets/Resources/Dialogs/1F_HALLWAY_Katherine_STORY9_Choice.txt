@@ -1,0 +1,7 @@
+SetCameraBetween(Katherine;Player)
+FocusCamera(Katherine)
+
+Choice
+About you;1F_HALLWAY_Katherine_STORY9_Choice1
+Daniel's room;1F_HALLWAY_Katherine_STORY9_Choice2
+Return;EXIT

@@ -1,0 +1,66 @@
+PositionCamera(STORY18_Camera)
+TeleportNPC(Lydia;STORY18_Lydia_Position)
+PositionPlayer(STORY18_Player_Position)
+SetNPCRotation(Lydia;0)
+RotationPlayer(0)
+
+FocusCamera(Grace)
+Dialog(Arthur;<color=blue>What are they doing ? Are they... fighting ?</color>;NONE;false)
+Dialog(Grace;God, can you be annoying ! Will you ever stop ?;Grace;false)
+
+FocusCamera(Pearl)
+Dialog(Pearl;But, why can't we go together ? You never want to-;Pearl;false)
+
+FocusCamera(Grace)
+Dialog(Grace;Stop it ! I don't care about any of this. Leave me alone.;Grace;false)
+Dialog(Grace;If you want to go to the viewing point, wait for that damn domestic.;Grace;false)
+Dialog(Grace;I have to go now. Don't disturb me again with such unimportant matters.;Grace;true)
+
+SetNPCDestination(Grace;STORY18_Grace_Exit) 
+
+FocusCamera(Grace)
+Dialog(Grace;You came. Now make sure you don't come back before lunch.;Grace;true)
+SetNPCHidden(Grace;true)
+
+FocusCamera(Pearl)
+
+SetNPCDestination(Pearl;STORY18_Pearl_Position) 
+
+SetCameraBetween(Player;Pearl)
+
+FocusCamera(Pearl)
+Dialog(Pearl;Uncle Arthur... Are you here to bring me to the viewing point too ?;Pearl;false)
+
+FocusCamera(Player)
+Dialog(Arthur;<color=blue>Uh.... What am I supposed to say in such a situation ?</color>;NONE;false)
+Dialog(Arthur;<color=blue>You got this, Arthur. You got this...</color>;NONE;false)
+Dialog(Arthur;Yes. Lydia asked me if I wanted to come, so I happily accepted.;Player;false)
+
+SetCameraBetween(Lydia;Pearl)
+
+FocusCamera(Lydia)
+Dialog(Lydia;Pearl, I think we should try our best to forget what happened here.;Lydia;false)
+Dialog(Lydia;We are going to have a great time at the viewing point. We can't kill the mood now !;Lydia;false)
+
+FocusCamera(Pearl)
+Dialog(Pearl;Ri- Right ! Thank you, aunt Lydia.;Pearl;false)
+
+FocusCamera(Lydia)
+Dialog(Lydia;Eh. No problem, Pearl.;Lydia;false)
+
+SetCameraBetween(Player;Lydia)
+
+FocusCamera(Player)
+Dialog(Arthur;<color=blue>Pearl calls Lydia her aunt even though they aren't related. That's just how much she loves her.</color>;NONE;false)
+
+FocusCamera(Lydia)
+Dialog(Lydia;Well. Time to depart, then. We'll be right behind you.;Lydia;false)
+Dialog(Lydia;You remember how to get to the viewing point, right ?;Lydia;false)
+Dialog(Lydia;It's past the gate on the left, and past the fields.;Lydia;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Right. Let's go.;Player;true)
+
+
+SetSaveItem(STORY;19)
+SetNPCFollowPlayer(Pearl;true)

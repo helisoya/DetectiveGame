@@ -1,0 +1,41 @@
+SetCameraBetween(Lydia;Player)
+FocusCamera(Lydia)
+
+Dialog(Lydia;Arthur ! It has been a long time. How are you doing ?;Lydia;false)
+Dialog(Lydia;You didn't catch any weird disease again on your way back, did you ?;Lydia;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Of course not. You know that I'm always careful.;Player;false)
+
+FocusCamera(Lydia)
+Dialog(Lydia;Well.... You said that last time too...;Lydia;false)
+Dialog(Lydia;But I guess I can trust you on this one. You wouldn't do anything careless at a time like this.;Lydia;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Yes. Are my siblings already on the Island ?;Player;false)
+
+FocusCamera(Lydia)
+Dialog(Lydia;Yes. Daniel and your sisters are already living here so they weren't going anywhere.;Lydia;false)
+Dialog(Lydia;As for James, he arrived three days ago with his wife and child.;Lydia;false)
+
+FocusCamera(Player)
+Dialog(Arthur;I see. Then I suppose that we shouldn't keep them waiting.;Player;false)
+
+FocusCamera(Lydia)
+Dialog(Lydia;Of course. Follow me, I'll take you to the manor.;Lydia;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Oh, and before that...;Player;false)
+
+FocusCamera(Lydia)
+Dialog(Lydia;Yes ?;Lydia;false)
+
+FocusCamera(Player)
+Dialog(Arthur;It's good to see you again.;Player;false)
+
+FocusCamera(Lydia)
+Dialog(Lydia;Ah... you flatter me. Thank you.;Lydia;false)
+Dialog(Lydia;But follow me. We shouldn't keep your family waiting.;Lydia;true)
+
+SetSaveItem(STORY;3)
+StartNPCEvent(Lydia;DOCKS_STORY3_Lydia)

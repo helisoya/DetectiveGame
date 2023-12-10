@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: FaceAnimation_Charles
+  m_Controller: {fileID: 9100000, guid: 8617ad5bc19d87148996b8dcca999d6a, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 793a89c93bc39df4680765c45c9dda87, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 8798996d295bb694e98b04871a55a3dc, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 1b102dba09172b84cb42a9673b339851, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 2640fb024a432d64fb4f980425b1a2cb, type: 2}
