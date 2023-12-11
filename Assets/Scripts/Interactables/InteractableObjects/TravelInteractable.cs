@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Interactable objects that changes the current Scene
+/// </summary>
 public class TravelInteractable : InteractableObject
 {
     [Header("Travel Interaction")]
@@ -10,6 +13,9 @@ public class TravelInteractable : InteractableObject
 
     private bool used = false;
 
+    /// <summary>
+    /// Changes scene if there are no conflicts with the overrides
+    /// </summary>
     public override void OnInteraction()
     {
         if (used) return;
@@ -38,6 +44,9 @@ public class TravelInteractable : InteractableObject
 
     }
 
+    /// <summary>
+    /// An override dialog that will be processed if the requirement is met
+    /// </summary>
     [System.Serializable]
     public struct TravelInteractableOverride
     {

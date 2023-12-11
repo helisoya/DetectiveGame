@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Handles Interactable Objects & Interactions
+/// </summary>
 public class InteractionManager : MonoBehaviour
 {
     [SerializeField] private PlayerCameraManager cameraManager;
@@ -18,6 +21,10 @@ public class InteractionManager : MonoBehaviour
         CursorManager.ChangeCursorTex(null);
     }
 
+    /// <summary>
+    /// Changes the currently focused on object if possible
+    /// </summary>
+    /// <param name="current">The new object</param>
     public void SetCurrentObject(InteractableObject current)
     {
         if (DialogMaster.instance.inDialog || GameGUI.instance.inMenu || GameGUI.instance.playingMiniGame) return;
@@ -26,6 +33,11 @@ public class InteractionManager : MonoBehaviour
         CursorManager.ChangeCursorTex(current.hoverSprite);
     }
 
+    /// <summary>
+    /// Remove the current object
+    /// </summary>
+    /// <param name="old">The current object</param>
+    /// <param name="force">Force the removal ? (if in dialog)</param>
     public void RemoveCurrentObject(InteractableObject old, bool force = false)
     {
         if (!force && DialogMaster.instance.inDialog) return;
@@ -51,6 +63,10 @@ public class InteractionManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Checks if the distance is good for an interaction
+    /// </summary>
+    /// <returns>Is the distance good ?</returns>
     bool DistanceRequired()
     {
         return Vector3.Distance(playerPos.position, currentInteractable.transform.position) <= minimumDistance;
