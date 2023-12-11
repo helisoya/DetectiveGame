@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 
+
+/// <summary>
+/// Handles Dialogs (Cutscenes technicaly)
+/// </summary>
 public class DialogMaster : MonoBehaviour
 {
     public static DialogMaster instance;
@@ -22,26 +26,51 @@ public class DialogMaster : MonoBehaviour
 
     private List<string[]> currentChoices;
 
+    /// <summary>
+    /// Register a NPC to the dialog system
+    /// </summary>
+    /// <param name="name">Reference name</param>
+    /// <param name="value">The NPC</param>
     public void RegisterNPC(string name, NPC value)
     {
         npcs.Add(name, value);
     }
 
+    /// <summary>
+    /// Register Focusable Objects to the dialog system
+    /// </summary>
+    /// <param name="name">Reference name</param>
+    /// <param name="value">The Focusable Object</param>
     public void RegisterFocusable(string name, FocusableObject value)
     {
         focusableObjects.Add(name, value);
     }
 
+    /// <summary>
+    /// Register Waypoints to the dialog system
+    /// </summary>
+    /// <param name="name">Reference name</param>
+    /// <param name="value">The Waypoint</param>
     public void RegisterNPCWaypoints(string name, Transform value)
     {
         npcWaypoints.Add(name, value);
     }
 
+    /// <summary>
+    /// Register Animators to the dialog system
+    /// </summary>
+    /// <param name="name">Reference name</param>
+    /// <param name="value">The Animator</param>
     public void RegisterAnimation(string name, Animator value)
     {
         animations.Add(name, value);
     }
 
+    /// <summary>
+    /// Register Facial Animators to the dialog system
+    /// </summary>
+    /// <param name="name">Reference name</param>
+    /// <param name="value">The Animator</param>
     public void RegisterFaceAnimation(string name, Animator value)
     {
         faceAnimators.Add(name, value);
@@ -67,6 +96,10 @@ public class DialogMaster : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Starts starting dialog after a delay of 2 frames 
+    /// </summary>
+    /// <returns></returns>
     IEnumerator Routine_StartingDialog()
     {
         for (int i = 0; i < 2; i++)
@@ -77,7 +110,10 @@ public class DialogMaster : MonoBehaviour
         StartDialog(dialogToStartOnLaunch);
     }
 
-
+    /// <summary>
+    /// Ends a choice segment
+    /// </summary>
+    /// <param name="indexChoice">The choice index</param>
     public void EndChoice(int indexChoice)
     {
         string choice = currentChoices[indexChoice][1];
@@ -98,7 +134,10 @@ public class DialogMaster : MonoBehaviour
     }
 
 
-
+    /// <summary>
+    /// Starts a dialog
+    /// </summary>
+    /// <param name="filePath">Filename of the dialog</param>
     public void StartDialog(string filePath)
     {
         if (dialogRoutine != null)
@@ -110,7 +149,11 @@ public class DialogMaster : MonoBehaviour
     }
 
 
-
+    /// <summary>
+    /// Interpreter for the dialog system
+    /// </summary>
+    /// <param name="filePath">The filename of the dialog</param>
+    /// <returns>IEnumerator</returns>
     IEnumerator Routine_Dialog(string filePath)
     {
         List<string> file = FileManager.ReadTextAsset(Resources.Load<TextAsset>("Dialogs/" + filePath));
@@ -147,7 +190,7 @@ public class DialogMaster : MonoBehaviour
 
 
 
-            if (line.Equals("Choice"))
+            if (line.Equals("Choice")) // Handling Choice
             {
                 currentChoices = new List<string[]>();
                 int y = i + 1;
@@ -161,11 +204,11 @@ public class DialogMaster : MonoBehaviour
 
                 yield break;
             }
-            else
+            else // Not handling a choice
             {
                 split = line.Split('(');
 
-                if (split[0].Equals("If"))
+                if (split[0].Equals("If")) // Handling If
                 {
                     split = split[1].Split(")");
                     args = split[0].Split(";");
@@ -201,7 +244,7 @@ public class DialogMaster : MonoBehaviour
                         StartDialog(split[1]);
                     }
                 }
-                else
+                else // Handling normal line
                 {
                     split[1] = split[1].Split(')')[0];
                     switch (split[0])

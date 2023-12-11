@@ -6,6 +6,9 @@ using UnityEditor.UIElements;
 using UnityEngine.SceneManagement;
 using PlasticGui;
 
+/// <summary>
+/// Debug class for testing the game more easily
+/// </summary>
 public class DebugerPopup : EditorWindow
 {
     [MenuItem("DetectiveGame/Debuger")]
@@ -18,6 +21,9 @@ public class DebugerPopup : EditorWindow
     private TextField fieldStory;
     private TextField fieldFollowers;
 
+    /// <summary>
+    /// Creates the GUI
+    /// </summary>
     public void CreateGUI()
     {
         VisualElement root = rootVisualElement;
@@ -48,6 +54,9 @@ public class DebugerPopup : EditorWindow
 
     }
 
+    /// <summary>
+    /// Restarts the map using the parameters specified
+    /// </summary>
     public void Click()
     {
         GameManager.instance.SetSaveItem("STORY", fieldStory.text);
