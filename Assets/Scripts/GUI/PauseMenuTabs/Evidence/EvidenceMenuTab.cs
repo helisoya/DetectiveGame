@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+/// <summary>
+/// Handles the Evidence menu tab
+/// </summary>
 public class EvidenceMenuTab : PauseMenuTab
 {
     [Header("Evidence Tab")]
@@ -29,7 +32,10 @@ public class EvidenceMenuTab : PauseMenuTab
     private Case currentCase = null;
     private Evidence currentEvidence = null;
 
-
+    /// <summary>
+    /// Changes the current case
+    /// </summary>
+    /// <param name="newID">The new case</param>
     public void ChangeCase(Case newID)
     {
         currentCase = newID;
@@ -51,6 +57,10 @@ public class EvidenceMenuTab : PauseMenuTab
         }
     }
 
+    /// <summary>
+    /// Changes the current evidence
+    /// </summary>
+    /// <param name="newEvidence">The new evidence</param>
     public void ChangeEvidence(Evidence newEvidence)
     {
         currentEvidence = newEvidence;
@@ -61,6 +71,9 @@ public class EvidenceMenuTab : PauseMenuTab
         evidenceImg.sprite = currentEvidence.evidenceBig;
     }
 
+    /// <summary>
+    /// Refreshes the tab
+    /// </summary>
     public override void Refresh()
     {
         base.Refresh();

@@ -5,7 +5,9 @@ using TMPro;
 using UnityEngine.UI;
 
 
-
+/// <summary>
+/// Handles the GUI
+/// </summary>
 public class GameGUI : MonoBehaviour
 {
     [Header("Dialog System")]
@@ -106,24 +108,41 @@ public class GameGUI : MonoBehaviour
     ===============================================================================================
     **/
 
-
+    /// <summary>
+    /// Fades the Background layer (doesn't hide dialogs)
+    /// </summary>
+    /// <param name="alpha">Fade to (0 = transparent, 1 = opaque)</param>
+    /// <param name="speed">Fade speed</param>
     public void FadeBackgroundTo(float alpha, float speed)
     {
         fadeBg.FadeTo(alpha, speed);
     }
 
+    /// <summary>
+    /// Fades the Foreground layer (hides dialogs too)
+    /// </summary>
+    /// <param name="alpha">Fade to (0 = transparent, 1 = opaque)</param>
+    /// <param name="speed">Fade speed</param>
     public void FadeForegroundTo(float alpha, float speed)
     {
         fadeFg.FadeTo(alpha, speed);
     }
 
-
+    /// <summary>
+    /// Shows a CG
+    /// </summary>
+    /// <param name="sprite">CG sprite</param>
+    /// <param name="speed">CG appearence speed</param>
     public void ShowCG(Sprite sprite, float speed)
     {
         cgFade.SetImage(sprite);
         cgFade.FadeTo(1, speed);
     }
 
+    /// <summary>
+    /// Hides a CG
+    /// </summary>
+    /// <param name="speed">Hide speed</param>
     public void HideCG(float speed)
     {
         cgFade.FadeTo(0, speed);
@@ -135,6 +154,10 @@ public class GameGUI : MonoBehaviour
     ===============================================================================================
     **/
 
+    /// <summary>
+    /// Enables the detective vision (only for the GUI)
+    /// </summary>
+    /// <param name="activated">Detective Vision is active ?</param>
     public void SetDetectiveVisionActive(bool activated)
     {
         detectiveVisionObj.SetActive(activated);
@@ -146,6 +169,10 @@ public class GameGUI : MonoBehaviour
     ===============================================================================================
     **/
 
+    /// <summary>
+    /// Starts the lockpick minigame
+    /// </summary>
+    /// <param name="dialogAfterward">Dialog to load afterwards if won</param>
     public void StartLockPickMiniGame(string dialogAfterward)
     {
         lockpickMiniGame.StartMiniGame(dialogAfterward);
@@ -157,7 +184,9 @@ public class GameGUI : MonoBehaviour
     ===============================================================================================
     **/
 
-
+    /// <summary>
+    /// Opens the pause menu
+    /// </summary>
     public void OpenPauseMenu()
     {
         Time.timeScale = 0;
@@ -174,6 +203,10 @@ public class GameGUI : MonoBehaviour
         Cursor.visible = true;
     }
 
+    /// <summary>
+    /// Closes the pause menu
+    /// </summary>
+    /// <param name="ignoreMouseValues">Should mouse details be restored ? (default = false)</param>
     public void ClosePauseMenu(bool ignoreMouseValues = false)
     {
         Time.timeScale = 1;
@@ -188,6 +221,10 @@ public class GameGUI : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Changes the pause menu tab
+    /// </summary>
+    /// <param name="newTab">The new tab</param>
     public void ChangeCurrentPauseMenuTab(PauseMenuTab newTab)
     {
         lastOpenedTab.Close();
@@ -195,11 +232,14 @@ public class GameGUI : MonoBehaviour
         lastOpenedTab = newTab;
     }
 
+    /// <summary>
+    /// Saves the last cursor texture known
+    /// </summary>
+    /// <param name="tex">The last texture known</param>
     public void SetLastCursorTex(Texture2D tex)
     {
         lastCursorImg = tex;
     }
-
 
     /**
     ===============================================================================================
@@ -207,6 +247,11 @@ public class GameGUI : MonoBehaviour
     ===============================================================================================
     **/
 
+    /// <summary>
+    /// Shows a dialog (on GUI)
+    /// </summary>
+    /// <param name="speaker">Who speaks ?</param>
+    /// <param name="dialog">What is told ?</param>
     public void ShowDialog(string speaker, string dialog)
     {
         dialogPassed = false;
@@ -215,18 +260,27 @@ public class GameGUI : MonoBehaviour
         dialogRoot.SetActive(true);
     }
 
+    /// <summary>
+    /// Handles the click that passes the dialog
+    /// </summary>
     public void Click_Dialog()
     {
         dialogPassed = true;
     }
 
+    /// <summary>
+    /// Hides the dialog
+    /// </summary>
     public void HideDialog()
     {
         dialogPassed = false;
         dialogRoot.SetActive(false);
     }
 
-
+    /// <summary>
+    /// Shows a choice to the player
+    /// </summary>
+    /// <param name="choices">List of the possible choices</param>
     public void ShowChoice(List<string[]> choices)
     {
         DeleteChoices();
@@ -239,7 +293,10 @@ public class GameGUI : MonoBehaviour
         }
     }
 
-
+    /// <summary>
+    /// Handles the click that determines the choice made
+    /// </summary>
+    /// <param name="choice">Index of the chosen choice</param>
     public void Event_Choice(int choice)
     {
         DeleteChoices();
@@ -248,6 +305,9 @@ public class GameGUI : MonoBehaviour
         DialogMaster.instance.EndChoice(choice);
     }
 
+    /// <summary>
+    /// Deletes all choice buttons
+    /// </summary>
     void DeleteChoices()
     {
         foreach (Transform child in choiceRoot)

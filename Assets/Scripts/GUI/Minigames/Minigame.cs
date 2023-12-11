@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/// <summary>
+/// Parent class for all minigames
+/// </summary>
 public class Minigame : MonoBehaviour
 {
     [Header("MiniGame")]
@@ -9,7 +13,10 @@ public class Minigame : MonoBehaviour
     protected string dialogToLoadAtTheEnd;
     protected bool playing;
 
-
+    /// <summary>
+    /// Starts the minigame
+    /// </summary>
+    /// <param name="endDialog">Dialog to launch after winning the minigame</param>
     public virtual void StartMiniGame(string endDialog)
     {
         dialogToLoadAtTheEnd = endDialog;
@@ -17,6 +24,9 @@ public class Minigame : MonoBehaviour
         playing = true;
     }
 
+    /// <summary>
+    /// Base mechanics of a game
+    /// </summary>
     public virtual void Update()
     {
         if (GameGUI.instance.inMenu || DialogMaster.instance.inDialog || !playing)
@@ -32,6 +42,9 @@ public class Minigame : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// End the minigame and load the dialog afterwards if it exists
+    /// </summary>
     public virtual void EndMiniGame()
     {
         root.SetActive(false);

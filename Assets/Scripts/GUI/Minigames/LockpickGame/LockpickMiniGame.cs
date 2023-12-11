@@ -4,6 +4,9 @@ using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Class for the lockpick minigame
+/// </summary>
 public class LockpickMiniGame : Minigame
 {
     [Header("Target")]
@@ -35,6 +38,10 @@ public class LockpickMiniGame : Minigame
         }
     }
 
+    /// <summary>
+    /// Handles the start of the lockpick minigame
+    /// </summary>
+    /// <param name="endDialog">Dialog to load afterwards</param>
     public override void StartMiniGame(string endDialog)
     {
         base.StartMiniGame(endDialog);
@@ -55,6 +62,9 @@ public class LockpickMiniGame : Minigame
         targetTransform.anchoredPosition = new Vector2(targetPosition, targetTransform.anchoredPosition.y);
     }
 
+    /// <summary>
+    /// Handles the lockpick minigame's logic
+    /// </summary>
     public override void Update()
     {
         base.Update();

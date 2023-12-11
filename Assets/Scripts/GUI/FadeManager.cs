@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Class used to fade an image
+/// </summary>
 public class FadeManager : MonoBehaviour
 {
     [SerializeField] protected Image fadeImg;
@@ -25,6 +28,11 @@ public class FadeManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Starts fading the image
+    /// </summary>
+    /// <param name="to">Target Alpha</param>
+    /// <param name="speed">Fade speed</param>
     public virtual void FadeTo(float to, float speed)
     {
         if (fading != null)
@@ -34,7 +42,12 @@ public class FadeManager : MonoBehaviour
         fading = StartCoroutine(Routine_Fade(to, speed));
     }
 
-
+    /// <summary>
+    /// Routine for the fading
+    /// </summary>
+    /// <param name="to">Target alpha</param>
+    /// <param name="speed">Fade speed</param>
+    /// <returns></returns>
     protected virtual IEnumerator Routine_Fade(float to, float speed)
     {
         Color col = fadeImg.color;

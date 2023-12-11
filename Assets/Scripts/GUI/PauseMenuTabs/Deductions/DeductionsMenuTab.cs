@@ -4,6 +4,9 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
+/// <summary>
+/// Class for the deduction menu tab
+/// </summary>
 public class DeductionsMenuTab : PauseMenuTab
 {
     [Header("Deductions Screen")]
@@ -29,6 +32,11 @@ public class DeductionsMenuTab : PauseMenuTab
     private int[] currentAwnsers;
     private Case currentCase;
 
+    /// <summary>
+    /// Finds if the player owns all the evidence related to a case
+    /// </summary>
+    /// <param name="c">The case</param>
+    /// <returns>Does the player owns all evidence related to this case ?</returns>
     bool HasAllEvidenceForCase(Case c)
     {
         foreach (Evidence evidence in c.evidences)
@@ -41,6 +49,10 @@ public class DeductionsMenuTab : PauseMenuTab
         return true;
     }
 
+    /// <summary>
+    /// Changes the current case
+    /// </summary>
+    /// <param name="newCase">The new case</param>
     public void ChangeCase(Case newCase)
     {
         caseInfosRoot.SetActive(true);
@@ -73,11 +85,19 @@ public class DeductionsMenuTab : PauseMenuTab
 
     }
 
+    /// <summary>
+    /// Changes the awnser for a questions
+    /// </summary>
+    /// <param name="index">The question index</param>
+    /// <param name="val">The awnser index</param>
     public void SetAwnser(int index, int val)
     {
         currentAwnsers[index] = val;
     }
 
+    /// <summary>
+    /// Handles the confirmation of the deductions
+    /// </summary>
     public void Event_ClickConfirm()
     {
         for (int i = 0; i < currentCase.questions.Length; i++)
@@ -92,6 +112,11 @@ public class DeductionsMenuTab : PauseMenuTab
         StartCoroutine(Routine_StartEndCaseDialog(currentCase));
     }
 
+    /// <summary>
+    /// Closes the pause menu and ends the case
+    /// </summary>
+    /// <param name="c">The case to end</param>
+    /// <returns>IEnumerator</returns>
     IEnumerator Routine_StartEndCaseDialog(Case c)
     {
         currentCase = null;
@@ -105,7 +130,9 @@ public class DeductionsMenuTab : PauseMenuTab
         }
     }
 
-
+    /// <summary>
+    /// Starts the deduction failed routine
+    /// </summary>
     void StartFailedRoutine()
     {
         if (failed != null)
@@ -115,6 +142,10 @@ public class DeductionsMenuTab : PauseMenuTab
         failed = StartCoroutine(Routine_Failed());
     }
 
+    /// <summary>
+    /// Shows a text for a few seconds, then hide it
+    /// </summary>
+    /// <returns>IEnumerator</returns>
     IEnumerator Routine_Failed()
     {
         failedObj.SetActive(true);
@@ -122,6 +153,9 @@ public class DeductionsMenuTab : PauseMenuTab
         failedObj.SetActive(false);
     }
 
+    /// <summary>
+    /// Refreshes the tab
+    /// </summary>
     public override void Refresh()
     {
         base.Refresh();

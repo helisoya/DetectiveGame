@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Class for the map menu tab
+/// </summary>
 public class MapMenuTab : PauseMenuTab
 {
     [Header("Map Tab")]
@@ -29,7 +32,11 @@ public class MapMenuTab : PauseMenuTab
         }
     }
 
-
+    /// <summary>
+    /// Search for a child of a transform, and enables it
+    /// </summary>
+    /// <param name="transform">The parent</param>
+    /// <param name="name">The name of the researched child</param>
     void SearchForIconInTransform(Transform transform, string name)
     {
         transform.gameObject.SetActive(true);

@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Class for the Character button in the Characters menu tab
+/// </summary>
 public class CharacterMenuButton : MonoBehaviour
 {
 
@@ -13,6 +16,11 @@ public class CharacterMenuButton : MonoBehaviour
     private Sprite unlockedSprite;
     private Sprite lockedSprite;
 
+    /// <summary>
+    /// Initialize the button
+    /// </summary>
+    /// <param name="id">The id of the biography</param>
+    /// <param name="t">The parent tab</param>
     public void Init(string id, CharacterMenuTab t)
     {
         entryID = id;
@@ -24,6 +32,9 @@ public class CharacterMenuButton : MonoBehaviour
         Refresh();
     }
 
+    /// <summary>
+    /// Refreshes the button's informations
+    /// </summary>
     public void Refresh()
     {
         bool hasUnlockedBio = GameManager.instance.save_unlockedBios.Contains(entryID);
@@ -31,6 +42,9 @@ public class CharacterMenuButton : MonoBehaviour
         buttonSprite.sprite = hasUnlockedBio ? unlockedSprite : lockedSprite;
     }
 
+    /// <summary>
+    /// Handles the button click
+    /// </summary>
     public void Event_Click()
     {
         tab.SelectBio(entryID);

@@ -4,6 +4,10 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
+
+/// <summary>
+/// Class for the characters menu tab
+/// </summary>
 public class CharacterMenuTab : PauseMenuTab
 {
     [Header("Character Menu")]
@@ -35,7 +39,9 @@ public class CharacterMenuTab : PauseMenuTab
 
     }
 
-
+    /// <summary>
+    /// Refreshes the tab
+    /// </summary>
     public override void Refresh()
     {
         base.Refresh();
@@ -47,6 +53,11 @@ public class CharacterMenuTab : PauseMenuTab
         SelectBio(currentCharacter);
     }
 
+
+    /// <summary>
+    /// Selects a new biography
+    /// </summary>
+    /// <param name="id">The ID of the biography</param>
     public void SelectBio(string id)
     {
         currentCharacter = id;
@@ -58,6 +69,10 @@ public class CharacterMenuTab : PauseMenuTab
     }
 }
 
+
+/// <summary>
+/// Class of a biography entry
+/// </summary>
 [System.Serializable]
 public class CharacterMenuEntry
 {
