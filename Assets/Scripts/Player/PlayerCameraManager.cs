@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 
+/// <summary>
+/// Handles the Player Camera
+/// </summary>
 public class PlayerCameraManager : MonoBehaviour
 {
 
@@ -41,6 +44,9 @@ public class PlayerCameraManager : MonoBehaviour
         _inputAxisNameY = thridPersonCam.m_YAxis.m_InputAxisName;
     }
 
+    /// <summary>
+    /// Refreshes the priorities of the cameras and the cursor state
+    /// </summary>
     void RefreshPriorities()
     {
         Camera.main.cullingMask = isInFirstPerson ? fpsLayers : tpsLayers;
@@ -77,12 +83,21 @@ public class PlayerCameraManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Turns the player toward a transform
+    /// </summary>
+    /// <param name="obj">The target transform</param>
     public void TurnToward(Transform obj)
     {
         transform.LookAt(obj);
         transform.eulerAngles = new Vector3(0f, transform.eulerAngles.y, 0f);
     }
 
+
+    /// <summary>
+    /// Sets the rotation of the player
+    /// </summary>
+    /// <param name="angle">The target angle</param>
     public void Rotate(float angle)
     {
         transform.eulerAngles = new Vector3(0f, angle, 0f);

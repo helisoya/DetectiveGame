@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+/// <summary>
+/// An NPC is a character that move around the map and do things in custcenes. Followers follow the player accross maps.
+/// </summary>
 public class NPC : MonoBehaviour
 {
     [Header("Data")]
@@ -49,6 +52,10 @@ public class NPC : MonoBehaviour
         SetHidden(hiddenAtStart);
     }
 
+    /// <summary>
+    /// Changes the rotation of the NPC
+    /// </summary>
+    /// <param name="value">The new rotation</param>
     public void SetRotation(float value)
     {
         transform.eulerAngles = new Vector3(
@@ -58,7 +65,10 @@ public class NPC : MonoBehaviour
         );
     }
 
-
+    /// <summary>
+    /// Changes the follow status of the NPC
+    /// </summary>
+    /// <param name="value">Is the NPC following the player ?</param>
     public void ChangeFollowPlayer(bool value)
     {
 
@@ -79,6 +89,10 @@ public class NPC : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Changes the destination of the NPC
+    /// </summary>
+    /// <param name="destination">The new destination</param>
     public void SetDestination(Vector3 destination)
     {
         animator.SetFloat("Speed", 1);
@@ -89,11 +103,19 @@ public class NPC : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Sets if the NPC is hidden or not
+    /// </summary>
+    /// <param name="hidden">Is the NPC hidden ?</param>
     public void SetHidden(bool hidden)
     {
         gameObject.SetActive(!hidden);
     }
 
+    /// <summary>
+    /// Teleport the NPC to a given location
+    /// </summary>
+    /// <param name="position">The target location</param>
     public void Teleport(Vector3 position)
     {
         agent.Warp(position);
@@ -131,7 +153,10 @@ public class NPC : MonoBehaviour
     }
 
 
-
+    /// <summary>
+    /// Starts an NPC event (only applies to the NPC)
+    /// </summary>
+    /// <param name="fileName">The filename of the event</param>
     public void StartEvent(string fileName)
     {
         if (routineEvent != null)
@@ -141,6 +166,11 @@ public class NPC : MonoBehaviour
         routineEvent = DialogMaster.instance.StartCoroutine(Routine_Event(fileName));
     }
 
+    /// <summary>
+    /// Routine for the Interpreter for the NPC event
+    /// </summary>
+    /// <param name="filename">The filename of the event</param>
+    /// <returns>IEnumerator</returns>
     IEnumerator Routine_Event(string filename)
     {
         List<string> file = FileManager.ReadTextAsset(Resources.Load<TextAsset>("NPCsEvent/" + filename));

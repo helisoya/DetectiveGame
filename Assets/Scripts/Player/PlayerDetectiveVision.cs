@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 
+/// <summary>
+/// Handles the Detective Vision, a visual effect that highlights important objects 
+/// </summary>
 public class PlayerDetectiveVision : MonoBehaviour
 {
     private float currentValue = 0f;
@@ -16,6 +19,9 @@ public class PlayerDetectiveVision : MonoBehaviour
         materials = new List<Material>();
     }
 
+    /// <summary>
+    /// Finds the renderers that renders the DetectiveVision shader
+    /// </summary>
     void FindRenderers()
     {
         Renderer[] renderers = (Renderer[])(Object.FindObjectsOfType(typeof(Renderer)));
@@ -30,6 +36,9 @@ public class PlayerDetectiveVision : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Refreshes the shaders using a DetectiveVision shader
+    /// </summary>
     void RefreshMaterials()
     {
         foreach (Material mat in materials)
@@ -74,7 +83,9 @@ public class PlayerDetectiveVision : MonoBehaviour
         }
     }
 
-
+    /// <summary>
+    /// Used to find renderers
+    /// </summary>
     void LateUpdate()
     {
         if (!foundRenderers)

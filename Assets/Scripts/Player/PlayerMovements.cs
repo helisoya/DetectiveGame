@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+/// <summary>
+/// Handles player movements
+/// </summary>
 public class PlayerMovements : MonoBehaviour
 {
     [Header("Speed")]
@@ -36,7 +39,10 @@ public class PlayerMovements : MonoBehaviour
         FindStartingPoint();
     }
 
-
+    /// <summary>
+    /// Find the correct starting point and teleports the player to it. 
+    /// Otherwise, it teleports them to the DEFAULT starting point.
+    /// </summary>
     void FindStartingPoint()
     {
         Transform defaultStart = null;
@@ -116,6 +122,10 @@ public class PlayerMovements : MonoBehaviour
         body.eulerAngles = new Vector3(0, body.eulerAngles.y, 0);
     }
 
+    /// <summary>
+    /// Teleports the player to a given location
+    /// </summary>
+    /// <param name="position">The target location</param>
     public void SetPosition(Vector3 position)
     {
         body.position = position;
