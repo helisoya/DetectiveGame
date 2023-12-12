@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+/// <summary>
+/// Class containing all the informations that are saved by the game
+/// </summary>
 [System.Serializable]
 public class SaveFile
 {
@@ -32,6 +35,9 @@ public class SaveFile
 }
 
 
+/// <summary>
+/// An item that is saved (The story point for instance)
+/// </summary>
 [System.Serializable]
 public class SaveItem
 {

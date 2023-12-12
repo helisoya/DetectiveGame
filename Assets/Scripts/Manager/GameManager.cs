@@ -6,6 +6,9 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// The GameManager handles the Savefile as well as other things. It isn't destroyed when changing scenes.
+/// </summary>
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
@@ -85,17 +88,32 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Gets a specific Save Item's value
+    /// </summary>
+    /// <param name="key">The item's key</param>
+    /// <returns>The item's value</returns>
     public string GetSaveItemValue(string key)
     {
         return _saveItems[key].value;
     }
 
+    /// <summary>
+    /// Changes a specfic Save Item's value
+    /// </summary>
+    /// <param name="key">The item's key</param>
+    /// <param name="value">The new item's value</param>
     public void SetSaveItem(string key, string value)
     {
         _saveItems[key].value = value;
     }
 
 
+    /// <summary>
+    /// Checks if a evidence was unlocked 
+    /// </summary>
+    /// <param name="evidence">The evidence</param>
+    /// <returns>Has the evidence been unlocked ?</returns>
     public bool HasUnlockedEvidence(Evidence evidence)
     {
         return caseAdapters[evidence.caseRef.ID].evidenceFound[evidence.ID];
@@ -118,7 +136,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
+    /// <summary>
+    /// Resets the SaveFile
+    /// </summary>
     void ResetSaveFile()
     {
         save = new SaveFile();
@@ -132,7 +152,9 @@ public class GameManager : MonoBehaviour
         RefreshAdapters();
     }
 
-
+    /// <summary>
+    /// Initialize save adapters
+    /// </summary>
     void InitAdapters()
     {
         caseAdapters = new Dictionary<string, CaseAdapter>();
@@ -149,6 +171,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Refresh the Save Adapters
+    /// </summary>
     void RefreshAdapters()
     {
         Evidence[] evidences = Resources.LoadAll<Evidence>("Evidences");
@@ -158,6 +183,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Unlocks a new Biography
+    /// </summary>
+    /// <param name="newBio">The new biography's ID</param>
     public void Save_UnlockNewBio(string newBio)
     {
         if (!save.biosUnlocked.Contains(newBio))
@@ -166,6 +195,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Marks a case as started
+    /// </summary>
+    /// <param name="caseID">The case ID</param>
     public void Save_StartNewCase(string caseID)
     {
         if (!save.currentCases.Contains(caseID))
@@ -174,6 +207,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Marks a case as finished
+    /// </summary>
+    /// <param name="caseID"></param>
     public void Save_EndCase(string caseID)
     {
         if (save.currentCases.Contains(caseID))
@@ -183,6 +220,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Unlock a new evidence
+    /// </summary>
+    /// <param name="ID">The evidence ID</param>
     public void Save_AddEvidence(string ID)
     {
         Evidence evidence = Resources.Load<Evidence>("Evidences/" + ID);
@@ -194,13 +235,20 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
+    /// <summary>
+    /// Changes the current map (in the save file)
+    /// </summary>
+    /// <param name="name">The new current map</param>
     public void Save_SetCurrentMap(string name)
     {
         save.lastMap = save.currentMap;
         save.currentMap = name;
     }
 
+    /// <summary>
+    /// Adds a follower
+    /// </summary>
+    /// <param name="name">The follower's name</param>
     public void Save_AddFollower(string name)
     {
         if (!save.currentFollowers.Contains(name))
@@ -209,17 +257,26 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Removes a follower
+    /// </summary>
+    /// <param name="name">The follower's name</param>
     public void Save_RemoveFollower(string name)
     {
         save.currentFollowers.Remove(name);
     }
 
-
+    /// <summary>
+    /// Save the game
+    /// </summary>
     public void Save()
     {
         FileManager.SaveJSON(FileManager.savPath + "save.sav", save);
     }
 
+    /// <summary>
+    /// Loads the game
+    /// </summary>
     public void Load()
     {
         if (System.IO.File.Exists(FileManager.savPath + "save.sav"))
@@ -234,7 +291,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
+    /// <summary>
+    /// Loads a new map
+    /// </summary>
+    /// <param name="name">The new map's name</param>
     public void LoadMap(string name)
     {
         if (routine_changeMap != null) return;
@@ -242,6 +302,11 @@ public class GameManager : MonoBehaviour
         routine_changeMap = StartCoroutine(Routine_ChangeMap(name));
     }
 
+    /// <summary>
+    /// Routine for changing maps
+    /// </summary>
+    /// <param name="name">The new map's name</param>
+    /// <returns></returns>
     IEnumerator Routine_ChangeMap(string name)
     {
         Time.timeScale = 1;

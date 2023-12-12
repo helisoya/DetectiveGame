@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Class representing an evidence
+/// </summary>
 [CreateAssetMenu(fileName = "Evidence", order = 1, menuName = "DetectiveGame/Evidence")]
 public class Evidence : ScriptableObject
 {
