@@ -2,8 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Handles the weather and the day/night cycle.
+/// </summary>
 public class SkyManager : MonoBehaviour
 {
+    /// <summary>
+    /// Represents the different types of sky possible
+    /// </summary>
     public enum SkyType
     {
         DAY,
@@ -37,7 +43,10 @@ public class SkyManager : MonoBehaviour
         ChangeSkybox(System.Enum.Parse<SkyType>(GameManager.instance.save_currentWeather));
     }
 
-
+    /// <summary>
+    /// Changes the current sky
+    /// </summary>
+    /// <param name="data">The new sky data</param>
     void ChangeValues(SkyData data)
     {
         RenderSettings.skybox = data.skybox;
@@ -48,6 +57,10 @@ public class SkyManager : MonoBehaviour
         rain.SetActive(data.rain);
     }
 
+    /// <summary>
+    /// Changes the skybox
+    /// </summary>
+    /// <param name="type">The type of sky</param>
     public void ChangeSkybox(SkyType type)
     {
         GameManager.instance.save_currentWeather = type.ToString();

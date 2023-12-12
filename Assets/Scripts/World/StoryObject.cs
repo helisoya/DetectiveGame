@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// A story object is an object that can only appears under certain circonstances.
+/// It is registered in the StoryObjectsManager
+/// </summary>
 public class StoryObject : MonoBehaviour
 {
     [SerializeField] private string[] enablingConditions;
@@ -16,6 +20,10 @@ public class StoryObject : MonoBehaviour
         RefreshIsVisible();
     }
 
+    /// <summary>
+    /// Finds out if the object can be enabled. Only computes it once.
+    /// </summary>
+    /// <returns>Can the object be enabled ?</returns>
     public bool GetCanBeEnabled()
     {
         if (computed) return value;
@@ -25,7 +33,11 @@ public class StoryObject : MonoBehaviour
         return value;
     }
 
-    bool CanBeEnabled()
+    /// <summary>
+    /// Computes if the object can be enabled
+    /// </summary>
+    /// <returns>Can the object be enabled ?</returns>
+    private bool CanBeEnabled()
     {
         string[] args;
         foreach (string condition in enablingConditions)
@@ -63,7 +75,9 @@ public class StoryObject : MonoBehaviour
         return needAll;
     }
 
-
+    /// <summary>
+    /// Refreshes if the object can be shown
+    /// </summary>
     public void RefreshIsVisible()
     {
         computed = false;

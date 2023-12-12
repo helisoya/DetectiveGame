@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Handles the rain. Making sure it is always on top of it's target. (The player)
+/// </summary>
 public class RainMovements : MonoBehaviour
 {
     private Transform target;
