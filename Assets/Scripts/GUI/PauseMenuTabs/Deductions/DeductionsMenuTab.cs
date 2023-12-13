@@ -169,10 +169,8 @@ public class DeductionsMenuTab : PauseMenuTab
             ChangeCase(currentCase);
         }
 
-        foreach (Transform child in casesRoot)
-        {
-            Destroy(child.gameObject);
-        }
+
+        Utils.DestroyAllChildren(casesRoot);
 
         foreach (string currentCase in GameManager.instance.save_currentCases)
         {

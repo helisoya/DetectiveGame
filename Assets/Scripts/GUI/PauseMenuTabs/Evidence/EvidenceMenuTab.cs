@@ -43,10 +43,8 @@ public class EvidenceMenuTab : PauseMenuTab
         rightRootTab.SetActive(false);
 
         caseText.text = currentCase.caseName;
-        foreach (Transform child in evidenceRoot)
-        {
-            Destroy(child.gameObject);
-        }
+
+        Utils.DestroyAllChildren(evidenceRoot);
 
         foreach (Evidence evidence in currentCase.evidences)
         {
@@ -78,15 +76,8 @@ public class EvidenceMenuTab : PauseMenuTab
     {
         base.Refresh();
 
-        foreach (Transform child in doneCasesRoot)
-        {
-            Destroy(child.gameObject);
-        }
-
-        foreach (Transform child in currentCasesRoot)
-        {
-            Destroy(child.gameObject);
-        }
+        Utils.DestroyAllChildren(doneCasesRoot);
+        Utils.DestroyAllChildren(currentCasesRoot);
 
         foreach (string caseID in GameManager.instance.save_currentCases)
         {
