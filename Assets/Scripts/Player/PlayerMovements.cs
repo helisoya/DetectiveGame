@@ -25,6 +25,10 @@ public class PlayerMovements : MonoBehaviour
     private PlayerCameraManager camManager;
     private List<GameObject> instanciatedFollowers;
 
+    [Header("Sounds")]
+    [SerializeField] private FootstepSwapper footstepSwapper;
+    [SerializeField] private AudioSource footstepSource;
+
     public static PlayerMovements instance;
 
     void Awake()
@@ -106,9 +110,20 @@ public class PlayerMovements : MonoBehaviour
 
         rb.velocity = moveDirection;
 
-        bool moving = (moveDirection.x != 0 || moveDirection.z != 0);
+        bool moving = moveDirection.x != 0 || moveDirection.z != 0;
         animator.SetBool("Run", running);
         animator.SetFloat("Speed", moving ? 2 : 0);
+
+        footstepSwapper.CheckLayer();
+
+        if (footstepSource.isPlaying && !moving)
+        {
+            footstepSource.Stop();
+        }
+        else if (!footstepSource.isPlaying && moving)
+        {
+            footstepSource.Play();
+        }
 
         if (!camManager.isInFirstPerson && moving)
         {
