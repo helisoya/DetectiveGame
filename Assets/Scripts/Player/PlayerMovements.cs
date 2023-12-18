@@ -93,6 +93,7 @@ public class PlayerMovements : MonoBehaviour
         {
             animator.SetBool("Run", false);
             animator.SetFloat("Speed", 0);
+            footstepSource.Stop();
             return;
         }
 

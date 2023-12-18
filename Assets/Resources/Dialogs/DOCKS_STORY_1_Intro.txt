@@ -1,19 +1,39 @@
 FadeBg(1;999)
 ChangeWeather(EVENING)
-Dialog(Arthur;<color=blue>My name is Arthur Lazare, french officer. The year is 1872.</color>;Player;false)
-Dialog(Arthur;<color=blue>I received a telegram two months ago stating that my mother had died.</color>;Player;false)
+
+ShowCG(IntroA;5)
+Dialog(Arthur;<color=blue>The date is the tenth of may, 1872.</color>;Player;false)
+
+ShowCG(IntroB;5)
+Dialog(Arthur;<color=blue>My name is Arthur Lazar, french officer. I can't claim to be the best though.</color>;Player;false)
+Dialog(Arthur;<color=blue>I received a telegram two months ago, stating that my mother had died.</color>;Player;false)
 Dialog(Arthur;<color=blue>Of course, I decided to come back to pay my respect.</color>;Player;false)
-Dialog(Arthur;<color=blue>The travel was long, as I was stationed in Indochina.</color>;Player;false)
-Dialog(Arthur;<color=blue>But, now, I am finally home. On the Island of Lazar. Home of the Lazar family.</color>;Player;false)
-Dialog(Arthur;<color=blue>All my relatives have gathered here together. It is quite the family reunion.</color>;Player;false)
-Dialog(Arthur;<color=blue>It's time for me to-</color>;Player;true)
+Dialog(Arthur;<color=blue>My superiors let me go, since they didn't need me for at least 7 months.</color>;Player;false)
+Dialog(Arthur;<color=blue>The travel was long, as I was stationed in Indochina at the time.</color>;Player;false)
+
+
+ShowCG(IntroC;5)
+Dialog(Arthur;<color=blue>But after two months, I am finally here.</color>;Player;false)
+Dialog(Arthur;<color=blue>The Island of Lazar is the home of our family. The Lazar family...</color>;Player;false)
+Dialog(Arthur;<color=blue>It was bought by Father a few decades ago now. There, he built a manor, and started a family.</color>;Player;false)
+Dialog(Arthur;<color=blue>There are 5 children of Lazar. Two girls and three boys, including me.</color>;Player;false)
+Dialog(Arthur;<color=blue>Today, they have all gathered here. It's quite the family reunion.</color>;Player;false)
+Dialog(Arthur;<color=blue>I am surely the last one to get here, considering my travel.</color>;Player;true)
+Dialog(Arthur;<color=blue>This will be interresting...</color>;Player;true)
+
+HideCG(5)
 
 SetCameraBetween(Lydia;Player)
 UnlockBio(LYDIA)
-FocusCamera(Lydia)
+
+FocusCamera(Player)
 FadeBg(0;5)
 
-Dialog(???;Hey ! Are you listening, Arthur ?;Lydia;false)
+Dialog(Arthur;Here at last. The island I spent most of my youth on...;Player;false)
+Dialog(Arthur;I wonder wh-;Player;false)
+
+FocusCamera(Lydia)
+Dialog(???;Hey, Arthur ! Over here !;Lydia;false)
 
 FocusCamera(Player)
 Dialog(Arthur;Uh ? Oh. Hi, Lydia.;Player;false)
