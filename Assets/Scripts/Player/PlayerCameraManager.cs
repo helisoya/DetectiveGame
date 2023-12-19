@@ -34,6 +34,15 @@ public class PlayerCameraManager : MonoBehaviour
 
     public static PlayerCameraManager instance;
 
+
+    public float rotation
+    {
+        get
+        {
+            return transform.eulerAngles.y;
+        }
+    }
+
     void Awake()
     {
         instance = this;
@@ -42,6 +51,15 @@ public class PlayerCameraManager : MonoBehaviour
 
         _inputAxisNameX = thridPersonCam.m_XAxis.m_InputAxisName;
         _inputAxisNameY = thridPersonCam.m_YAxis.m_InputAxisName;
+    }
+
+    void Start()
+    {
+        if (GameManager.instance.wasLoaded)
+        {
+            Rotate(GameManager.instance.save_playerRotation);
+            return;
+        }
     }
 
     /// <summary>

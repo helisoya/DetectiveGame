@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -16,6 +17,8 @@ public class NPC : MonoBehaviour
     private Transform playerRef;
     private bool ignoreUpdate;
     private Coroutine routineEvent;
+    private string _currentEvent;
+    private int _currentEventIndex;
 
     [Header("Components")]
     [SerializeField] private NavMeshAgent agent;
@@ -39,6 +42,38 @@ public class NPC : MonoBehaviour
         }
     }
 
+    public string currentEvent
+    {
+        get
+        {
+            return _currentEvent;
+        }
+    }
+
+    public int currentEventIndex
+    {
+        get
+        {
+            return _currentEventIndex;
+        }
+    }
+
+    public Vector3 position
+    {
+        get
+        {
+            return transform.position;
+        }
+    }
+
+    public float rotation
+    {
+        get
+        {
+            return transform.eulerAngles.y;
+        }
+    }
+
     void Start()
     {
         agent.isStopped = true;
@@ -49,7 +84,26 @@ public class NPC : MonoBehaviour
         {
             DialogMaster.instance.RegisterNPC(referenceName, this);
         }
-        SetHidden(hiddenAtStart);
+
+        if (!GameManager.instance.wasLoaded)
+        {
+            SetHidden(hiddenAtStart);
+        }
+    }
+
+    /// <summary>
+    /// Refreshes the NPC with a SaveStoryObject
+    /// </summary>
+    /// <param name="save">The SaveStoryObject to sync with</param>
+    public void RefreshFromSaveStoryObject(SaveStoryObject save)
+    {
+        SetRotation(save.objectRotation);
+        Teleport(save.objectPosition);
+        if (!string.IsNullOrEmpty(save.npcEventName))
+        {
+            StartEvent(save.npcEventName, save.currentNpcEventIndex);
+        }
+        return;
     }
 
     /// <summary>
@@ -157,22 +211,26 @@ public class NPC : MonoBehaviour
     /// Starts an NPC event (only applies to the NPC)
     /// </summary>
     /// <param name="fileName">The filename of the event</param>
-    public void StartEvent(string fileName)
+    /// <param name="startIndex">The starting index</param>
+    public void StartEvent(string fileName, int startIndex = 0)
     {
         if (routineEvent != null)
         {
             StopCoroutine(routineEvent);
         }
-        routineEvent = DialogMaster.instance.StartCoroutine(Routine_Event(fileName));
+        routineEvent = DialogMaster.instance.StartCoroutine(Routine_Event(fileName, startIndex));
     }
 
     /// <summary>
     /// Routine for the Interpreter for the NPC event
     /// </summary>
     /// <param name="filename">The filename of the event</param>
+    /// <param name="startIndex">The starting index</param>
     /// <returns>IEnumerator</returns>
-    IEnumerator Routine_Event(string filename)
+    IEnumerator Routine_Event(string filename, int startIndex = 0)
     {
+        _currentEvent = filename;
+
         List<string> file = FileManager.ReadTextAsset(Resources.Load<TextAsset>("NPCsEvent/" + filename));
 
         ignoreUpdate = true;
@@ -182,9 +240,9 @@ public class NPC : MonoBehaviour
         string[] args;
 
 
-        for (int i = 0; i < file.Count; i++)
+        for (_currentEventIndex = startIndex; _currentEventIndex < file.Count; _currentEventIndex++)
         {
-            line = file[i];
+            line = file[_currentEventIndex];
 
             if (string.IsNullOrWhiteSpace(line) || string.IsNullOrEmpty(line))
             {

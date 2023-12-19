@@ -3610,22 +3610,22 @@ PrefabInstance:
     - target: {fileID: 7720391608949689652, guid: 1ae079d84730e1b45a457630e6a4767f,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.45329142
+      value: -0.4532914
       objectReference: {fileID: 0}
     - target: {fileID: 7720391608949689652, guid: 1ae079d84730e1b45a457630e6a4767f,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.0722996
+      value: -0.07229957
       objectReference: {fileID: 0}
     - target: {fileID: 7720391608949689652, guid: 1ae079d84730e1b45a457630e6a4767f,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.8773358
+      value: -0.87733585
       objectReference: {fileID: 0}
     - target: {fileID: 7720391608949689652, guid: 1ae079d84730e1b45a457630e6a4767f,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.1399343
+      value: 0.13993429
       objectReference: {fileID: 0}
     - target: {fileID: 7720391609563952855, guid: 1ae079d84730e1b45a457630e6a4767f,
         type: 3}
@@ -3705,7 +3705,7 @@ PrefabInstance:
     - target: {fileID: 7720391610542800624, guid: 1ae079d84730e1b45a457630e6a4767f,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.45190516
+      value: -0.4519052
       objectReference: {fileID: 0}
     - target: {fileID: 7720391610542800624, guid: 1ae079d84730e1b45a457630e6a4767f,
         type: 3}
@@ -8171,6 +8171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 281b188a4be419340948619ae0d774b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  saveObjectName: 
   enablingConditions:
   - STORY;=;5
   needAll: 0
@@ -9329,6 +9330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7520fe099a98cb64d950a2901e85124b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  saveObjectName: 
   referenceName: Lydia
   followPlayer: 0
   startFollowingAfterMeters: 10
@@ -9336,7 +9338,7 @@ MonoBehaviour:
   agent: {fileID: 1720161267}
   animator: {fileID: 1720161266}
   interaction: {fileID: 934150321}
-  storyObj: {fileID: 0}
+  storyObj: {fileID: 1720161269}
 --- !u!114 &1720161269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9349,9 +9351,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 281b188a4be419340948619ae0d774b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  saveObjectName: 
   enablingConditions:
   - STORY;<;7
   needAll: 0
+--- !u!114 &1720161270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720161264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49d16558940bed244942a21eb436dd20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveName: Lydia_Intro
+  npc: {fileID: 1720161268}
+  storyObject: {fileID: 1720161269}
 --- !u!1 &1731670607 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8164078558771037576, guid: e390bd4f6f89bad4c8ca57faad99f289,
@@ -10298,6 +10316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 281b188a4be419340948619ae0d774b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  saveObjectName: 
   enablingConditions:
   - STORY;>;6
   needAll: 0

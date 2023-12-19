@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.PlasticSCM.Editor.WebApi;
+using Unity.VisualScripting;
 using UnityEditor.PackageManager.Requests;
 using UnityEngine;
 using UnityEngine.AI;
@@ -18,6 +19,16 @@ public class GameManager : MonoBehaviour
     private Coroutine routine_changeMap;
 
     private Dictionary<string, CaseAdapter> caseAdapters;
+    private bool loading = false;
+    private Dictionary<string, SaveStoryObject> saveStoryObjs;
+
+    public bool wasLoaded
+    {
+        get
+        {
+            return loading;
+        }
+    }
 
 
     public List<string> save_unlockedBios
@@ -88,6 +99,37 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public Vector3 save_playerPosition
+    {
+        get
+        {
+            return save.playerPosition;
+        }
+    }
+
+    public float save_playerRotation
+    {
+        get
+        {
+            return save.playerRotation;
+        }
+    }
+
+    /// <summary>
+    /// Finds the Saved Story Object with the given name, if it exists.
+    /// </summary>
+    /// <param name="objectName">The name of the storyObject</param>
+    /// <returns>The SaveStoryObject, if found</returns>
+    public SaveStoryObject GetSaveStoryObject(string objectName)
+    {
+        if (saveStoryObjs.ContainsKey(objectName))
+        {
+            return saveStoryObjs[objectName];
+        }
+        return null;
+    }
+
+
     /// <summary>
     /// Gets a specific Save Item's value
     /// </summary>
@@ -132,7 +174,6 @@ public class GameManager : MonoBehaviour
             DontDestroyOnLoad(gameObject);
             instance = this;
             ResetSaveFile();
-            Save();
         }
     }
 
@@ -271,23 +312,40 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void Save()
     {
+        save.playerPosition = PlayerMovements.instance.position;
+        save.playerRotation = PlayerCameraManager.instance.rotation;
+
+        save.storyObjects.Clear();
+        save.storyObjects = SaveObjectManager.instance.GetSaveStoryObjects();
+
         FileManager.SaveJSON(FileManager.savPath + "save.sav", save);
     }
 
     /// <summary>
-    /// Loads the game
+    /// Load the game
     /// </summary>
     public void Load()
     {
         if (System.IO.File.Exists(FileManager.savPath + "save.sav"))
         {
             save = FileManager.LoadJSON<SaveFile>(FileManager.savPath + "save.sav");
+            if (save == null) return;
+
             _saveItems = new Dictionary<string, SaveItem>();
             foreach (SaveItem item in save.items)
             {
                 _saveItems.Add(item.id, item);
             }
             RefreshAdapters();
+
+            saveStoryObjs = new Dictionary<string, SaveStoryObject>();
+            foreach (SaveStoryObject saveStoryObject in save.storyObjects)
+            {
+                saveStoryObjs.Add(saveStoryObject.objectName, saveStoryObject);
+            }
+
+            loading = true;
+            LoadMap(save_currentMap);
         }
     }
 
@@ -323,7 +381,33 @@ public class GameManager : MonoBehaviour
         Save_SetCurrentMap(name);
         SceneManager.LoadScene(name);
 
+        if (loading)
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                yield return new WaitForEndOfFrame();
+            }
+
+            loading = false;
+        }
+
         routine_changeMap = null;
     }
 
+
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha8))
+        {
+            print("Saving...");
+            Save();
+
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha9))
+        {
+            print("Loading...");
+            Load();
+        }
+    }
 }

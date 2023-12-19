@@ -19,6 +19,10 @@ public class SaveFile
     public string currentWeather;
     public List<string> currentFollowers;
 
+    public Vector3 playerPosition;
+    public float playerRotation;
+    public List<SaveStoryObject> storyObjects;
+
     public SaveFile()
     {
         biosUnlocked = new List<string>();
@@ -31,6 +35,10 @@ public class SaveFile
         lastMap = "NONE";
         currentWeather = "DAY";
         currentFollowers = new List<string>();
+
+        playerRotation = 0f;
+        playerPosition = new Vector3();
+        storyObjects = new List<SaveStoryObject>();
     }
 }
 
@@ -48,5 +56,28 @@ public class SaveItem
     {
         this.id = id;
         value = defaultValue;
+    }
+}
+
+
+/// <summary>
+/// Represents a StoryObject (NPC, ...) whose informations will be saved here
+/// </summary>
+[System.Serializable]
+public class SaveStoryObject
+{
+    public string objectName;
+    public Vector3 objectPosition;
+    public float objectRotation;
+    public string npcEventName;
+    public int currentNpcEventIndex;
+
+    public SaveStoryObject(string objectName, Vector3 objectPosition, float objectRotation, string npcEventName = "", int currentNpcEventIndex = 0)
+    {
+        this.objectName = objectName;
+        this.objectPosition = objectPosition;
+        this.objectRotation = objectRotation;
+        this.npcEventName = npcEventName;
+        this.currentNpcEventIndex = currentNpcEventIndex;
     }
 }

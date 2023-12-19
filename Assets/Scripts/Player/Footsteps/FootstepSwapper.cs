@@ -42,7 +42,6 @@ public class FootstepSwapper : MonoBehaviour
 
         if (Physics.Raycast(transform.position, Vector3.down, out hit, 3, layerMask))
         {
-            print(hit.transform);
             Terrain terrain = hit.transform.GetComponent<Terrain>();
 
             if (terrain)

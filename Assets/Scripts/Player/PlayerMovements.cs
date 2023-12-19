@@ -31,6 +31,14 @@ public class PlayerMovements : MonoBehaviour
 
     public static PlayerMovements instance;
 
+    public Vector3 position
+    {
+        get
+        {
+            return body.position;
+        }
+    }
+
     void Awake()
     {
         instance = this;
@@ -49,6 +57,13 @@ public class PlayerMovements : MonoBehaviour
     /// </summary>
     void FindStartingPoint()
     {
+
+        if (GameManager.instance.wasLoaded)
+        {
+            root.position = GameManager.instance.save_playerPosition;
+            return;
+        }
+
         Transform defaultStart = null;
         Transform chosen = null;
         string mapName = GameManager.instance.save_lastMap;

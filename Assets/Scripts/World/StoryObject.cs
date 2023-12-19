@@ -17,7 +17,18 @@ public class StoryObject : MonoBehaviour
     void Start()
     {
         StoryObjectsManager.instance.RegisterStoryObject(this);
+
         RefreshIsVisible();
+    }
+
+    /// <summary>
+    /// Forces the StoryObject value to another
+    /// </summary>
+    /// <param name="value">The new value</param>
+    public void ForceSetValueTo(bool value)
+    {
+        computed = true;
+        this.value = value;
     }
 
     /// <summary>
@@ -80,7 +91,6 @@ public class StoryObject : MonoBehaviour
     /// </summary>
     public void RefreshIsVisible()
     {
-        computed = false;
         gameObject.SetActive(GetCanBeEnabled());
     }
 }
