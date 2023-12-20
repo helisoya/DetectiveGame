@@ -795,6 +795,7 @@ MonoBehaviour:
   followPlayer: 0
   startFollowingAfterMeters: 10
   hiddenAtStart: 0
+  ignoreSaveSystem: 1
   agent: {fileID: 125263835}
   animator: {fileID: 125263838}
   interaction: {fileID: 760331270}
@@ -815,6 +816,7 @@ MonoBehaviour:
   - STORY;=;10
   - STORY;=;11
   needAll: 0
+  refreshOnStart: 1
 --- !u!95 &125263838
 Animator:
   serializedVersion: 5
@@ -966,6 +968,7 @@ MonoBehaviour:
   followPlayer: 0
   startFollowingAfterMeters: 10
   hiddenAtStart: 0
+  ignoreSaveSystem: 1
   agent: {fileID: 156238763}
   animator: {fileID: 156238766}
   interaction: {fileID: 2005149990}
@@ -986,6 +989,7 @@ MonoBehaviour:
   - STORY;=;10
   - STORY;=;11
   needAll: 0
+  refreshOnStart: 1
 --- !u!95 &156238766
 Animator:
   serializedVersion: 5
@@ -1457,6 +1461,7 @@ MonoBehaviour:
   followPlayer: 0
   startFollowingAfterMeters: 10
   hiddenAtStart: 0
+  ignoreSaveSystem: 1
   agent: {fileID: 275744305}
   animator: {fileID: 275744307}
   interaction: {fileID: 2067759045}
@@ -1499,6 +1504,7 @@ MonoBehaviour:
   - STORY;=;10
   - STORY;=;11
   needAll: 0
+  refreshOnStart: 1
 --- !u!95 &275744307
 Animator:
   serializedVersion: 5
@@ -2377,6 +2383,7 @@ MonoBehaviour:
   followPlayer: 0
   startFollowingAfterMeters: 10
   hiddenAtStart: 0
+  ignoreSaveSystem: 1
   agent: {fileID: 470786924}
   animator: {fileID: 470786927}
   interaction: {fileID: 59632959}
@@ -2397,6 +2404,7 @@ MonoBehaviour:
   - STORY;=;10
   - STORY;=;11
   needAll: 0
+  refreshOnStart: 1
 --- !u!95 &470786927
 Animator:
   serializedVersion: 5
@@ -2548,6 +2556,7 @@ MonoBehaviour:
   followPlayer: 0
   startFollowingAfterMeters: 10
   hiddenAtStart: 1
+  ignoreSaveSystem: 1
   agent: {fileID: 477071385}
   animator: {fileID: 477071388}
   interaction: {fileID: 428306006}
@@ -2568,6 +2577,7 @@ MonoBehaviour:
   - STORY;=;10
   - STORY;=;11
   needAll: 0
+  refreshOnStart: 1
 --- !u!95 &477071388
 Animator:
   serializedVersion: 5
@@ -3121,6 +3131,11 @@ PrefabInstance:
       propertyPath: followPlayer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8679224687514535432, guid: 2e14f3506ea19d54ab05c9eeb342d3c5,
+        type: 3}
+      propertyPath: ignoreSaveSystem
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8679224687870432129, guid: 2e14f3506ea19d54ab05c9eeb342d3c5,
         type: 3}
       propertyPath: storyObj
@@ -3181,7 +3196,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5517546756800994248, guid: 2e14f3506ea19d54ab05c9eeb342d3c5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2e14f3506ea19d54ab05c9eeb342d3c5, type: 3}
 --- !u!4 &589991100 stripped
 Transform:
@@ -3210,6 +3226,7 @@ MonoBehaviour:
   enablingConditions:
   - STORY;=;13
   needAll: 0
+  refreshOnStart: 1
 --- !u!1 &609789162
 GameObject:
   m_ObjectHideFlags: 0
@@ -14569,6 +14586,7 @@ MonoBehaviour:
   - STORY;=;10
   - STORY;=;11
   needAll: 0
+  refreshOnStart: 1
 --- !u!95 &1076764037
 Animator:
   serializedVersion: 5
@@ -14628,6 +14646,7 @@ MonoBehaviour:
   followPlayer: 0
   startFollowingAfterMeters: 10
   hiddenAtStart: 0
+  ignoreSaveSystem: 1
   agent: {fileID: 1076764038}
   animator: {fileID: 470786927}
   interaction: {fileID: 1965511680}
@@ -15840,6 +15859,7 @@ MonoBehaviour:
   - STORY;=;10
   - STORY;=;11
   needAll: 0
+  refreshOnStart: 1
 --- !u!114 &1550283280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15856,6 +15876,7 @@ MonoBehaviour:
   followPlayer: 0
   startFollowingAfterMeters: 10
   hiddenAtStart: 0
+  ignoreSaveSystem: 1
   agent: {fileID: 1550283281}
   animator: {fileID: 1550283282}
   interaction: {fileID: 1205903865}
@@ -16026,6 +16047,7 @@ MonoBehaviour:
   - STORY;=;13
   - STORY;=;14
   needAll: 0
+  refreshOnStart: 1
 --- !u!114 &1587969230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16042,6 +16064,7 @@ MonoBehaviour:
   followPlayer: 0
   startFollowingAfterMeters: 10
   hiddenAtStart: 0
+  ignoreSaveSystem: 1
   agent: {fileID: 1587969231}
   animator: {fileID: 0}
   interaction: {fileID: 1443535722}
@@ -17917,6 +17940,7 @@ MonoBehaviour:
   - STORY;=;13
   - STORY;=;14
   needAll: 0
+  refreshOnStart: 1
 --- !u!114 &2019384694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17933,6 +17957,7 @@ MonoBehaviour:
   followPlayer: 0
   startFollowingAfterMeters: 10
   hiddenAtStart: 0
+  ignoreSaveSystem: 1
   agent: {fileID: 2019384696}
   animator: {fileID: 2019384695}
   interaction: {fileID: 973878397}
@@ -18271,6 +18296,7 @@ MonoBehaviour:
   - STORY;=;13
   - STORY;=;14
   needAll: 0
+  refreshOnStart: 1
 --- !u!114 &2070394051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18287,6 +18313,7 @@ MonoBehaviour:
   followPlayer: 0
   startFollowingAfterMeters: 10
   hiddenAtStart: 0
+  ignoreSaveSystem: 1
   agent: {fileID: 2070394053}
   animator: {fileID: 2070394052}
   interaction: {fileID: 1189966208}
@@ -18539,6 +18566,7 @@ MonoBehaviour:
   followPlayer: 0
   startFollowingAfterMeters: 10
   hiddenAtStart: 0
+  ignoreSaveSystem: 1
   agent: {fileID: 2098883607}
   animator: {fileID: 2098883610}
   interaction: {fileID: 609789163}
@@ -18559,6 +18587,7 @@ MonoBehaviour:
   - STORY;=;10
   - STORY;=;11
   needAll: 0
+  refreshOnStart: 1
 --- !u!95 &2098883610
 Animator:
   serializedVersion: 5

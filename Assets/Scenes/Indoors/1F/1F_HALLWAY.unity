@@ -583,6 +583,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referenceName: Robert
+  storyObj: {fileID: 275744306}
   _focusOn: {fileID: 236655780}
   _turn: {fileID: 275744302}
 --- !u!1001 &267411974
@@ -11203,9 +11204,11 @@ MonoBehaviour:
   followPlayer: 0
   startFollowingAfterMeters: 10
   hiddenAtStart: 0
+  ignoreSaveSystem: 1
   agent: {fileID: 275744305}
   animator: {fileID: 275744307}
-  interaction: {fileID: 0}
+  interaction: {fileID: 2067759045}
+  storyObj: {fileID: 275744306}
 --- !u!195 &275744305
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -11244,6 +11247,7 @@ MonoBehaviour:
   - STORY;=;8
   - STORY;=;9
   needAll: 0
+  refreshOnStart: 1
 --- !u!95 &275744307
 Animator:
   serializedVersion: 5
@@ -11500,6 +11504,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referenceName: Lydia
+  storyObj: {fileID: 1649828563}
   _focusOn: {fileID: 337856646}
   _turn: {fileID: 1649828559}
 --- !u!1001 &398043374
@@ -11643,6 +11648,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referenceName: Katherine
+  storyObj: {fileID: 1550283279}
 --- !u!95 &413588455
 Animator:
   serializedVersion: 5
@@ -13370,6 +13376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referenceName: Katherine
+  storyObj: {fileID: 1550283279}
   _focusOn: {fileID: 790435624}
   _turn: {fileID: 1550283276}
 --- !u!1001 &821728935
@@ -29014,6 +29021,7 @@ MonoBehaviour:
   - STORY;=;8
   - STORY;=;9
   needAll: 0
+  refreshOnStart: 1
 --- !u!114 &1550283280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29030,9 +29038,11 @@ MonoBehaviour:
   followPlayer: 0
   startFollowingAfterMeters: 10
   hiddenAtStart: 0
+  ignoreSaveSystem: 1
   agent: {fileID: 1550283281}
   animator: {fileID: 1550283282}
-  interaction: {fileID: 0}
+  interaction: {fileID: 1205903865}
+  storyObj: {fileID: 1550283279}
 --- !u!195 &1550283281
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -29106,6 +29116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referenceName: STORY_8_Position
+  storyObj: {fileID: 0}
   _focusOn: {fileID: 1596424743}
   _turn: {fileID: 1596424743}
 --- !u!4 &1596424743
@@ -29420,9 +29431,11 @@ MonoBehaviour:
   followPlayer: 0
   startFollowingAfterMeters: 10
   hiddenAtStart: 0
+  ignoreSaveSystem: 1
   agent: {fileID: 1649828561}
   animator: {fileID: 1649828564}
   interaction: {fileID: 0}
+  storyObj: {fileID: 1649828563}
 --- !u!114 &1649828563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29438,6 +29451,7 @@ MonoBehaviour:
   enablingConditions:
   - STORY;=;8
   needAll: 0
+  refreshOnStart: 1
 --- !u!95 &1649828564
 Animator:
   serializedVersion: 5
@@ -55270,6 +55284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referenceName: Robert
+  storyObj: {fileID: 275744306}
 --- !u!95 &1842354747
 Animator:
   serializedVersion: 5
@@ -56361,6 +56376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referenceName: Lydia
+  storyObj: {fileID: 1649828563}
 --- !u!95 &2019353266
 Animator:
   serializedVersion: 5

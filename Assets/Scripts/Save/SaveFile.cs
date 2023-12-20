@@ -71,13 +71,15 @@ public class SaveStoryObject
     public float objectRotation;
     public string npcEventName;
     public int currentNpcEventIndex;
+    public bool npcHidden;
 
-    public SaveStoryObject(string objectName, Vector3 objectPosition, float objectRotation, string npcEventName = "", int currentNpcEventIndex = 0)
+    public SaveStoryObject(string objectName, Vector3 objectPosition, float objectRotation, bool npcHidden = false, string npcEventName = "", int currentNpcEventIndex = 0)
     {
         this.objectName = objectName;
         this.objectPosition = objectPosition;
         this.objectRotation = objectRotation;
         this.npcEventName = npcEventName;
+        this.npcHidden = npcHidden;
         this.currentNpcEventIndex = currentNpcEventIndex;
     }
 }

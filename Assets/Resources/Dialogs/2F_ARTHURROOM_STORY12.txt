@@ -54,7 +54,7 @@ SetNPCHidden(Lydia;true)
 
 FocusCamera(Player)
 Dialog(Arthur;I won't investigate "much"...;Player;false)
-Dialog(Arthur;<color=blueBut I'll still talk to Daniel, just to be sure.</color>;Player;false)
+Dialog(Arthur;<color=blue>But I'll still talk to Daniel, just to be sure.</color>;Player;false)
 Dialog(Arthur;Well... Time to go to sleep;Player;true)
 
 FadeBg(1;5)

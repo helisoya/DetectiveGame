@@ -11,6 +11,7 @@ public class RepositoryObject : MonoBehaviour
     [SerializeField] protected string referenceName;
     [SerializeField] protected StoryObject storyObj;
 
+
     /// <summary>
     /// Register the object in the dialog system
     /// </summary>
@@ -23,7 +24,7 @@ public class RepositoryObject : MonoBehaviour
     /// </summary>
     public virtual void Start()
     {
-        if (storyObj == null || storyObj.GetCanBeEnabled())
+        if ((storyObj == null || storyObj.GetCanBeEnabled()))
         {
             AddToRepository();
         }

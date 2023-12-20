@@ -626,6 +626,7 @@ GameObject:
   - component: {fileID: 2458891926038509224}
   - component: {fileID: 2458891926038509225}
   - component: {fileID: 2458891926038509226}
+  - component: {fileID: 3173459397960413270}
   m_Layer: 0
   m_Name: Pearl
   m_TagString: Untagged
@@ -715,6 +716,22 @@ MonoBehaviour:
   animator: {fileID: 2458891926038509224}
   interaction: {fileID: 2458891925971375995}
   storyObj: {fileID: 0}
+--- !u!114 &3173459397960413270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3377370950253464566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49d16558940bed244942a21eb436dd20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveName: Follower_Pearl
+  npc: {fileID: 2458891926038509226}
+  storyObject: {fileID: 0}
+  ignoreForLoad: 0
 --- !u!1 &3497832816994582858
 GameObject:
   m_ObjectHideFlags: 0

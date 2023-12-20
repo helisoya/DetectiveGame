@@ -3705,7 +3705,7 @@ PrefabInstance:
     - target: {fileID: 7720391610542800624, guid: 1ae079d84730e1b45a457630e6a4767f,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.4519052
+      value: -0.45190516
       objectReference: {fileID: 0}
     - target: {fileID: 7720391610542800624, guid: 1ae079d84730e1b45a457630e6a4767f,
         type: 3}
@@ -5040,7 +5040,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referenceName: Lydia
-  storyObj: {fileID: 0}
+  storyObj: {fileID: 1720161269}
 --- !u!95 &1193446885
 Animator:
   serializedVersion: 5
@@ -8171,7 +8171,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 281b188a4be419340948619ae0d774b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  saveObjectName: 
   enablingConditions:
   - STORY;=;5
   needAll: 0
@@ -8208,6 +8207,20 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1260253877}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1260253884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260253878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01de9a5644612bd49923c081938173b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveName: STORY5_Key
+  storyObject: {fileID: 1260253880}
 --- !u!850595691 &1260725862
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -9024,7 +9037,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referenceName: Lydia
-  storyObj: {fileID: 0}
+  storyObj: {fileID: 1720161269}
   _focusOn: {fileID: 1657648470}
   _turn: {fileID: 1720161265}
 --- !u!1 &1658224882 stripped
@@ -9330,11 +9343,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7520fe099a98cb64d950a2901e85124b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  saveObjectName: 
   referenceName: Lydia
   followPlayer: 0
   startFollowingAfterMeters: 10
   hiddenAtStart: 0
+  ignoreSaveSystem: 0
   agent: {fileID: 1720161267}
   animator: {fileID: 1720161266}
   interaction: {fileID: 934150321}
@@ -9351,7 +9364,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 281b188a4be419340948619ae0d774b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  saveObjectName: 
   enablingConditions:
   - STORY;<;7
   needAll: 0
@@ -9370,6 +9382,7 @@ MonoBehaviour:
   saveName: Lydia_Intro
   npc: {fileID: 1720161268}
   storyObject: {fileID: 1720161269}
+  ignoreForLoad: 0
 --- !u!1 &1731670607 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8164078558771037576, guid: e390bd4f6f89bad4c8ca57faad99f289,
@@ -10316,7 +10329,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 281b188a4be419340948619ae0d774b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  saveObjectName: 
   enablingConditions:
   - STORY;>;6
   needAll: 0

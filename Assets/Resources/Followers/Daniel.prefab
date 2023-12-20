@@ -822,6 +822,7 @@ GameObject:
   - component: {fileID: 8679224687514535438}
   - component: {fileID: 8679224687514535432}
   - component: {fileID: 8679224687514535433}
+  - component: {fileID: 5517546756800994248}
   m_Layer: 0
   m_Name: Daniel
   m_TagString: Untagged
@@ -885,6 +886,7 @@ MonoBehaviour:
   followPlayer: 1
   startFollowingAfterMeters: 10
   hiddenAtStart: 0
+  ignoreSaveSystem: 0
   agent: {fileID: 8679224687514535433}
   animator: {fileID: 8679224687514535438}
   interaction: {fileID: 8679224687450680358}
@@ -911,6 +913,22 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &5517546756800994248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8409246415441099606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49d16558940bed244942a21eb436dd20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveName: Follower_Daniel
+  npc: {fileID: 8679224687514535432}
+  storyObject: {fileID: 0}
+  ignoreForLoad: 0
 --- !u!1 &8608573800096077837
 GameObject:
   m_ObjectHideFlags: 0

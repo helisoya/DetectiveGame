@@ -202,6 +202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referenceName: Lydia
+  storyObj: {fileID: 0}
   _focusOn: {fileID: 67473992}
   _turn: {fileID: 821577981}
 --- !u!1 &202958828
@@ -282,6 +283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referenceName: Lydia
+  storyObj: {fileID: 0}
 --- !u!95 &499428574
 Animator:
   serializedVersion: 5
@@ -1189,6 +1191,7 @@ MonoBehaviour:
   enablingConditions:
   - STORY;=;12
   needAll: 0
+  refreshOnStart: 1
 --- !u!114 &821577984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1205,9 +1208,11 @@ MonoBehaviour:
   followPlayer: 0
   startFollowingAfterMeters: 10
   hiddenAtStart: 1
+  ignoreSaveSystem: 1
   agent: {fileID: 821577985}
   animator: {fileID: 821577986}
   interaction: {fileID: 0}
+  storyObj: {fileID: 0}
 --- !u!195 &821577985
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2147,6 +2152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referenceName: STORY_12_Position
+  storyObj: {fileID: 0}
   _focusOn: {fileID: 1545501300}
   _turn: {fileID: 1545501300}
 --- !u!1 &1634531328

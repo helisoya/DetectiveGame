@@ -9874,6 +9874,7 @@ MonoBehaviour:
   followPlayer: 0
   startFollowingAfterMeters: 10
   hiddenAtStart: 0
+  ignoreSaveSystem: 0
   agent: {fileID: 1796485709}
   animator: {fileID: 1796485710}
   interaction: {fileID: 850511390}
@@ -9921,6 +9922,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1796485711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796485707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49d16558940bed244942a21eb436dd20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveName: Olivier
+  npc: {fileID: 1796485708}
+  storyObject: {fileID: 0}
+  ignoreForLoad: 0
 --- !u!1 &1797742341 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8164078558771037576, guid: 14bc105aeec3b58499ee9b2f1bfcd265,

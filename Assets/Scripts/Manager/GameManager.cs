@@ -129,6 +129,16 @@ public class GameManager : MonoBehaviour
         return null;
     }
 
+    /// <summary>
+    /// Checks if the Follower is enabled
+    /// </summary>
+    /// <param name="follower">The follower's ID</param>
+    /// <returns>Is the follower active ?</returns>
+    public bool HasFollower(string follower)
+    {
+        return save.currentFollowers.Contains(follower);
+    }
+
 
     /// <summary>
     /// Gets a specific Save Item's value
@@ -378,6 +388,7 @@ public class GameManager : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
 
+        SaveObjectManager.instance.ResetSaveObjects();
         Save_SetCurrentMap(name);
         SceneManager.LoadScene(name);
 

@@ -234,6 +234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referenceName: Esther
+  storyObj: {fileID: 403117635}
 --- !u!95 &255102856
 Animator:
   serializedVersion: 5
@@ -415,9 +416,11 @@ MonoBehaviour:
   followPlayer: 0
   startFollowingAfterMeters: 10
   hiddenAtStart: 1
+  ignoreSaveSystem: 1
   agent: {fileID: 403117634}
   animator: {fileID: 403117633}
   interaction: {fileID: 0}
+  storyObj: {fileID: 403117635}
 --- !u!95 &403117633
 Animator:
   serializedVersion: 5
@@ -461,6 +464,22 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &403117635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403117630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 281b188a4be419340948619ae0d774b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enablingConditions:
+  - STORY;=;9
+  needAll: 0
+  refreshOnStart: 1
 --- !u!1 &525318549
 GameObject:
   m_ObjectHideFlags: 0
@@ -8847,6 +8866,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referenceName: Esther
+  storyObj: {fileID: 403117635}
   _focusOn: {fileID: 1819889572}
   _turn: {fileID: 403117628}
 --- !u!1001 &1854125973
@@ -9379,6 +9399,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 3.2000122
       objectReference: {fileID: 0}
+    - target: {fileID: 6947227433287522280, guid: 85fec7c4db9eefe49bfb609f63fdd0b3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -12.000015
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85fec7c4db9eefe49bfb609f63fdd0b3, type: 3}
 --- !u!1 &2085704739
@@ -9517,6 +9542,7 @@ MonoBehaviour:
   enablingConditions:
   - STORY;=;9
   needAll: 0
+  refreshOnStart: 0
 --- !u!1001 &5613967617534681273
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9593,16 +9619,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5517546756800994248, guid: 2e14f3506ea19d54ab05c9eeb342d3c5,
+        type: 3}
+      propertyPath: storyObject
+      value: 
+      objectReference: {fileID: 919132149520202933}
+    - target: {fileID: 5517546756800994248, guid: 2e14f3506ea19d54ab05c9eeb342d3c5,
+        type: 3}
+      propertyPath: ignoreForLoad
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5517546756800994248, guid: 2e14f3506ea19d54ab05c9eeb342d3c5,
+        type: 3}
+      propertyPath: followerRequiredForIgnoring
+      value: Daniel
+      objectReference: {fileID: 0}
     - target: {fileID: 8409246415441099606, guid: 2e14f3506ea19d54ab05c9eeb342d3c5,
         type: 3}
       propertyPath: m_Name
       value: Daniel
       objectReference: {fileID: 0}
+    - target: {fileID: 8679224686172705666, guid: 2e14f3506ea19d54ab05c9eeb342d3c5,
+        type: 3}
+      propertyPath: storyObj
+      value: 
+      objectReference: {fileID: 919132149520202933}
+    - target: {fileID: 8679224687514535432, guid: 2e14f3506ea19d54ab05c9eeb342d3c5,
+        type: 3}
+      propertyPath: storyObj
+      value: 
+      objectReference: {fileID: 919132149520202933}
     - target: {fileID: 8679224687514535432, guid: 2e14f3506ea19d54ab05c9eeb342d3c5,
         type: 3}
       propertyPath: followPlayer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8679224687870432129, guid: 2e14f3506ea19d54ab05c9eeb342d3c5,
+        type: 3}
+      propertyPath: storyObj
+      value: 
+      objectReference: {fileID: 919132149520202933}
     - target: {fileID: 9221249580378071532, guid: 2e14f3506ea19d54ab05c9eeb342d3c5,
         type: 3}
       propertyPath: m_RootOrder

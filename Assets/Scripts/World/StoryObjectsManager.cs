@@ -34,5 +34,6 @@ public class StoryObjectsManager : MonoBehaviour
         {
             obj.RefreshIsVisible();
         }
+        PlayerDetectiveVision.instance.FindRenderers();
     }
 }

@@ -10,6 +10,7 @@ public class StoryObject : MonoBehaviour
 {
     [SerializeField] private string[] enablingConditions;
     [SerializeField] private bool needAll;
+    [SerializeField] private bool refreshOnStart = true;
 
     private bool computed = false;
     private bool value;
@@ -18,7 +19,10 @@ public class StoryObject : MonoBehaviour
     {
         StoryObjectsManager.instance.RegisterStoryObject(this);
 
-        RefreshIsVisible();
+        if (refreshOnStart)
+        {
+            RefreshIsVisible();
+        }
     }
 
     /// <summary>
@@ -88,9 +92,15 @@ public class StoryObject : MonoBehaviour
 
     /// <summary>
     /// Refreshes if the object can be shown
+    /// <param name="recompute"/>Recompute if the object can be enabled</param>
     /// </summary>
-    public void RefreshIsVisible()
+    public void RefreshIsVisible(bool recompute = true)
     {
+        if (recompute)
+        {
+            computed = false;
+        }
+
         gameObject.SetActive(GetCanBeEnabled());
     }
 }

@@ -14,6 +14,13 @@ public class PlayerDetectiveVision : MonoBehaviour
     private bool inDetectiveMode = false;
     private bool foundRenderers = false;
 
+    public static PlayerDetectiveVision instance;
+
+    void Awake()
+    {
+        instance = this;
+    }
+
     void Start()
     {
         materials = new List<Material>();
@@ -22,7 +29,7 @@ public class PlayerDetectiveVision : MonoBehaviour
     /// <summary>
     /// Finds the renderers that renders the DetectiveVision shader
     /// </summary>
-    void FindRenderers()
+    public void FindRenderers()
     {
         Renderer[] renderers = (Renderer[])(Object.FindObjectsOfType(typeof(Renderer)));
         materials.Clear();

@@ -3,16 +3,33 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class SaveObjectManager : MonoBehaviour
+public class SaveObjectManager
 {
-    public static SaveObjectManager instance;
+    public static SaveObjectManager instance
+    {
+        get
+        {
+            if (_instance == null) _instance = new SaveObjectManager();
+            return _instance;
+        }
+    }
+
+    private static SaveObjectManager _instance;
     private List<SaveObject> saveObjects;
 
-    void Awake()
+    public SaveObjectManager()
     {
-        instance = this;
         saveObjects = new List<SaveObject>();
     }
+
+    /// <summary>
+    /// Resets the save objects registered
+    /// </summary>
+    public void ResetSaveObjects()
+    {
+        saveObjects.Clear();
+    }
+
 
     /// <summary>
     /// Register a SaveObject
@@ -21,6 +38,15 @@ public class SaveObjectManager : MonoBehaviour
     public void RegisterSaveObject(SaveObject saveObject)
     {
         saveObjects.Add(saveObject);
+    }
+
+    /// <summary>
+    /// Unregister a SaveObject
+    /// </summary>
+    /// <param name="saveObject"></param>
+    public void UnRegister(SaveObject saveObject)
+    {
+        saveObjects.Remove(saveObject);
     }
 
     public List<SaveStoryObject> GetSaveStoryObjects()

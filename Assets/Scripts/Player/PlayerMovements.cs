@@ -61,6 +61,7 @@ public class PlayerMovements : MonoBehaviour
         if (GameManager.instance.wasLoaded)
         {
             root.position = GameManager.instance.save_playerPosition;
+            InstantiateFollowers();
             return;
         }
 
@@ -94,12 +95,19 @@ public class PlayerMovements : MonoBehaviour
             root.eulerAngles = chosen.eulerAngles;
         }
 
+        InstantiateFollowers();
+    }
+
+    /// <summary>
+    /// Instantiates the followers to the player's position
+    /// </summary>
+    void InstantiateFollowers()
+    {
         instanciatedFollowers = new List<GameObject>();
         foreach (string follower in GameManager.instance.save_currentfollowers)
         {
             instanciatedFollowers.Add(Instantiate(Resources.Load<GameObject>("Followers/" + follower), transform.position, Quaternion.identity));
         }
-
     }
 
     void Update()

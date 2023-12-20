@@ -15,7 +15,7 @@ public class Utils
     {
         foreach (Transform child in parent)
         {
-            Object.Destroy(child);
+            Object.Destroy(child.gameObject);
         }
     }
 }

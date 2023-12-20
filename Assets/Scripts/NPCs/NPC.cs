@@ -14,6 +14,7 @@ public class NPC : MonoBehaviour
     [SerializeField] private bool followPlayer;
     [SerializeField] private float startFollowingAfterMeters;
     [SerializeField] private bool hiddenAtStart;
+    [SerializeField] private bool ignoreSaveSystem;
     private Transform playerRef;
     private bool ignoreUpdate;
     private Coroutine routineEvent;
@@ -74,9 +75,39 @@ public class NPC : MonoBehaviour
         }
     }
 
+    public bool hidden
+    {
+        get
+        {
+            return !gameObject.activeInHierarchy;
+        }
+    }
+
+
     void Start()
     {
-        agent.isStopped = true;
+        if (ignoreSaveSystem)
+        {
+            Init();
+        }
+    }
+
+    void Awake()
+    {
+        ignoreUpdate = true;
+    }
+
+
+    /// <summary>
+    /// Initialize the NPC
+    /// </summary>
+    public void Init()
+    {
+        if (agent.isOnNavMesh)
+        {
+            agent.isStopped = true;
+        }
+
         ignoreUpdate = false;
         playerRef = PlayerCameraManager.instance.transform;
 
@@ -85,7 +116,7 @@ public class NPC : MonoBehaviour
             DialogMaster.instance.RegisterNPC(referenceName, this);
         }
 
-        if (!GameManager.instance.wasLoaded)
+        if ((!GameManager.instance.wasLoaded || ignoreSaveSystem) && hiddenAtStart)
         {
             SetHidden(hiddenAtStart);
         }
@@ -99,6 +130,7 @@ public class NPC : MonoBehaviour
     {
         SetRotation(save.objectRotation);
         Teleport(save.objectPosition);
+        SetHidden(save.npcHidden);
         if (!string.IsNullOrEmpty(save.npcEventName))
         {
             StartEvent(save.npcEventName, save.currentNpcEventIndex);
@@ -214,11 +246,19 @@ public class NPC : MonoBehaviour
     /// <param name="startIndex">The starting index</param>
     public void StartEvent(string fileName, int startIndex = 0)
     {
+        StopEvent();
+        routineEvent = DialogMaster.instance.StartCoroutine(Routine_Event(fileName, startIndex));
+    }
+
+    /// <summary>
+    /// Stop the current event if it exists
+    /// </summary>
+    public void StopEvent()
+    {
         if (routineEvent != null)
         {
             StopCoroutine(routineEvent);
         }
-        routineEvent = DialogMaster.instance.StartCoroutine(Routine_Event(fileName, startIndex));
     }
 
     /// <summary>
@@ -258,6 +298,11 @@ public class NPC : MonoBehaviour
                     ChangeFollowPlayer(bool.Parse(split[1]));
                     break;
                 case "SetDestination":
+                    while (!agent.isOnNavMesh)
+                    {
+                        yield return new WaitForEndOfFrame();
+                    }
+
                     SetDestination(DialogMaster.instance.npcWaypoints[split[1]].position);
                     yield return new WaitForEndOfFrame();
                     while (!arrivedAtDestination)
@@ -292,7 +337,8 @@ public class NPC : MonoBehaviour
 
         }
 
-
+        _currentEvent = "";
+        _currentEventIndex = 0;
         ignoreUpdate = false;
         routineEvent = null;
     }

@@ -561,7 +561,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3946093602680994864}
   - component: {fileID: 3946093602680994871}
-  - component: {fileID: 2111138505831389578}
+  - component: {fileID: 1658999304971101631}
   m_Layer: 0
   m_Name: Collider
   m_TagString: Untagged
@@ -598,7 +598,7 @@ CapsuleCollider:
   m_Height: 4.5627594
   m_Direction: 1
   m_Center: {x: -0.038235903, y: 2.328555, z: 0}
---- !u!114 &2111138505831389578
+--- !u!114 &1658999304971101631
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -607,11 +607,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 3946093602680994865}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc72b2a3bad700d4e9ef23a0640e5fdd, type: 3}
+  m_Script: {fileID: 11500000, guid: e00f146450b670646903bf28517c9579, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hoverSprite: {fileID: 2800000, guid: 4c635989fff9f924d8d595166e6820ba, type: 3}
   dialogToLoad: FOLLOWER_Lydia_Check
+  npc: {fileID: 3946093601894419009}
 --- !u!1 &3955218374841205927
 GameObject:
   m_ObjectHideFlags: 0
@@ -690,6 +691,7 @@ GameObject:
   - component: {fileID: 3946093601894419015}
   - component: {fileID: 3946093601894419010}
   - component: {fileID: 3946093601894419009}
+  - component: {fileID: 2309916246801662156}
   m_Layer: 0
   m_Name: Lydia
   m_TagString: Untagged
@@ -777,8 +779,24 @@ MonoBehaviour:
   hiddenAtStart: 0
   agent: {fileID: 3946093601894419010}
   animator: {fileID: 3946093601894419015}
-  interaction: {fileID: 0}
+  interaction: {fileID: 1658999304971101631}
   storyObj: {fileID: 0}
+--- !u!114 &2309916246801662156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4179972573986486031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49d16558940bed244942a21eb436dd20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveName: Follower_Lydia
+  npc: {fileID: 3946093601894419009}
+  storyObject: {fileID: 0}
+  ignoreForLoad: 0
 --- !u!1 &4850780746157376205
 GameObject:
   m_ObjectHideFlags: 0

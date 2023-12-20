@@ -1214,7 +1214,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 322814916569749859, guid: ecb96b48ba8345044933df0e71ed1484, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ecb96b48ba8345044933df0e71ed1484, type: 3}
 --- !u!1001 &524322150
 PrefabInstance:
@@ -1923,6 +1924,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1960723224}
     m_Modifications:
+    - target: {fileID: 5517546756800994248, guid: 2e14f3506ea19d54ab05c9eeb342d3c5,
+        type: 3}
+      propertyPath: storyObject
+      value: 
+      objectReference: {fileID: 667086285}
+    - target: {fileID: 5517546756800994248, guid: 2e14f3506ea19d54ab05c9eeb342d3c5,
+        type: 3}
+      propertyPath: ignoreForLoad
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5517546756800994248, guid: 2e14f3506ea19d54ab05c9eeb342d3c5,
+        type: 3}
+      propertyPath: followerRequiredForIgnoring
+      value: Daniel
+      objectReference: {fileID: 0}
     - target: {fileID: 8409246415441099606, guid: 2e14f3506ea19d54ab05c9eeb342d3c5,
         type: 3}
       propertyPath: m_Name
@@ -2037,6 +2053,7 @@ MonoBehaviour:
   enablingConditions:
   - STORY;=;14
   needAll: 0
+  refreshOnStart: 1
 --- !u!1001 &695016158
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2144,6 +2161,7 @@ MonoBehaviour:
   enablingConditions:
   - STORY;=;18
   needAll: 0
+  refreshOnStart: 1
 --- !u!114 &695016163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2160,6 +2178,7 @@ MonoBehaviour:
   followPlayer: 0
   startFollowingAfterMeters: 10
   hiddenAtStart: 0
+  ignoreSaveSystem: 1
   agent: {fileID: 695016165}
   animator: {fileID: 695016164}
   interaction: {fileID: 1041198820}
@@ -3096,6 +3115,7 @@ MonoBehaviour:
   enablingConditions:
   - STORY;=;18
   needAll: 0
+  refreshOnStart: 1
 --- !u!114 &866390025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3112,6 +3132,7 @@ MonoBehaviour:
   followPlayer: 0
   startFollowingAfterMeters: 10
   hiddenAtStart: 0
+  ignoreSaveSystem: 0
   agent: {fileID: 866390026}
   animator: {fileID: 866390027}
   interaction: {fileID: 799306200}
@@ -3159,6 +3180,23 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &866390028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866390023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49d16558940bed244942a21eb436dd20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveName: Follower_Pearl
+  npc: {fileID: 866390025}
+  storyObject: {fileID: 866390024}
+  ignoreForLoad: 1
+  followerRequiredForIgnoring: Pearl
 --- !u!1001 &881972881
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3470,12 +3508,12 @@ PrefabInstance:
     - target: {fileID: 7720391608949689652, guid: 1ae079d84730e1b45a457630e6a4767f,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.000025624768
+      value: 0.000025641772
       objectReference: {fileID: 0}
     - target: {fileID: 7720391608949689652, guid: 1ae079d84730e1b45a457630e6a4767f,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.0000039756164
+      value: 0.000003978254
       objectReference: {fileID: 0}
     - target: {fileID: 7720391608949689652, guid: 1ae079d84730e1b45a457630e6a4767f,
         type: 3}
@@ -3535,7 +3573,7 @@ PrefabInstance:
     - target: {fileID: 7720391610410401249, guid: 1ae079d84730e1b45a457630e6a4767f,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.0000049054374
+      value: 0.000004905437
       objectReference: {fileID: 0}
     - target: {fileID: 7720391610410401249, guid: 1ae079d84730e1b45a457630e6a4767f,
         type: 3}
@@ -3545,7 +3583,7 @@ PrefabInstance:
     - target: {fileID: 7720391610410401249, guid: 1ae079d84730e1b45a457630e6a4767f,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.18910751
+      value: 0.1891075
       objectReference: {fileID: 0}
     - target: {fileID: 7720391610542800624, guid: 1ae079d84730e1b45a457630e6a4767f,
         type: 3}
@@ -5770,6 +5808,7 @@ MonoBehaviour:
   enablingConditions:
   - STORY;=;7
   needAll: 0
+  refreshOnStart: 1
 --- !u!114 &1342948188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5786,6 +5825,7 @@ MonoBehaviour:
   followPlayer: 0
   startFollowingAfterMeters: 10
   hiddenAtStart: 0
+  ignoreSaveSystem: 0
   agent: {fileID: 1342948189}
   animator: {fileID: 1342948190}
   interaction: {fileID: 0}
@@ -5833,6 +5873,23 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1342948191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342948184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49d16558940bed244942a21eb436dd20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveName: Lydia_Story7
+  npc: {fileID: 1342948188}
+  storyObject: {fileID: 1342948187}
+  ignoreForLoad: 0
+  followerRequiredForIgnoring: 
 --- !u!1 &1360268166
 GameObject:
   m_ObjectHideFlags: 0
@@ -36041,6 +36098,7 @@ MonoBehaviour:
   enablingConditions:
   - STORY;>;7
   needAll: 0
+  refreshOnStart: 1
 --- !u!1 &4365658949539398076
 GameObject:
   m_ObjectHideFlags: 0
