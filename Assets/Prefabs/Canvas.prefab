@@ -1375,6 +1375,7 @@ MonoBehaviour:
   textCharacter: {fileID: 3788230083830589431}
   continueDialogMark: {fileID: 3788230082932412096}
   dialogPassed: 0
+  typingSpeed: 5
   lockpickMiniGame: {fileID: 4284002438564315095}
   choiceRoot: {fileID: 3788230083188538807}
   choicePrefab: {fileID: 7836999519857620410, guid: aaee10379c7c04c40b8257b0257365b8,

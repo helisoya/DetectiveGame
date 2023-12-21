@@ -16,6 +16,9 @@ public class GameGUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI textCharacter;
     [SerializeField] private GameObject continueDialogMark;
     [HideInInspector] public bool dialogPassed;
+    [SerializeField] private float typingSpeed;
+    private bool dialogSkip;
+    private Coroutine routineTyping;
 
 
     [Header("Mini Games")]
@@ -257,7 +260,35 @@ public class GameGUI : MonoBehaviour
         dialogPassed = false;
         textDialog.text = dialog;
         textCharacter.text = speaker;
+        textDialog.maxVisibleCharacters = 0;
         dialogRoot.SetActive(true);
+        continueDialogMark.SetActive(false);
+
+        if (routineTyping != null)
+        {
+            StopCoroutine(routineTyping);
+        }
+        routineTyping = StartCoroutine(Routine_Typing());
+    }
+
+    /// <summary>
+    /// Routine for the typewritter effect
+    /// </summary>
+    /// <returns>IEnumerator</returns>
+    IEnumerator Routine_Typing()
+    {
+        int textLength = textDialog.text.Length;
+
+        while (textDialog.maxVisibleCharacters < textLength && !dialogSkip)
+        {
+            yield return new WaitForSeconds(Time.deltaTime * typingSpeed);
+            textDialog.maxVisibleCharacters++;
+        }
+
+        textDialog.maxVisibleCharacters = textLength;
+        dialogSkip = false;
+        continueDialogMark.SetActive(true);
+        routineTyping = null;
     }
 
     /// <summary>
@@ -265,7 +296,15 @@ public class GameGUI : MonoBehaviour
     /// </summary>
     public void Click_Dialog()
     {
-        dialogPassed = true;
+        if (routineTyping == null)
+        {
+            dialogPassed = true;
+        }
+        else
+        {
+            dialogSkip = true;
+        }
+
     }
 
     /// <summary>
