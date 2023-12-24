@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     private Dictionary<string, CaseAdapter> caseAdapters;
     private bool loading = false;
     private Dictionary<string, SaveStoryObject> saveStoryObjs;
+    public GlobalSave globalSave;
 
     public bool wasLoaded
     {
@@ -115,6 +116,24 @@ public class GameManager : MonoBehaviour
         }
     }
 
+
+    void Awake()
+    {
+        if (instance != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            LoadGlobal();
+            InitAdapters();
+            DontDestroyOnLoad(gameObject);
+            instance = this;
+            ResetSaveFile();
+        }
+    }
+
+
     /// <summary>
     /// Finds the Saved Story Object with the given name, if it exists.
     /// </summary>
@@ -171,21 +190,6 @@ public class GameManager : MonoBehaviour
         return caseAdapters[evidence.caseRef.ID].evidenceFound[evidence.ID];
     }
 
-
-    void Awake()
-    {
-        if (instance != null)
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            InitAdapters();
-            DontDestroyOnLoad(gameObject);
-            instance = this;
-            ResetSaveFile();
-        }
-    }
 
     /// <summary>
     /// Resets the SaveFile
@@ -315,6 +319,41 @@ public class GameManager : MonoBehaviour
     public void Save_RemoveFollower(string name)
     {
         save.currentFollowers.Remove(name);
+    }
+
+    /// <summary>
+    /// Saves the global save
+    /// </summary>
+    public void SaveGlobal()
+    {
+        FileManager.SaveJSON(FileManager.savPath + "global.sav", globalSave);
+    }
+
+    /// <summary>
+    /// Loads the global and creates a new profile if it doesn't exists
+    /// </summary>
+    public void LoadGlobal()
+    {
+        if (System.IO.File.Exists(FileManager.savPath + "global.sav"))
+        {
+            globalSave = FileManager.LoadJSON<GlobalSave>(FileManager.savPath + "global.sav");
+
+            AudioManager.instance.ChangeVolume("Master", globalSave.volumeMaster);
+            AudioManager.instance.ChangeVolume("SFX", globalSave.volumeSFX);
+            AudioManager.instance.ChangeVolume("BGM", globalSave.volumeBGM);
+
+            Screen.SetResolution(globalSave.resolutionW, globalSave.resolutionH, globalSave.fullscreen, globalSave.refreshRate);
+        }
+        else
+        {
+            globalSave = new GlobalSave(
+                Screen.currentResolution.width,
+                Screen.currentResolution.height,
+                Screen.currentResolution.refreshRate,
+                Screen.fullScreen
+            );
+            SaveGlobal();
+        }
     }
 
     /// <summary>

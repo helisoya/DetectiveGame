@@ -319,3 +319,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sourceBGM: {fileID: 473855296350816591}
   sourceSFX: {fileID: 5162303337127859965}
+  audioMixer: {fileID: 24100000, guid: 99373bfc440371049b8600329cec4896, type: 2}

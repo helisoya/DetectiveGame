@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class AudioManager : MonoBehaviour
 {
     [Header("Sources")]
     [SerializeField] private AudioSource sourceBGM;
     [SerializeField] private AudioSource sourceSFX;
+    [SerializeField] private AudioMixer audioMixer;
 
     public static AudioManager instance;
 
@@ -39,5 +41,16 @@ public class AudioManager : MonoBehaviour
     public void PlaySFX(AudioClip clip)
     {
         sourceSFX.PlayOneShot(clip);
+    }
+
+
+    /// <summary>
+    /// Changes the volume of a group (SFX,BGM,Master)
+    /// </summary>
+    /// <param name="volumeName">The group's name</param>
+    /// <param name="value">The new volume value</param>
+    public void ChangeVolume(string volumeName, float value)
+    {
+        audioMixer.SetFloat(volumeName, value);
     }
 }
