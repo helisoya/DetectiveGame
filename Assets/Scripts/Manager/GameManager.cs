@@ -116,6 +116,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public bool saveFileExists
+    {
+        get
+        {
+            return System.IO.File.Exists(FileManager.savPath + "save.sav");
+        }
+    }
+
 
     void Awake()
     {
@@ -375,7 +383,7 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void Load()
     {
-        if (System.IO.File.Exists(FileManager.savPath + "save.sav"))
+        if (saveFileExists)
         {
             save = FileManager.LoadJSON<SaveFile>(FileManager.savPath + "save.sav");
             if (save == null) return;
