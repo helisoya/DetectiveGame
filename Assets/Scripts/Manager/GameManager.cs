@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.PlasticSCM.Editor.WebApi;
@@ -139,6 +140,16 @@ public class GameManager : MonoBehaviour
             instance = this;
             ResetSaveFile();
         }
+    }
+
+    /// <summary>
+    /// Starts a new game (from the main menu only)
+    /// </summary>
+    public void NewGame()
+    {
+        InitAdapters();
+        ResetSaveFile();
+        LoadMap("DOCKS", true);
     }
 
 
@@ -381,7 +392,8 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// Load the game
     /// </summary>
-    public void Load()
+    /// <param name="fromMainMenu">Is the game loading from the Main Menu ?</param>
+    public void Load(bool fromMainMenu = false)
     {
         if (saveFileExists)
         {
@@ -402,7 +414,7 @@ public class GameManager : MonoBehaviour
             }
 
             loading = true;
-            LoadMap(save_currentMap);
+            LoadMap(save_currentMap, fromMainMenu);
         }
     }
 
@@ -410,32 +422,48 @@ public class GameManager : MonoBehaviour
     /// Loads a new map
     /// </summary>
     /// <param name="name">The new map's name</param>
-    public void LoadMap(string name)
+    /// <param name="fromMainMenu">Is the game loading from the Main Menu ?</param>
+    public void LoadMap(string name, bool fromMainMenu = false)
     {
         if (routine_changeMap != null) return;
 
-        routine_changeMap = StartCoroutine(Routine_ChangeMap(name));
+        routine_changeMap = StartCoroutine(Routine_ChangeMap(name, fromMainMenu));
     }
 
     /// <summary>
     /// Routine for changing maps
     /// </summary>
     /// <param name="name">The new map's name</param>
+    /// <param name="fromMainMenu">Is the game loading from the Main Menu ?</param>
     /// <returns></returns>
-    IEnumerator Routine_ChangeMap(string name)
+    IEnumerator Routine_ChangeMap(string name, bool fromMainMenu)
     {
         Time.timeScale = 1;
 
-        GameGUI.instance.FadeForegroundTo(1, 5);
-
-        yield return new WaitForEndOfFrame();
-
-        while (GameGUI.instance.isFadingForeground)
+        if (fromMainMenu)
         {
+            MainMenuManager.instance.FadeTo(1, 5);
             yield return new WaitForEndOfFrame();
+            while (MainMenuManager.instance.isFading)
+            {
+                yield return new WaitForEndOfFrame();
+            }
+        }
+        else
+        {
+            GameGUI.instance.FadeForegroundTo(1, 5);
+            yield return new WaitForEndOfFrame();
+            while (GameGUI.instance.isFadingForeground)
+            {
+                yield return new WaitForEndOfFrame();
+            }
         }
 
-        SaveObjectManager.instance.ResetSaveObjects();
+        if (SaveObjectManager.instance != null)
+        {
+            SaveObjectManager.instance.ResetSaveObjects();
+        }
+
         Save_SetCurrentMap(name);
         SceneManager.LoadScene(name);
 

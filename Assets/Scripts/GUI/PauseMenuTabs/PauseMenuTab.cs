@@ -30,7 +30,10 @@ public class PauseMenuTab : MonoBehaviour
     public virtual void Close()
     {
         tabRoot.SetActive(false);
-        tabButtonSprite.color = normalColor;
+        if (tabButtonSprite != null)
+        {
+            tabButtonSprite.color = normalColor;
+        }
     }
 
     /// <summary>
@@ -38,7 +41,11 @@ public class PauseMenuTab : MonoBehaviour
     /// </summary>
     public virtual void Refresh()
     {
-        tabButtonSprite.color = selectedColor;
+        if (tabButtonSprite)
+        {
+            tabButtonSprite.color = selectedColor;
+        }
+
         tabRoot.SetActive(true);
     }
 }

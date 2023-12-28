@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 /// <summary>
@@ -42,6 +43,7 @@ public class SaveMenuTab : PauseMenuTab
     /// </summary>
     public void Click_MainMenu()
     {
-
+        GameManager.instance.LoadMap("MainMenu");
     }
+
 }
