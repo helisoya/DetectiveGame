@@ -110,13 +110,29 @@ public class PlayerMovements : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Regulate if the footsteps sound effect should be played
+    /// </summary>
+    /// <param name="active">Is the founstep SFX active ?</param>
+    void SetFootstepSoundActive(bool active)
+    {
+        if (active && !footstepSource.isPlaying)
+        {
+            footstepSource.Play();
+        }
+        else if (!active && footstepSource.isPlaying)
+        {
+            footstepSource.Stop();
+        }
+    }
+
     void Update()
     {
-        if (DialogMaster.instance.inDialog)
+        if (DialogMaster.instance.inDialog || GameGUI.instance.inMenu)
         {
             animator.SetBool("Run", false);
             animator.SetFloat("Speed", 0);
-            footstepSource.Stop();
+            SetFootstepSoundActive(false);
             return;
         }
 
@@ -140,14 +156,7 @@ public class PlayerMovements : MonoBehaviour
 
         footstepSwapper.CheckLayer();
 
-        if (footstepSource.isPlaying && !moving)
-        {
-            footstepSource.Stop();
-        }
-        else if (!footstepSource.isPlaying && moving)
-        {
-            footstepSource.Play();
-        }
+        SetFootstepSoundActive(moving);
 
         if (!camManager.isInFirstPerson && moving)
         {

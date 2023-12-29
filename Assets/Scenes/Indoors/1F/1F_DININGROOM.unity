@@ -3544,17 +3544,17 @@ PrefabInstance:
     - target: {fileID: 7720391610410401249, guid: 1ae079d84730e1b45a457630e6a4767f,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.11064316
+      value: 0.11064319
       objectReference: {fileID: 0}
     - target: {fileID: 7720391610410401249, guid: 1ae079d84730e1b45a457630e6a4767f,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.7963422
+      value: -0.79634213
       objectReference: {fileID: 0}
     - target: {fileID: 7720391610410401249, guid: 1ae079d84730e1b45a457630e6a4767f,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.15336153
+      value: 0.15336151
       objectReference: {fileID: 0}
     - target: {fileID: 7720391610542800624, guid: 1ae079d84730e1b45a457630e6a4767f,
         type: 3}
@@ -16951,6 +16951,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6691304728366189906, guid: ecb96b48ba8345044933df0e71ed1484,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 373c8400438baa94e93e7ae978dbe406, type: 3}
     - target: {fileID: 7853215938514460120, guid: ecb96b48ba8345044933df0e71ed1484,
         type: 3}
       propertyPath: sun
