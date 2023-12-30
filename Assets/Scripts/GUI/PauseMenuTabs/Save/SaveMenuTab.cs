@@ -26,6 +26,7 @@ public class SaveMenuTab : PauseMenuTab
     /// </summary>
     public void Click_Save()
     {
+        GameGUI.instance.PlayButtonSFX();
         GameManager.instance.Save();
         GameGUI.instance.ClosePauseMenu();
     }
@@ -35,6 +36,7 @@ public class SaveMenuTab : PauseMenuTab
     /// </summary>
     public void Click_Load()
     {
+        GameGUI.instance.PlayButtonSFX();
         GameManager.instance.Load();
     }
 
@@ -43,6 +45,7 @@ public class SaveMenuTab : PauseMenuTab
     /// </summary>
     public void Click_MainMenu()
     {
+        GameGUI.instance.PlayButtonSFX();
         GameManager.instance.LoadMap("MainMenu");
     }
 

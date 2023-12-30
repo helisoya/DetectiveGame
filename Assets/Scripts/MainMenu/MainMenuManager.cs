@@ -54,6 +54,7 @@ public class MainMenuManager : MonoBehaviour
     /// </summary>
     public void Click_NewGame()
     {
+        GameGUI.instance.PlayButtonSFX();
         mainRoot.SetActive(false);
         if (GameManager.instance.saveFileExists)
         {
@@ -70,6 +71,7 @@ public class MainMenuManager : MonoBehaviour
     /// </summary>
     public void Click_ConfirmNewGame()
     {
+        GameGUI.instance.PlayButtonSFX();
         newGameOverwriteRoot.SetActive(false);
         GameManager.instance.NewGame();
     }
@@ -79,6 +81,7 @@ public class MainMenuManager : MonoBehaviour
     /// </summary>
     public void Click_CancelNewGame()
     {
+        GameGUI.instance.PlayButtonSFX();
         newGameOverwriteRoot.SetActive(false);
         mainRoot.SetActive(true);
     }
@@ -88,6 +91,7 @@ public class MainMenuManager : MonoBehaviour
     /// </summary>
     public void Click_Load()
     {
+        GameGUI.instance.PlayButtonSFX();
         mainRoot.SetActive(false);
         GameManager.instance.Load(true);
     }
@@ -97,6 +101,7 @@ public class MainMenuManager : MonoBehaviour
     /// </summary>
     public void Click_Options()
     {
+        GameGUI.instance.PlayButtonSFX();
         mainRoot.SetActive(false);
         optionsMenuTab.Open();
     }
@@ -106,6 +111,7 @@ public class MainMenuManager : MonoBehaviour
     /// </summary>
     public void Click_CloseOptions()
     {
+        GameGUI.instance.PlayButtonSFX();
         optionsMenuTab.Close();
         mainRoot.SetActive(true);
     }

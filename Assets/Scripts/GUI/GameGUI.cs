@@ -87,6 +87,12 @@ public class GameGUI : MonoBehaviour
         }
     }
 
+    [Header("Sound Effects")]
+    [SerializeField] private AudioClip sfxMenuOpen;
+    [SerializeField] private AudioClip sfxTypewritter;
+    [SerializeField] private AudioClip sfxTabChange;
+    [SerializeField] private AudioClip sfxMenuButton;
+
 
     public static GameGUI instance;
 
@@ -204,6 +210,7 @@ public class GameGUI : MonoBehaviour
 
         lastVisible = Cursor.visible;
         Cursor.visible = true;
+        AudioManager.instance.PlaySFX(sfxMenuOpen);
     }
 
     /// <summary>
@@ -221,7 +228,7 @@ public class GameGUI : MonoBehaviour
             CursorManager.ChangeCursorTex(lastCursorImg);
             Cursor.visible = lastVisible;
         }
-
+        AudioManager.instance.PlaySFX(sfxMenuOpen);
     }
 
     /// <summary>
@@ -233,6 +240,7 @@ public class GameGUI : MonoBehaviour
         lastOpenedTab.Close();
         newTab.Open();
         lastOpenedTab = newTab;
+        AudioManager.instance.PlaySFX(sfxTabChange);
     }
 
     /// <summary>
@@ -242,6 +250,14 @@ public class GameGUI : MonoBehaviour
     public void SetLastCursorTex(Texture2D tex)
     {
         lastCursorImg = tex;
+    }
+
+    /// <summary>
+    /// Plays the button SFX
+    /// </summary>
+    public void PlayButtonSFX()
+    {
+        AudioManager.instance.PlaySFX(sfxMenuButton);
     }
 
     /**
@@ -277,12 +293,17 @@ public class GameGUI : MonoBehaviour
     /// <returns>IEnumerator</returns>
     IEnumerator Routine_Typing()
     {
-        int textLength = textDialog.text.Length;
+        string dialog = Utils.RemoveRichText(textDialog.text);
 
-        while (textDialog.maxVisibleCharacters < textLength && !dialogSkip)
+        int textLength = dialog.Length;
+        int currentIndex = 0;
+
+        while (currentIndex < textLength && !dialogSkip)
         {
+            currentIndex++;
+            AudioManager.instance.PlaySFX(sfxTypewritter);
+            textDialog.maxVisibleCharacters = currentIndex;
             yield return new WaitForSeconds(Time.deltaTime * typingSpeed);
-            textDialog.maxVisibleCharacters++;
         }
 
         textDialog.maxVisibleCharacters = textLength;

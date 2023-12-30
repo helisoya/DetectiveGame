@@ -29,6 +29,7 @@ public class ChoiceButton : MonoBehaviour
     /// </summary>
     public void Click_Choice()
     {
+        GameGUI.instance.PlayButtonSFX();
         GameGUI.instance.Event_Choice(choice);
     }
 }

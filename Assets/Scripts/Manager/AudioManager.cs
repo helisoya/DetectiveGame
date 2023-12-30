@@ -14,7 +14,10 @@ public class AudioManager : MonoBehaviour
 
     void Awake()
     {
-        instance = this;
+        if (instance == null)
+        {
+            instance = this;
+        }
     }
 
     /// <summary>

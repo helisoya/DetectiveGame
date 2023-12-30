@@ -47,6 +47,7 @@ public class CharacterMenuButton : MonoBehaviour
     /// </summary>
     public void Event_Click()
     {
+        GameGUI.instance.PlayButtonSFX();
         tab.SelectBio(entryID);
     }
 }

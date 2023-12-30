@@ -29,6 +29,7 @@ public class EvidenceMenu_CaseButton : MonoBehaviour
     /// </summary>
     public void Event_Click()
     {
+        GameGUI.instance.PlayButtonSFX();
         tab.ChangeCase(data);
     }
 }

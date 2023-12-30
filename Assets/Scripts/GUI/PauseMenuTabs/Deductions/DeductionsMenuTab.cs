@@ -100,6 +100,8 @@ public class DeductionsMenuTab : PauseMenuTab
     /// </summary>
     public void Event_ClickConfirm()
     {
+        GameGUI.instance.PlayButtonSFX();
+
         for (int i = 0; i < currentCase.questions.Length; i++)
         {
             if (currentAwnsers[i] != currentCase.questions[i].correctAwnser)

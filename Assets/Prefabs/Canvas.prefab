@@ -3135,6 +3135,10 @@ MonoBehaviour:
   cgFade: {fileID: 2569459749576090744}
   pauseMenuRoot: {fileID: 3788230084513393487}
   lastOpenedTab: {fileID: 3788230084906278913}
+  sfxMenuOpen: {fileID: 8300000, guid: 83708a8ecde03ce44bac4aab2dca7d82, type: 3}
+  sfxTypewritter: {fileID: 8300000, guid: fedc62efedc6aba4abbe123d07400f89, type: 3}
+  sfxTabChange: {fileID: 8300000, guid: e9c66642d9e96284fbb76a6f0d3d969b, type: 3}
+  sfxMenuButton: {fileID: 8300000, guid: 0193fb9fe37f1864b8a0d3e06446ba6d, type: 3}
 --- !u!1 &3788230083141708807
 GameObject:
   m_ObjectHideFlags: 0

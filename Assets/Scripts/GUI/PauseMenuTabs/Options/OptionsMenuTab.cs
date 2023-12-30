@@ -29,6 +29,7 @@ public class OptionsMenuTab : PauseMenuTab
     /// <param name="section">The new section</param>
     public void Click_ChangeSection(OptionsSection section)
     {
+        GameGUI.instance.PlayButtonSFX();
         if (currentSection != null) currentSection.Close();
         section.Open();
         currentSection = section;
@@ -39,6 +40,7 @@ public class OptionsMenuTab : PauseMenuTab
     /// </summary>
     public void Click_Apply()
     {
+        GameGUI.instance.PlayButtonSFX();
         foreach (OptionsSection section in sections)
         {
             section.Save();
