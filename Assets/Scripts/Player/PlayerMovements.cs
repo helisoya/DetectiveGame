@@ -139,7 +139,7 @@ public class PlayerMovements : MonoBehaviour
         bool running = Input.GetKey(KeyCode.LeftShift) && canRun;
 
         currentSpeed = running ? runSpeed : normalSpeed;
-
+        footstepSource.pitch = running ? 1.2f : 1;
 
 
         Vector3 moveDirection = cam.forward * Input.GetAxis("Vertical");
@@ -155,7 +155,6 @@ public class PlayerMovements : MonoBehaviour
         animator.SetFloat("Speed", moving ? 2 : 0);
 
         footstepSwapper.CheckLayer();
-
         SetFootstepSoundActive(moving);
 
         if (!camManager.isInFirstPerson && moving)

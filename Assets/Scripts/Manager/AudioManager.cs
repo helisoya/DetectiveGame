@@ -51,6 +51,7 @@ public class AudioManager : MonoBehaviour
     /// <param name="value">The new volume value</param>
     public void ChangeVolume(string volumeName, float value)
     {
+        print("Setting " + volumeName + " to " + value);
         audioMixer.SetFloat(volumeName, value);
     }
 }

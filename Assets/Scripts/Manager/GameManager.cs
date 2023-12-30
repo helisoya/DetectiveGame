@@ -128,17 +128,27 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-        if (instance != null)
+        if (instance != null) // A Game Manager was already registered
         {
             Destroy(gameObject);
         }
-        else
+        else // Register the current Game Manager
         {
-            LoadGlobal();
             InitAdapters();
             DontDestroyOnLoad(gameObject);
             instance = this;
             ResetSaveFile();
+        }
+    }
+
+    void Start()
+    {
+        // Loading Sound volumes on Awake() doesn't work
+        // Doing it here instead
+
+        if (instance == this)
+        {
+            LoadGlobal();
         }
     }
 
