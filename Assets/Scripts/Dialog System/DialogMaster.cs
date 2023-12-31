@@ -264,13 +264,19 @@ public class DialogMaster : MonoBehaviour
 
                             while (!GameGUI.instance.dialogPassed)
                             {
+                                if (useSpeak && GameGUI.instance.typewritterFinished)
+                                {
+                                    faceAnimators[args[2]].SetBool("Speak", false);
+                                }
                                 yield return new WaitForEndOfFrame();
                             }
 
+                            /*
                             if (useSpeak)
                             {
                                 faceAnimators[args[2]].SetBool("Speak", false);
                             }
+                            */
 
                             if (args[3].Equals("true"))
                             {

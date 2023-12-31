@@ -16,8 +16,8 @@ public class GameGUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI textCharacter;
     [SerializeField] private GameObject continueDialogMark;
     [HideInInspector] public bool dialogPassed;
+    [HideInInspector] public bool typewritterFinished;
     [SerializeField] private float typingSpeed;
-    private bool dialogSkip;
     private Coroutine routineTyping;
 
 
@@ -298,7 +298,9 @@ public class GameGUI : MonoBehaviour
         int textLength = dialog.Length;
         int currentIndex = 0;
 
-        while (currentIndex < textLength && !dialogSkip)
+        typewritterFinished = false;
+
+        while (currentIndex < textLength && !typewritterFinished)
         {
             currentIndex++;
             AudioManager.instance.PlaySFX(sfxTypewritter);
@@ -307,7 +309,7 @@ public class GameGUI : MonoBehaviour
         }
 
         textDialog.maxVisibleCharacters = textLength;
-        dialogSkip = false;
+        typewritterFinished = true;
         continueDialogMark.SetActive(true);
         routineTyping = null;
     }
@@ -323,7 +325,7 @@ public class GameGUI : MonoBehaviour
         }
         else
         {
-            dialogSkip = true;
+            typewritterFinished = true;
         }
 
     }
