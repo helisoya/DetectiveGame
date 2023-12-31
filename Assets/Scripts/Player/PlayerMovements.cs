@@ -111,19 +111,11 @@ public class PlayerMovements : MonoBehaviour
     }
 
     /// <summary>
-    /// Regulate if the footsteps sound effect should be played
+    /// Plays the footstep sound effect
     /// </summary>
-    /// <param name="active">Is the founstep SFX active ?</param>
-    void SetFootstepSoundActive(bool active)
+    public void PlayFootstepSFX()
     {
-        if (active && !footstepSource.isPlaying)
-        {
-            footstepSource.Play();
-        }
-        else if (!active && footstepSource.isPlaying)
-        {
-            footstepSource.Stop();
-        }
+        footstepSource.Play();
     }
 
     void Update()
@@ -132,14 +124,13 @@ public class PlayerMovements : MonoBehaviour
         {
             animator.SetBool("Run", false);
             animator.SetFloat("Speed", 0);
-            SetFootstepSoundActive(false);
             return;
         }
 
         bool running = Input.GetKey(KeyCode.LeftShift) && canRun;
 
         currentSpeed = running ? runSpeed : normalSpeed;
-        footstepSource.pitch = running ? 1.2f : 1;
+        footstepSource.pitch = running ? 1.1f : 1;
 
 
         Vector3 moveDirection = cam.forward * Input.GetAxis("Vertical");
@@ -155,7 +146,6 @@ public class PlayerMovements : MonoBehaviour
         animator.SetFloat("Speed", moving ? 2 : 0);
 
         footstepSwapper.CheckLayer();
-        SetFootstepSoundActive(moving);
 
         if (!camManager.isInFirstPerson && moving)
         {
