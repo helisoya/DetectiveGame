@@ -5,17 +5,17 @@ using UnityEngine;
 public class FootstepSwapper : MonoBehaviour
 {
     private GroundChecker groundChecker;
-    [SerializeField] private AudioSource footstepSource;
+    [SerializeField] private FootstepSource footstepSource;
     [SerializeField] private LayerMask layerMask;
     private string currentLayer;
-    private Dictionary<string, Footstep> footsteps;
+    private static Dictionary<string, Footstep> footsteps;
 
     void Awake()
     {
         groundChecker = new GroundChecker();
 
+        if (footsteps != null && footsteps.Keys.Count > 0) return;
         Footstep[] allFootsteps = Resources.LoadAll<Footstep>("Footsteps");
-
         footsteps = new Dictionary<string, Footstep>();
 
         foreach (Footstep footstep in allFootsteps)
@@ -50,7 +50,7 @@ public class FootstepSwapper : MonoBehaviour
                 if (currentLayer != newLayer)
                 {
                     currentLayer = newLayer;
-                    footstepSource.clip = footsteps[newLayer].footstepSound;
+                    footstepSource.ChangeClip(footsteps[newLayer].footstepSound);
                 }
             }
             else
@@ -59,7 +59,7 @@ public class FootstepSwapper : MonoBehaviour
                 if (surface && currentLayer != surface.footstepData.footstepName)
                 {
                     currentLayer = surface.footstepData.footstepName;
-                    footstepSource.clip = surface.footstepData.footstepSound;
+                    footstepSource.ChangeClip(surface.footstepData.footstepSound);
                 }
             }
         }

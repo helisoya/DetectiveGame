@@ -27,7 +27,7 @@ public class PlayerMovements : MonoBehaviour
 
     [Header("Sounds")]
     [SerializeField] private FootstepSwapper footstepSwapper;
-    [SerializeField] private AudioSource footstepSource;
+    [SerializeField] private FootstepSource footstepSource;
 
     public static PlayerMovements instance;
 
@@ -130,7 +130,7 @@ public class PlayerMovements : MonoBehaviour
         bool running = Input.GetKey(KeyCode.LeftShift) && canRun;
 
         currentSpeed = running ? runSpeed : normalSpeed;
-        footstepSource.pitch = running ? 1.1f : 1;
+        footstepSource.SetPitch(running ? 1.1f : 1);
 
 
         Vector3 moveDirection = cam.forward * Input.GetAxis("Vertical");

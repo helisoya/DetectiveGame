@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee29dc2e4fc225a4dbe472239d040699, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  footstepSource: {fileID: 8186983857185322739}
+  footstepSource: {fileID: 3207865913331654856}
   layerMask:
     serializedVersion: 2
     m_Bits: 1
@@ -1976,6 +1976,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3207865913331654856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7486458753038204935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b6720de77e25484cb827485eade4f18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source: {fileID: 8186983857185322739}
 --- !u!114 &7720391609924844892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2022,7 +2035,7 @@ MonoBehaviour:
   startingPointsRoot: {fileID: 0}
   root: {fileID: 7720391610681460746}
   footstepSwapper: {fileID: 8270490057300781821}
-  footstepSource: {fileID: 8186983857185322739}
+  footstepSource: {fileID: 3207865913331654856}
 --- !u!4 &7831458755098483389 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 708b03bb241045f41959cbb8ca28043d,

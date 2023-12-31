@@ -26,6 +26,7 @@ public class NPC : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private NPCInteractable interaction;
     [SerializeField] private StoryObject storyObj;
+    [SerializeField] private FootstepSwapper footstepSwapper;
 
     public bool isProcessingEvent
     {
@@ -211,6 +212,8 @@ public class NPC : MonoBehaviour
     void Update()
     {
         if (ignoreUpdate) return;
+
+        footstepSwapper.CheckLayer();
 
         if (followPlayer)
         {
