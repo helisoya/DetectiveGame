@@ -69,7 +69,7 @@ public class NPCSaveObject : SaveObject
     /// <returns>The SaveStoryObject of the NPC</returns>
     public override SaveStoryObject Save()
     {
-        if (storyObject != null && !storyObject.GetCanBeEnabled()) return null;
+        if (storyObject != null && !storyObject.GetCanBeEnabled() || npc == null) return null;
 
         if (npc.isProcessingEvent)
         {

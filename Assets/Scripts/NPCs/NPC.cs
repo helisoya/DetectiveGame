@@ -273,6 +273,7 @@ public class NPC : MonoBehaviour
     IEnumerator Routine_Event(string filename, int startIndex = 0)
     {
         _currentEvent = filename;
+        yield return new WaitForEndOfFrame();
 
         List<string> file = FileManager.ReadTextAsset(Resources.Load<TextAsset>("NPCsEvent/" + filename));
 

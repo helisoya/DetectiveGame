@@ -34,7 +34,7 @@ public class StaticSaveObject : SaveObject
     /// <returns>The SaveStoryObject of the Object</returns>
     public override SaveStoryObject Save()
     {
-        if (storyObject != null && !storyObject.GetCanBeEnabled()) return null;
+        if (storyObject != null && !storyObject.GetCanBeEnabled() || transform == null) return null;
 
         return new SaveStoryObject(
             saveName,

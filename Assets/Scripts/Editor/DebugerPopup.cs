@@ -71,6 +71,6 @@ public class DebugerPopup : EditorWindow
             }
         }
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        GameManager.instance.LoadMap(SceneManager.GetActiveScene().name);
     }
 }
