@@ -10,6 +10,7 @@ public class TravelInteractable : InteractableObject
     [Header("Travel Interaction")]
     [SerializeField] private string sceneName;
     [SerializeField] private TravelInteractableOverride[] overrides;
+    [SerializeField] private AudioClip travelSFX;
 
     private bool used = false;
 
@@ -40,6 +41,7 @@ public class TravelInteractable : InteractableObject
         }
 
         used = true;
+        AudioManager.instance.PlaySFX(travelSFX);
         GameManager.instance.LoadMap(sceneName);
 
     }

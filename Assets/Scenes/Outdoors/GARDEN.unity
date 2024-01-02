@@ -3907,7 +3907,7 @@ PrefabInstance:
     - target: {fileID: 7720391610410401249, guid: 1ae079d84730e1b45a457630e6a4767f,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.000004905437
+      value: 0.0000049054374
       objectReference: {fileID: 0}
     - target: {fileID: 7720391610410401249, guid: 1ae079d84730e1b45a457630e6a4767f,
         type: 3}
@@ -3917,7 +3917,7 @@ PrefabInstance:
     - target: {fileID: 7720391610410401249, guid: 1ae079d84730e1b45a457630e6a4767f,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.1891075
+      value: 0.18910751
       objectReference: {fileID: 0}
     - target: {fileID: 7720391610542800624, guid: 1ae079d84730e1b45a457630e6a4767f,
         type: 3}
@@ -6865,6 +6865,7 @@ MonoBehaviour:
   - dialogName: DOORS_Story9
     sign: 60
     storyPoint: 19
+  travelSFX: {fileID: 8300000, guid: 330194000d66ff54ba44cdf8e1455ed4, type: 3}
 --- !u!65 &1452448544
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32369,6 +32370,7 @@ MonoBehaviour:
   hoverSprite: {fileID: 2800000, guid: c67281d2a6caa004daa9b52fe3e9e66a, type: 3}
   sceneName: DOCKS
   overrides: []
+  travelSFX: {fileID: 8300000, guid: 330194000d66ff54ba44cdf8e1455ed4, type: 3}
 --- !u!65 &1863397626
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36593,6 +36595,7 @@ MonoBehaviour:
   hoverSprite: {fileID: 2800000, guid: c67281d2a6caa004daa9b52fe3e9e66a, type: 3}
   sceneName: 1F_HALLWAY
   overrides: []
+  travelSFX: {fileID: 8300000, guid: 28211b8fadd3d4e4aa3ef218da6c2bfc, type: 3}
 --- !u!65 &2143207823
 BoxCollider:
   m_ObjectHideFlags: 0

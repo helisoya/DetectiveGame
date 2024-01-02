@@ -3705,12 +3705,12 @@ PrefabInstance:
     - target: {fileID: 7720391610542800624, guid: 1ae079d84730e1b45a457630e6a4767f,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.4519052
+      value: -0.45190516
       objectReference: {fileID: 0}
     - target: {fileID: 7720391610542800624, guid: 1ae079d84730e1b45a457630e6a4767f,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.08051105
+      value: -0.08051104
       objectReference: {fileID: 0}
     - target: {fileID: 7720391610542800624, guid: 1ae079d84730e1b45a457630e6a4767f,
         type: 3}
@@ -3720,7 +3720,7 @@ PrefabInstance:
     - target: {fileID: 7720391610542800624, guid: 1ae079d84730e1b45a457630e6a4767f,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.15582742
+      value: 0.1558274
       objectReference: {fileID: 0}
     - target: {fileID: 7720391610681460746, guid: 1ae079d84730e1b45a457630e6a4767f,
         type: 3}
@@ -10927,6 +10927,7 @@ MonoBehaviour:
   hoverSprite: {fileID: 2800000, guid: c67281d2a6caa004daa9b52fe3e9e66a, type: 3}
   sceneName: GARDEN
   overrides: []
+  travelSFX: {fileID: 8300000, guid: 330194000d66ff54ba44cdf8e1455ed4, type: 3}
 --- !u!65 &1913739400
 BoxCollider:
   m_ObjectHideFlags: 0

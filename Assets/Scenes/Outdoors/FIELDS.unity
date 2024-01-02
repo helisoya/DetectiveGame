@@ -2697,17 +2697,17 @@ PrefabInstance:
     - target: {fileID: 7720391608949689652, guid: 1ae079d84730e1b45a457630e6a4767f,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.7512631
+      value: -0.751263
       objectReference: {fileID: 0}
     - target: {fileID: 7720391608949689652, guid: 1ae079d84730e1b45a457630e6a4767f,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.11655656
+      value: -0.11655653
       objectReference: {fileID: 0}
     - target: {fileID: 7720391608949689652, guid: 1ae079d84730e1b45a457630e6a4767f,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.6419493
+      value: -0.64194936
       objectReference: {fileID: 0}
     - target: {fileID: 7720391608949689652, guid: 1ae079d84730e1b45a457630e6a4767f,
         type: 3}
@@ -7929,6 +7929,7 @@ MonoBehaviour:
   - dialogName: DOORS_CliffGate_Story21
     sign: 61
     storyPoint: 21
+  travelSFX: {fileID: 8300000, guid: 330194000d66ff54ba44cdf8e1455ed4, type: 3}
 --- !u!65 &1494907392
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9879,6 +9880,7 @@ MonoBehaviour:
   animator: {fileID: 1796485710}
   interaction: {fileID: 850511390}
   storyObj: {fileID: 0}
+  footstepSwapper: {fileID: 0}
 --- !u!195 &1796485709
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -9938,6 +9940,7 @@ MonoBehaviour:
   npc: {fileID: 1796485708}
   storyObject: {fileID: 0}
   ignoreForLoad: 0
+  followerRequiredForIgnoring: 
 --- !u!1 &1797742341 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8164078558771037576, guid: 14bc105aeec3b58499ee9b2f1bfcd265,
@@ -10102,6 +10105,7 @@ MonoBehaviour:
   hoverSprite: {fileID: 2800000, guid: c67281d2a6caa004daa9b52fe3e9e66a, type: 3}
   sceneName: GARDEN
   overrides: []
+  travelSFX: {fileID: 8300000, guid: 330194000d66ff54ba44cdf8e1455ed4, type: 3}
 --- !u!65 &1863397626
 BoxCollider:
   m_ObjectHideFlags: 0

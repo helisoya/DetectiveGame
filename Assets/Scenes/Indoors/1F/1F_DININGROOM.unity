@@ -800,6 +800,7 @@ MonoBehaviour:
   animator: {fileID: 125263838}
   interaction: {fileID: 760331270}
   storyObj: {fileID: 125263837}
+  footstepSwapper: {fileID: 0}
 --- !u!114 &125263837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -973,6 +974,7 @@ MonoBehaviour:
   animator: {fileID: 156238766}
   interaction: {fileID: 2005149990}
   storyObj: {fileID: 156238765}
+  footstepSwapper: {fileID: 0}
 --- !u!114 &156238765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1466,6 +1468,7 @@ MonoBehaviour:
   animator: {fileID: 275744307}
   interaction: {fileID: 2067759045}
   storyObj: {fileID: 275744306}
+  footstepSwapper: {fileID: 0}
 --- !u!195 &275744305
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2388,6 +2391,7 @@ MonoBehaviour:
   animator: {fileID: 470786927}
   interaction: {fileID: 59632959}
   storyObj: {fileID: 470786926}
+  footstepSwapper: {fileID: 0}
 --- !u!114 &470786926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2561,6 +2565,7 @@ MonoBehaviour:
   animator: {fileID: 477071388}
   interaction: {fileID: 428306006}
   storyObj: {fileID: 477071387}
+  footstepSwapper: {fileID: 0}
 --- !u!114 &477071387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3995,6 +4000,7 @@ MonoBehaviour:
   - dialogName: DOORS_Story11
     sign: 61
     storyPoint: 11
+  travelSFX: {fileID: 8300000, guid: 28211b8fadd3d4e4aa3ef218da6c2bfc, type: 3}
 --- !u!65 &776636638
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14451,6 +14457,7 @@ MonoBehaviour:
   animator: {fileID: 470786927}
   interaction: {fileID: 1965511680}
   storyObj: {fileID: 1076764036}
+  footstepSwapper: {fileID: 0}
 --- !u!1 &1090354065
 GameObject:
   m_ObjectHideFlags: 0
@@ -15895,6 +15902,7 @@ MonoBehaviour:
   animator: {fileID: 1550283282}
   interaction: {fileID: 1205903865}
   storyObj: {fileID: 1550283279}
+  footstepSwapper: {fileID: 0}
 --- !u!195 &1550283281
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -16083,6 +16091,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   interaction: {fileID: 1443535722}
   storyObj: {fileID: 1587969229}
+  footstepSwapper: {fileID: 0}
 --- !u!195 &1587969231
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -17981,6 +17990,7 @@ MonoBehaviour:
   animator: {fileID: 2019384695}
   interaction: {fileID: 973878397}
   storyObj: {fileID: 2019384693}
+  footstepSwapper: {fileID: 0}
 --- !u!95 &2019384695
 Animator:
   serializedVersion: 5
@@ -18337,6 +18347,7 @@ MonoBehaviour:
   animator: {fileID: 2070394052}
   interaction: {fileID: 1189966208}
   storyObj: {fileID: 2070394050}
+  footstepSwapper: {fileID: 0}
 --- !u!95 &2070394052
 Animator:
   serializedVersion: 5
@@ -18590,6 +18601,7 @@ MonoBehaviour:
   animator: {fileID: 2098883610}
   interaction: {fileID: 609789163}
   storyObj: {fileID: 2098883609}
+  footstepSwapper: {fileID: 0}
 --- !u!114 &2098883609
 MonoBehaviour:
   m_ObjectHideFlags: 0

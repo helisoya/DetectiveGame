@@ -868,6 +868,38 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.3000003, y: 2.1, z: 1.1000003}
   m_Center: {x: 0.049999993, y: 2.05, z: -0.050015282}
+--- !u!1 &613284385 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8164078558771037576, guid: 98713ef0218568748adf457f916332fe,
+    type: 3}
+  m_PrefabInstance: {fileID: 2070736974}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &613284389
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613284385}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5, y: 0.099999994, z: 5}
+  m_Center: {x: 0, y: -0.45, z: 0}
+--- !u!114 &613284390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613284385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef12d92c501bd714bbc526c43b79d9f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footstepData: {fileID: 11400000, guid: 7f8d01b9f36c0204280d47229c0496b5, type: 2}
 --- !u!1001 &719456304
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1213,6 +1245,7 @@ MonoBehaviour:
   animator: {fileID: 821577986}
   interaction: {fileID: 0}
   storyObj: {fileID: 0}
+  footstepSwapper: {fileID: 0}
 --- !u!195 &821577985
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1891,6 +1924,7 @@ MonoBehaviour:
   hoverSprite: {fileID: 2800000, guid: c67281d2a6caa004daa9b52fe3e9e66a, type: 3}
   sceneName: 2F_HALLWAY
   overrides: []
+  travelSFX: {fileID: 8300000, guid: 28211b8fadd3d4e4aa3ef218da6c2bfc, type: 3}
 --- !u!65 &1375441571
 BoxCollider:
   m_ObjectHideFlags: 0

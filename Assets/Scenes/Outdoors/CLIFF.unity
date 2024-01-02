@@ -9900,6 +9900,7 @@ MonoBehaviour:
   hoverSprite: {fileID: 2800000, guid: c67281d2a6caa004daa9b52fe3e9e66a, type: 3}
   sceneName: FIELDS
   overrides: []
+  travelSFX: {fileID: 8300000, guid: 330194000d66ff54ba44cdf8e1455ed4, type: 3}
 --- !u!65 &1863397626
 BoxCollider:
   m_ObjectHideFlags: 0
