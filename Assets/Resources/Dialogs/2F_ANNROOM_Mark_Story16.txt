@@ -1,5 +1,6 @@
 
 UnlockEvidence(ANN_MURDER_MARK)
+UnlockEvidence(ANN_MURDER_WITCH)
 
 Dialog(Arthur;So this is the mark Father talked about.;Player;false)
 Dialog(Arthur;So it was real after all....;Player;false)

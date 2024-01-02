@@ -17,13 +17,35 @@ FocusCamera(Daniel)
 Dialog(Daniel;Really ? How did you know ?;Daniel;false)
 
 FocusCamera(Player)
-Dialog(Arthur;Well, let's begin with what we know.;Player;false)
-Dialog(Arthur;Mother was lightly burnt, and died shortly afterward.;Player;false)
-Dialog(Arthur;She likely fought with her murderer, as shown by marks on her body.;Player;false)
-Dialog(Arthur;Nobody saw the event happen. Esther was the first to find the body long after the facts.;Player;false)
-Dialog(Arthur;What she saw, was Mother's dead body, and the witch's mark.;Player;false)
-Dialog(Arthur;When Father learnt the news, she deduced that the witch killed Mother.;Player;false)
-Dialog(Arthur;However, they didn't seem to notice the purple torn piece of clothing.;Player;false)
+Dialog(Arthur;Well, let's review what we know.;Player;false)
+
+ShowCG(ANNMURDER_1;5)
+Dialog(Arthur;Mother was in her room. Knowing her, she was probably knitting.;Player;false)
+Dialog(Arthur;Unbeknown to her, she wasn't alone. Someone was here to kill her.;Player;false)
+
+ShowCG(ANNMURDER_2;5)
+Dialog(Arthur;Given the marks on her body. I can almost be certain that she fought with her murderer.;Player;false)
+
+ShowCG(ANNMURDER_3;5)
+Dialog(Arthur;While she couldn't fend off her attacker in the end, she still managed to rip off a piece of clothing from them.;Player;false)
+
+ShowCG(ANNMURDER_4;5)
+Dialog(Arthur;She was then killed, and lightly burned in the process. The killer could have used a candlestick for that.;Player;false)
+
+ShowCG(ANNMURDER_5;5)
+Dialog(Arthur;The murderer then painted the mark on the wall and left.;Player;false)
+
+ShowCG(ANNMURDER_6;5)
+Dialog(Arthur;Nobody knew this happened. Esther was the first to find the body.;Player;false)
+Dialog(Arthur;It was hours after the deeds, the killer had since been long gone.;Player;false)
+Dialog(Arthur;She saw Mother, dead, as well as the mark on the wall.;Player;false)
+Dialog(Arthur;She then told everyone, including Father, what she saw.;Player;false)
+
+ShowCG(ANNMURDER_7;5)
+Dialog(Arthur;Father deduced that the mark was genuine, and that the witch killed her.;Player;false)
+Dialog(Arthur;However, he didn't seem to notice the purple torn piece of clothing.;Player;false)
+
+HideCG(5)
 Dialog(Arthur;This sums up about all the facts of the case.;Player;false)
 Dialog(Arthur;Now, to my conclusion : The witch couldn't have done it.;Player;false)
 Dialog(Arthur;We know that the witch supposedly is very powerful and malevolant. Often dismembering her victims.;Player;false)
@@ -35,7 +57,7 @@ Dialog(Daniel;Right. But how is it relevant ?;Daniel;false)
 FocusCamera(Player)
 Dialog(Arthur;Hear me out. If you are a powerful witch, capable of killing someone in seconds.;Player;false)
 Dialog(Arthur;Why would you only burn lightly your victim ? And why would you fight with her ?;Player;false)
-Dialog(Arthur;If the with really did it. She would have killed Mother instantly.;Player;false)
+Dialog(Arthur;If the witch really did it. She would have killed Mother instantly.;Player;false)
 
 FocusCamera(Daniel)
 Dialog(Daniel;Oh, right.;Daniel;false)
