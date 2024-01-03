@@ -213,7 +213,10 @@ public class NPC : MonoBehaviour
     {
         if (ignoreUpdate) return;
 
-        footstepSwapper.CheckLayer();
+        if (footstepSwapper)
+        {
+            footstepSwapper.CheckLayer();
+        }
 
         if (followPlayer)
         {

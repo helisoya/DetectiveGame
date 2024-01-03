@@ -117,6 +117,7 @@ Dialog(Arthur;<color=blue>This isn't going anywhere...</color>;NONE;false)
 
 PositionCamera(STORY11_Peter_Position)
 
+PlaySFX(Doors/openDoor)
 UnlockBio(PETER)
 SetNPCHidden(Peter;false)
 

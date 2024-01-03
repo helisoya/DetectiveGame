@@ -7,7 +7,7 @@ Dialog(Arthur;I'll have to talk to Daniel about that beforehand, though.;Player;
 Dialog(Arthur;<color=blue>He might know a way to enter Mother's room unnoticed.</color>;Player;false)
 
 SetNPCHidden(Lydia;false)
-
+PlaySFX(Doors/openDoor)
 Dialog(Lydia;Arthur ?;Lydia;false)
 
 SetCameraBetween(Player;Lydia)
@@ -49,6 +49,7 @@ Dialog(Lydia;Well, time for me to go. Have a good night.;Lydia;false)
 FocusCamera(Player)
 Dialog(Arthur;You too.;Player;true)
 
+PlaySFX(Doors/openDoor)
 Wait(1)
 SetNPCHidden(Lydia;true)
 

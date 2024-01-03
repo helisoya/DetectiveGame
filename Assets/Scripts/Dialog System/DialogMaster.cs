@@ -267,16 +267,10 @@ public class DialogMaster : MonoBehaviour
                                 if (useSpeak && GameGUI.instance.typewritterFinished)
                                 {
                                     faceAnimators[args[2]].SetBool("Speak", false);
+                                    useSpeak = false;
                                 }
                                 yield return new WaitForEndOfFrame();
                             }
-
-                            /*
-                            if (useSpeak)
-                            {
-                                faceAnimators[args[2]].SetBool("Speak", false);
-                            }
-                            */
 
                             if (args[3].Equals("true"))
                             {
@@ -413,6 +407,9 @@ public class DialogMaster : MonoBehaviour
                             break;
                         case "LoadMap":
                             GameManager.instance.LoadMap(split[1]);
+                            break;
+                        case "PlaySFX":
+                            AudioManager.instance.PlaySFX(Resources.Load<AudioClip>("Audio/SFX/" + split[1]));
                             break;
                         case "Wait":
                             yield return new WaitForSeconds(float.Parse(split[1]));

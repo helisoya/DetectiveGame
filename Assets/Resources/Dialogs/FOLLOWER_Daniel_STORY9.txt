@@ -44,7 +44,7 @@ FocusCamera(Daniel)
 Dialog(Daniel;Eh... well....;Daniel;false)
 
 UnlockBio(ESTHER)
-
+PlaySFX(Doors/openDoor)
 SetNPCHidden(Esther;false)
 SetCameraBetween(Esther;Player)
 
@@ -70,6 +70,7 @@ Dialog(Esther;Everybody is in the dining room. You go before dinner is served.;E
 FocusCamera(Player)
 Dialog(Arthur;I see. We'll be on our way. Thank you.;Player;true)
 
+PlaySFX(Doors/openDoor)
 SetNPCHidden(Esther;true)
 Wait(2)
 
