@@ -2156,7 +2156,7 @@ PrefabInstance:
     - target: {fileID: 7720391610410401249, guid: 1ae079d84730e1b45a457630e6a4767f,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.18885678
+      value: 0.1888568
       objectReference: {fileID: 0}
     - target: {fileID: 7720391610542800624, guid: 1ae079d84730e1b45a457630e6a4767f,
         type: 3}
@@ -12494,7 +12494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef12d92c501bd714bbc526c43b79d9f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  footstepData: {fileID: 11400000, guid: 9d18e72ef8d15b94b91deb511e2b65a1, type: 2}
+  footstepData: {fileID: 11400000, guid: 7f8d01b9f36c0204280d47229c0496b5, type: 2}
 --- !u!1001 &970558517
 PrefabInstance:
   m_ObjectHideFlags: 0
