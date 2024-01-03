@@ -3124,6 +3124,7 @@ MonoBehaviour:
   textCharacter: {fileID: 3788230083830589431}
   continueDialogMark: {fileID: 3788230082932412096}
   dialogPassed: 0
+  typewritterFinished: 0
   typingSpeed: 5
   lockpickMiniGame: {fileID: 4284002438564315095}
   choiceRoot: {fileID: 3788230083188538807}
@@ -14901,6 +14902,8 @@ MonoBehaviour:
   - {fileID: 5272938664715806071}
   - {fileID: 3980562111482634894}
   - {fileID: 4724729285832716153}
+  sfxNormal: {fileID: 8300000, guid: 045fb0675400a1941a7cdfe9458d5e36, type: 3}
+  sfxWin: {fileID: 8300000, guid: bae9244f7d9b27d4e91ea85ba673a6db, type: 3}
 --- !u!1 &8916144914534893187
 GameObject:
   m_ObjectHideFlags: 0

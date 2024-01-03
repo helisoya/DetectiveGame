@@ -22,6 +22,9 @@ public class LockpickMiniGame : Minigame
 
     [Header("Locks")]
     [SerializeField] private Image[] imagesLock;
+    [Header("Audios")]
+    [SerializeField] private AudioClip sfxNormal;
+    [SerializeField] private AudioClip sfxWin;
 
     private bool inCooldown;
     private float startedWaitingAt;
@@ -96,8 +99,17 @@ public class LockpickMiniGame : Minigame
 
                     if (currentLock == 2)
                     {
+                        AudioManager.instance.PlaySFX(sfxWin);
                         EndMiniGame();
                     }
+                    else
+                    {
+                        AudioManager.instance.PlaySFX(sfxNormal);
+                    }
+                }
+                else
+                {
+                    AudioManager.instance.PlaySFX(sfxNormal);
                 }
             }
         }
