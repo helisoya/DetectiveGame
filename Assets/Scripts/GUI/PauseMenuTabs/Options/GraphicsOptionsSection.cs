@@ -9,6 +9,7 @@ public class GraphicsOptionsSection : OptionsSection
     [Header("Graphics")]
     [SerializeField] private Toggle toggleFullscreen;
     [SerializeField] private TMP_Dropdown resolutionDropdown;
+    [SerializeField] private TMP_Dropdown qualityDropdown;
     private Resolution[] resolutions;
 
 
@@ -43,6 +44,8 @@ public class GraphicsOptionsSection : OptionsSection
 
         toggleFullscreen.SetIsOnWithoutNotify(save.fullscreen);
         resolutionDropdown.SetValueWithoutNotify(currentIndex != -1 ? currentIndex : 0);
+
+        qualityDropdown.SetValueWithoutNotify(save.quality);
     }
 
     /// <summary>
@@ -59,5 +62,8 @@ public class GraphicsOptionsSection : OptionsSection
         save.refreshRate = res.refreshRate;
 
         Screen.SetResolution(res.width, res.height, save.fullscreen, res.refreshRate);
+
+        save.quality = qualityDropdown.value;
+        QualitySettings.SetQualityLevel(save.quality);
     }
 }

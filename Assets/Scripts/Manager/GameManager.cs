@@ -379,7 +379,8 @@ public class GameManager : MonoBehaviour
                 Screen.currentResolution.width,
                 Screen.currentResolution.height,
                 Screen.currentResolution.refreshRate,
-                Screen.fullScreen
+                Screen.fullScreen,
+                QualitySettings.GetQualityLevel()
             );
             SaveGlobal();
         }

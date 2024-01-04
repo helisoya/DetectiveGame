@@ -19,6 +19,7 @@ public class SaveMenuTab : PauseMenuTab
     {
         base.Refresh();
         loadButton.interactable = GameManager.instance.saveFileExists;
+        saveButton.interactable = !DialogMaster.instance.inDialog;
     }
 
     /// <summary>
