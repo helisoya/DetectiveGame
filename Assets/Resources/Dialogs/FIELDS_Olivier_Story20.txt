@@ -23,4 +23,5 @@ Dialog(Olivier;I often forget to close or open it. I rarely go there, you see.;O
 FocusCamera(Player)
 Dialog(Arthur;Yes. Thank you. I'll make sure to give it back to you when I'm done.;Player;true)
 
+SetSaveItem(OBJECTIVE;15)
 SetSaveItem(STORY;21)

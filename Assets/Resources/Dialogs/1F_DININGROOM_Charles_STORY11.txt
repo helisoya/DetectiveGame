@@ -137,6 +137,7 @@ Dialog(Arthur;<color=blue>After finishing dinner, everyone went back to their ro
 Dialog(Arthur;<color=blue>I have to head to mine, too. It's on the second floor, in front of Daniel's room.</color>;NONE;false)
 Dialog(Arthur;<color=blue>I can use my map if I get lost.</color>;NONE;true)
 
+SetSaveItem(OBJECTIVE;6)
 SetNPCFollowPlayer(Daniel;false)
 SetSaveItem(STORY;12)
 LoadMap(1F_HALLWAY)

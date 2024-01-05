@@ -29,8 +29,11 @@ public class SaveFile
         evidencesUnlocked = new List<string>();
         currentCases = new List<string>();
         pastCases = new List<string>();
-        items = new List<SaveItem>();
-        items.Add(new SaveItem("STORY", "1"));
+        items = new List<SaveItem>
+        {
+            new SaveItem("STORY", "1"),
+            new SaveItem("OBJECTIVE", "0")
+        };
         currentMap = "DOCKS";
         lastMap = "NONE";
         currentWeather = "DAY";

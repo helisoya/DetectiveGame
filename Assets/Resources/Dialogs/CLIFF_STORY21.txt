@@ -85,14 +85,14 @@ Dialog(Lydia;Well, time to go, Pearl.;Lydia;false)
 
 
 FocusCamera(Story21_CamLookSea)
-Dialog(Arthur;<color=blue>All this talk about witches. They don't even exists.</color>;NONE;false)
+Dialog(Arthur;<color=blue>All this talk about witches. They don't even exist.</color>;NONE;false)
 Dialog(Arthur;<color=blue>I solved Mother's murder, and the shrine's appearence can surely be explained.</color>;NONE;false)
 Dialog(Arthur;<color=blue>I will find Mother's murderer. I will.</color>;NONE;false)
 Dialog(Arthur;<color=blue>...</color>;NONE;false)
 Dialog(Arthur;<color=blue>I gazed at the ocean for a few minutes.</color>;NONE;false)
-Dialog(Arthur;Well. Time to get back to the manor. The meals must be done by now.;Player;true)
+Dialog(Arthur;Well. Time to get back to the manor. Lunch must be prepared by now.;Player;true)
 
-
+SetSaveItem(OBJECTIVE;16)
 SetSaveItem(STORY;22)
 SetNPCFollowPlayer(Pearl;false)
 SetNPCFollowPlayer(Lydia;false)

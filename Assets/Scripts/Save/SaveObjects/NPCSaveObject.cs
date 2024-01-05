@@ -71,10 +71,11 @@ public class NPCSaveObject : SaveObject
     {
         if (storyObject != null && !storyObject.GetCanBeEnabled() || npc == null) return null;
 
+        /*
         if (npc.isProcessingEvent)
         {
             npc.StopEvent();
-        }
+        }*/
 
         return new SaveStoryObject(
             saveName,

@@ -18,5 +18,6 @@ Dialog(Arthur;Let's start our investigation.;Player;true)
 
 StartCase(ANN_MURDER)
 
+SetSaveItem(OBJECTIVE;10)
 SetSaveItem(STORY;16)
 RefreshStoryObjects()

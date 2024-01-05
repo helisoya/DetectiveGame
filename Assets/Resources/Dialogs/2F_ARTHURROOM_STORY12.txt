@@ -74,6 +74,6 @@ FocusCamera(Player)
 Dialog(Arthur;Wow, I never slept this much before.;Player;false)
 Dialog(Arthur;Well, time to get breakfast. I should head to the dining room.;Player;true)
 
-
+SetSaveItem(OBJECTIVE;7)
 SetSaveItem(STORY;13)
 RefreshStoryObjects()

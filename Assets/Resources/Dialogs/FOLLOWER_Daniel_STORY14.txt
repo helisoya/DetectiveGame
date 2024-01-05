@@ -52,5 +52,6 @@ FocusCamera(Daniel)
 Dialog(Daniel;Have faith, nobody will suspect a thing.;Daniel;false)
 Dialog(Daniel;Alright, lead the way. Mother's room in on the second floor, on the left.;Daniel;true)
 
+SetSaveItem(OBJECTIVE;9)
 SetSaveItem(STORY;15)
 SetNPCFollowPlayer(Daniel;true)

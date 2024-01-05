@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 /// <summary>
@@ -14,6 +15,10 @@ public class MapMenuTab : PauseMenuTab
     [SerializeField] private List<string> outsideScenes;
     [SerializeField] private List<string> F1Scenes;
     [SerializeField] private List<string> F2Scenes;
+
+    [Header("Objective")]
+    [SerializeField] private string[] objectiveLabels;
+    [SerializeField] private TextMeshProUGUI objectiveText;
 
     void Start()
     {
@@ -30,6 +35,12 @@ public class MapMenuTab : PauseMenuTab
         {
             SearchForIconInTransform(F2Map, mapName);
         }
+    }
+
+    public override void Refresh()
+    {
+        base.Refresh();
+        objectiveText.text = objectiveLabels[int.Parse(GameManager.instance.GetSaveItemValue("OBJECTIVE"))];
     }
 
     /// <summary>

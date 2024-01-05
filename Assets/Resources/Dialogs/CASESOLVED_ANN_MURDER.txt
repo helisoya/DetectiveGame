@@ -94,5 +94,6 @@ Dialog(Daniel;But let's get out of here first. We stayed in here for too long. P
 FocusCamera(Player)
 Dialog(Arthur;Right, let's go.;Player;true)
 
+SetSaveItem(OBJECTIVE;11)
 SetSaveItem(STORY;17)
 RefreshStoryObjects()

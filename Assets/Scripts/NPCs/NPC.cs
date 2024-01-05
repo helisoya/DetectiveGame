@@ -263,7 +263,7 @@ public class NPC : MonoBehaviour
     {
         if (routineEvent != null)
         {
-            StopCoroutine(routineEvent);
+            DialogMaster.instance.StopCoroutine(routineEvent);
         }
     }
 

@@ -11,6 +11,7 @@ Dialog(Lydia;I... I may have lost the key...;Lydia;false)
 FocusCamera(Player)
 Dialog(Arthur;Right.... Well, it's time for us to find the key.;Player;false)
 
+SetSaveItem(OBJECTIVE;1)
 SetSaveItem(STORY;5)
 LoadFile(DOCKS_Lydia_Story5)
 

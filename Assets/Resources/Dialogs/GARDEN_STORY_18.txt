@@ -61,6 +61,6 @@ Dialog(Lydia;It's past the gate on the left, and past the fields.;Lydia;false)
 FocusCamera(Player)
 Dialog(Arthur;Right. Let's go.;Player;true)
 
-
+SetSaveItem(OBJECTIVE;13)
 SetSaveItem(STORY;19)
 SetNPCFollowPlayer(Pearl;true)

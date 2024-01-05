@@ -55,6 +55,7 @@ MonoBehaviour:
     resolutionW: 0
     resolutionH: 0
     refreshRate: 0
+    quality: 0
 --- !u!114 &5030519964950151483
 MonoBehaviour:
   m_ObjectHideFlags: 0

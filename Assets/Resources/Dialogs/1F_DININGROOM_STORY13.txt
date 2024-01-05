@@ -45,6 +45,7 @@ Dialog(Arthur;Alright. I'll be there.;Player;true)
 
 FadeBg(1;5)
 
+SetSaveItem(OBJECTIVE;8)
 SetSaveItem(STORY;14)
 RefreshStoryObjects()
 PositionPlayer(STORY13_PlayerTable_Position)

@@ -1,5 +1,6 @@
 Dialog(Arthur;A key. This must be the one we are searching for.;Player;false)
 Dialog(Arthur;I should show it to Lydia.;Player;true)
 
+SetSaveItem(OBJECTIVE;2)
 SetSaveItem(STORY;6)
 RefreshStoryObjects()

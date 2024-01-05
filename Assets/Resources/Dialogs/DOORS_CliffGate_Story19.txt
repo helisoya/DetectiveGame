@@ -10,4 +10,5 @@ FocusCamera(Player)
 Dialog(Arthur;<color=blue>Our gardener ? This makes sense actually.</color>;Player;false)
 Dialog(Arthur;<color=blue>I should be able to find him somewhere around here.</color>;Player;true)
 
+SetSaveItem(OBJECTIVE;14)
 SetSaveItem(STORY;20)

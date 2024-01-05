@@ -75,5 +75,6 @@ Dialog(Arthur;Oh well, only one way to find out.;Player;false)
 Dialog(Arthur;<color=blue>Daniel's room is on the second floor. I should pay him a visit.</color>;NONE;false)
 Dialog(Arthur;<color=blue>If I ever get lost, I can use the map in my notebook using Tab</color>;NONE;true)
 
+SetSaveItem(OBJECTIVE;4)
 SetSaveItem(STORY;9)
 RefreshStoryObjects()

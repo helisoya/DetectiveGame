@@ -32,5 +32,6 @@ Dialog(Lydia;Not really. I just want to be sure you don't get endangered.;Lydia;
 FocusCamera(Player)
 Dialog(Arthur;Alright. Let's go meet my aunt in the garden.;Player;true)
 
+SetSaveItem(OBJECTIVE;12)
 SetSaveItem(STORY;18)
 SetNPCFollowPlayer(Lydia;true)

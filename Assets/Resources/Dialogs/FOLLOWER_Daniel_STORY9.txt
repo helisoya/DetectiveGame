@@ -89,5 +89,6 @@ Dialog(Daniel;Alright, lead the way. I'll be right behind you.;Daniel;false)
 FocusCamera(Player)
 Dialog(Arthur;<color=blue>The dining room is on the first floor. It's on the right from the entrance.</color>;Player;true)
 
+SetSaveItem(OBJECTIVE;5)
 SetSaveItem(STORY;10)
 SetNPCFollowPlayer(Daniel;true)
