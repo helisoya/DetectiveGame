@@ -109,6 +109,10 @@ public class GameGUI : MonoBehaviour
             if (pauseMenuRoot.activeInHierarchy) ClosePauseMenu();
             else OpenPauseMenu();
         }
+        else if (Input.GetKeyDown(KeyCode.Backspace) && !dialogPassed && typewritterFinished)
+        {
+            dialogRoot.SetActive(!dialogRoot.activeInHierarchy);
+        }
     }
 
     /**
@@ -322,6 +326,7 @@ public class GameGUI : MonoBehaviour
         if (routineTyping == null)
         {
             dialogPassed = true;
+            typewritterFinished = false;
         }
         else
         {

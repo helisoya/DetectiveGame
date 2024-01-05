@@ -86,10 +86,22 @@ Dialog(Lydia;Well, time to go, Pearl.;Lydia;false)
 
 FocusCamera(Story21_CamLookSea)
 Dialog(Arthur;<color=blue>All this talk about witches. They don't even exist.</color>;NONE;false)
-Dialog(Arthur;<color=blue>I solved Mother's murder, and the shrine's appearence can surely be explained.</color>;NONE;false)
-Dialog(Arthur;<color=blue>I will find Mother's murderer. I will.</color>;NONE;false)
-Dialog(Arthur;<color=blue>...</color>;NONE;false)
-Dialog(Arthur;<color=blue>I gazed at the ocean for a few minutes.</color>;NONE;false)
+Dialog(Arthur;<color=blue>I've almost solved Mother's murder, and the shrine's appearence can surely be explained.</color>;NONE;false)
+
+ShowCG(CLIFF_STORY21_1;5)
+Dialog(Arthur;I will find Mother's murderer. And I will prove that it wasn't a witch.;Player;false)
+Dialog(Arthur;...;NONE;false)
+
+ShowCG(CLIFF_STORY21_2;5)
+Dialog(???;...I'm sure you will... This will be interesting...;NONE;false)
+
+FadeBg(1;5)
+HideCG(5)
+Dialog( ;<color=red>This is the end of the demo. Thank you for playing.</color>;NONE;false)
+Dialog( ;<color=red>You can still play, but there is no content for now.</color>;NONE;false)
+FadeBg(0;5)
+
+
 Dialog(Arthur;Well. Time to get back to the manor. Lunch must be prepared by now.;Player;true)
 
 SetSaveItem(OBJECTIVE;16)
