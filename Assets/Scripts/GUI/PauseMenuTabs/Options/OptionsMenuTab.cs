@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class OptionsMenuTab : PauseMenuTab
 {
+    [SerializeField] private bool onMainMenu = false;
     [SerializeField] private OptionsSection[] sections;
 
     private OptionsSection currentSection;
@@ -29,7 +30,7 @@ public class OptionsMenuTab : PauseMenuTab
     /// <param name="section">The new section</param>
     public void Click_ChangeSection(OptionsSection section)
     {
-        GameGUI.instance.PlayButtonSFX();
+        PlayButtonSFX();
         if (currentSection != null) currentSection.Close();
         section.Open();
         currentSection = section;
@@ -40,11 +41,26 @@ public class OptionsMenuTab : PauseMenuTab
     /// </summary>
     public void Click_Apply()
     {
-        GameGUI.instance.PlayButtonSFX();
+        PlayButtonSFX();
         foreach (OptionsSection section in sections)
         {
             section.Save();
         }
         GameManager.instance.SaveGlobal();
+    }
+
+    /// <summary>
+    /// Plays the button click SFX, depending on the parent GUI
+    /// </summary>
+    void PlayButtonSFX()
+    {
+        if (onMainMenu)
+        {
+            MainMenuManager.instance.PlayButtonSFX();
+        }
+        else
+        {
+            GameGUI.instance.PlayButtonSFX();
+        }
     }
 }

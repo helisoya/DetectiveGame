@@ -19,6 +19,9 @@ public class MainMenuManager : MonoBehaviour
     [Header("Fading")]
     [SerializeField] private FadeManager fade;
 
+    [Header("Audio")]
+    [SerializeField] private AudioClip buttonPressClick;
+
     public static MainMenuManager instance;
 
     public bool isFading
@@ -39,6 +42,15 @@ public class MainMenuManager : MonoBehaviour
         continueButton.interactable = GameManager.instance.saveFileExists;
     }
 
+
+    /// <summary>
+    /// Plays the button click sound effect
+    /// </summary>
+    public void PlayButtonSFX()
+    {
+        AudioManager.instance.PlaySFX(buttonPressClick);
+    }
+
     /// <summary>
     /// Fades the screen
     /// </summary>
@@ -54,7 +66,7 @@ public class MainMenuManager : MonoBehaviour
     /// </summary>
     public void Click_NewGame()
     {
-        GameGUI.instance.PlayButtonSFX();
+        PlayButtonSFX();
         mainRoot.SetActive(false);
         if (GameManager.instance.saveFileExists)
         {
@@ -71,7 +83,7 @@ public class MainMenuManager : MonoBehaviour
     /// </summary>
     public void Click_ConfirmNewGame()
     {
-        GameGUI.instance.PlayButtonSFX();
+        PlayButtonSFX();
         newGameOverwriteRoot.SetActive(false);
         GameManager.instance.NewGame();
     }
@@ -81,7 +93,7 @@ public class MainMenuManager : MonoBehaviour
     /// </summary>
     public void Click_CancelNewGame()
     {
-        GameGUI.instance.PlayButtonSFX();
+        PlayButtonSFX();
         newGameOverwriteRoot.SetActive(false);
         mainRoot.SetActive(true);
     }
@@ -91,7 +103,7 @@ public class MainMenuManager : MonoBehaviour
     /// </summary>
     public void Click_Load()
     {
-        GameGUI.instance.PlayButtonSFX();
+        PlayButtonSFX();
         mainRoot.SetActive(false);
         GameManager.instance.Load(true);
     }
@@ -101,7 +113,7 @@ public class MainMenuManager : MonoBehaviour
     /// </summary>
     public void Click_Options()
     {
-        GameGUI.instance.PlayButtonSFX();
+        PlayButtonSFX();
         mainRoot.SetActive(false);
         optionsMenuTab.Open();
     }
@@ -111,7 +123,7 @@ public class MainMenuManager : MonoBehaviour
     /// </summary>
     public void Click_CloseOptions()
     {
-        GameGUI.instance.PlayButtonSFX();
+        PlayButtonSFX();
         optionsMenuTab.Close();
         mainRoot.SetActive(true);
     }
