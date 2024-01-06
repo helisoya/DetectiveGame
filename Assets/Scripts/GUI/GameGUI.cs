@@ -17,7 +17,6 @@ public class GameGUI : MonoBehaviour
     [SerializeField] private GameObject continueDialogMark;
     [HideInInspector] public bool dialogPassed;
     [HideInInspector] public bool typewritterFinished;
-    [SerializeField] private float typingSpeed;
     private Coroutine routineTyping;
 
 
@@ -299,6 +298,8 @@ public class GameGUI : MonoBehaviour
     {
         string dialog = Utils.RemoveRichText(textDialog.text);
 
+        GlobalSave save = GameManager.instance.globalSave;
+
         int textLength = dialog.Length;
         int currentIndex = 0;
 
@@ -309,7 +310,7 @@ public class GameGUI : MonoBehaviour
             currentIndex++;
             AudioManager.instance.PlaySFX(sfxTypewritter);
             textDialog.maxVisibleCharacters = currentIndex;
-            yield return new WaitForSeconds(Time.deltaTime * typingSpeed);
+            yield return new WaitForSeconds(Time.deltaTime * save.typewritterSpeed);
         }
 
         textDialog.maxVisibleCharacters = textLength;

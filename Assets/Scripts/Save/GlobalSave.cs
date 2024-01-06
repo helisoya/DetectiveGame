@@ -13,6 +13,7 @@ public class GlobalSave
     public int resolutionH;
     public int refreshRate;
     public int quality;
+    public float typewritterSpeed;
 
     /// <summary>
     /// Creates a new Global Save
@@ -33,6 +34,7 @@ public class GlobalSave
         volumeMaster = 0;
         volumeBGM = 0;
         volumeSFX = 0;
+        typewritterSpeed = 3;
     }
 
 }
