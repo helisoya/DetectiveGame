@@ -21,7 +21,7 @@ Dialog(Arthur;Well, let's review what we know.;Player;false)
 
 ShowCG(ANNMURDER_1;5)
 Dialog(Arthur;Mother was in her room. Knowing her, she was probably knitting.;Player;false)
-Dialog(Arthur;Unbeknown to her, she wasn't alone. Someone was here to kill her.;Player;false)
+Dialog(Arthur;Unbeknownst to her, she wasn't alone. Someone was here to kill her.;Player;false)
 
 ShowCG(ANNMURDER_2;5)
 Dialog(Arthur;Given the marks on her body. I can almost be certain that she fought with her murderer.;Player;false)

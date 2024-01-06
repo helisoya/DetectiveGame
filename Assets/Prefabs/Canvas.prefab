@@ -1894,6 +1894,7 @@ MonoBehaviour:
   tabButtonSprite: {fileID: 3788230082871639634}
   selectedColor: {r: 0.8627451, g: 0.8627451, b: 0.8627451, a: 1}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
+  onMainMenu: 0
   sections:
   - {fileID: 7919627756398134429}
   - {fileID: 4432133750957738394}
@@ -9881,7 +9882,8 @@ MonoBehaviour:
     characterImg: {fileID: 21300000, guid: 43f5864ebab160c4883fd407d4dc49e4, type: 3}
   - ID: KATHERINE
     characterName: Katherine
-    characterDesc: My younger sister. She is kind, and doesn't like troubles.
+    characterDesc: My younger sister. She is kind, and doesn't like troubles. She
+      spends most of her time with my sister Mary.
     characterImg: {fileID: 21300000, guid: c7a31d74c8c49274b981a572968ab111, type: 3}
   - ID: MARY
     characterName: Mary
@@ -9891,8 +9893,7 @@ MonoBehaviour:
   - ID: DANIEL
     characterName: Daniel
     characterDesc: My brother Daniel is probably not the brightest individual. He
-      often forgets things or finds himself in ridiculous situations. He admires
-      me for some reason.
+      often forgets things or finds himself in ridiculous situations.
     characterImg: {fileID: 21300000, guid: 0cbd5c9a66812464ead14a781ca60e23, type: 3}
   - ID: JAMES
     characterName: James
@@ -9930,8 +9931,8 @@ MonoBehaviour:
   - ID: OLIVIER
     characterName: Olivier
     characterDesc: Olivier is the family's garderner. He takes care of the fields
-      and makes sure Peter has something to cook for dinner. In the past, he has
-      served in the army.
+      and makes sure Peter has something to cook for dinner. In the past, he was
+      a soldier.
     characterImg: {fileID: 21300000, guid: 22b8cfb45e90bae4fb75fa98c2322609, type: 3}
 --- !u!1 &3788230084963684051
 GameObject:

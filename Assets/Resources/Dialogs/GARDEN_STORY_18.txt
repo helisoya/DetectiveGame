@@ -21,6 +21,7 @@ SetNPCDestination(Grace;STORY18_Grace_Exit)
 FocusCamera(Grace)
 Dialog(Grace;You came. Now make sure you don't come back before lunch.;Grace;true)
 SetNPCHidden(Grace;true)
+PlaySFX(Doors/openDoor)
 
 FocusCamera(Pearl)
 

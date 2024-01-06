@@ -15,10 +15,11 @@ FocusCamera(Player)
 Dialog(Arthur;The witch, uh ? Father started ranting about her around 5 years ago, right ?;Player;false)
 
 FocusCamera(Daniel)
-Dialog(Daniel;Yeah. He says that she was living in the mountain.;Daniel;false)
+Dialog(Daniel;Yeah. He says that she is living in the mountain.;Daniel;false)
 Dialog(Daniel;According to him, she is very powerful. She apparently can roast people in seconds.;Daniel;false)
 Dialog(Daniel;She also likes to do horrible things to her victims. Dismemberment, disfiguration. this kind of things.;Daniel;false)
 
 FocusCamera(Player)
 Dialog(Arthur;Right.... That's true, but....;Player;false)
-Dialog(Arthur;I'm not ready to accept that a witch did it. Not yet.;Player;true)
+Dialog(Arthur;I'm not ready to accept that a witch did it. Not yet.;Player;false)
+Dialog(Arthur;<color=blue>Something about the witch seems off, tough... I can't figure out what exactly...</color>;NONE;true)

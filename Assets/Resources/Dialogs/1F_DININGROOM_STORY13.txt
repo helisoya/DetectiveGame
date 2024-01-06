@@ -18,7 +18,7 @@ Dialog(Peter;Master Daniel was getting anxious. You never slept that much before
 SetCameraBetween(Daniel;Player)
 
 FocusCamera(Daniel)
-Dialog(Daniel;Ah Ah... right.... Well; it's not my fault. You usually are the first to wake up.;Daniel;false)
+Dialog(Daniel;Ah Ah... right.... Well, it's not my fault. You usually are the first one to wake up.;Daniel;false)
 
 FocusCamera(Player)
 Dialog(Arthur;True. The travel must have been more exhausting that I thought.;Player;false)

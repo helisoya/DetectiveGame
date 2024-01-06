@@ -19,7 +19,7 @@ Dialog(Arthur;How so ?;Player;false)
 
 FocusCamera(Daniel)
 Dialog(Daniel;You didn't hear ? Apparently a big storm is coming tomorrow night.;Daniel;false)
-Dialog(Daniel;We will be cut out from the world for a few days.;Daniel;false)
+Dialog(Daniel;We will be cut off from the world for a few days.;Daniel;false)
 
 FocusCamera(Player)
 Dialog(Arthur;Really ? This is unfortunate.;Player;false)
@@ -27,10 +27,10 @@ Dialog(Arthur;But, is it related to what you want to talk about ?;Player;false)
 
 FocusCamera(Daniel)
 Dialog(Daniel;Well... not really to be honest...;Daniel;false)
-Dialog(Daniel;So, here is the thing. You never heard how mother died, do you ?;Daniel;false)
+Dialog(Daniel;So, here is the thing. You never heard how mother died, did you ?;Daniel;false)
 
 FocusCamera(Player)
-Dialog(Arthur;No, I was only told she died sudently.;Player;false)
+Dialog(Arthur;No, I was only told she died suddently.;Player;false)
 Dialog(Arthur;<color=blue>I don't like where this is going.</color>;NONE;false)
 
 FocusCamera(Daniel)
@@ -55,17 +55,17 @@ FocusCamera(Player)
 Dialog(Arthur;Esther. I see you are doing okay.;Player;false)
 
 FocusCamera(Esther)
-Dialog(Arthur;<color=blue>Esther is a domestic working here. She is mainly in charge of cleaning.</color>;Player;false)
-Dialog(Arthur;<color=blue>She was also helping my mother raise me and my siblings.</color>;Player;false)
+Dialog(Arthur;<color=blue>Esther is a domestic working here. She is mainly in charge of cleaning.</color>;NONE;false)
+Dialog(Arthur;<color=blue>She was also helping my mother raise me and my siblings, back in the days.</color>;NONE;false)
 Dialog(Esther;Yes, thank you. I hope I did not interrupt anything ?;Esther;false)
 
 FocusCamera(Player)
 Dialog(Arthur;No, don't worry. What do you want to talk about ?;Player;false)
-Dialog(Arthur;<color=blue>I can't tell her about what Daniel told me. Not now.</color>;Player;false)
+Dialog(Arthur;<color=blue>I can't tell her about what Daniel told me. Not now.</color>;NONE;false)
 
 FocusCamera(Esther)
 Dialog(Esther;That is a relief. I just came to tell you that dinner is almost ready.;Esther;false)
-Dialog(Esther;Everybody is in the dining room. You go before dinner is served.;Esther;false)
+Dialog(Esther;Everyone is in the dining room. You should come, before dinner is served.;Esther;false)
 
 FocusCamera(Player)
 Dialog(Arthur;I see. We'll be on our way. Thank you.;Player;true)
@@ -87,7 +87,7 @@ FocusCamera(Daniel)
 Dialog(Daniel;Alright, lead the way. I'll be right behind you.;Daniel;false)
 
 FocusCamera(Player)
-Dialog(Arthur;<color=blue>The dining room is on the first floor. It's on the right from the entrance.</color>;Player;true)
+Dialog(Arthur;<color=blue>The dining room is on the first floor. It's on the right from the entrance.</color>;NONE;true)
 
 SetSaveItem(OBJECTIVE;5)
 SetSaveItem(STORY;10)

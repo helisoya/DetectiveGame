@@ -19,7 +19,7 @@ Dialog(Charles;It was right under our nose from the start...;Charles;false)
 FocusCamera(Player)
 Dialog(Arthur;Father ? What are talking about ?;Player;false)
 Dialog(Arthur;<color=blue>Father may not look like it, but he is into the occult.</color>;NONE;false)
-Dialog(Arthur;<color=blue>He even claims that a witch lives on the island. He built her a shrine in a cavern near the manor.</color>;NONE;false)
+Dialog(Arthur;<color=blue>He even claims that a witch lives on the island. She apparently has a shrine in a cavern near the manor.</color>;NONE;false)
 
 FocusCamera(Charles)
 Dialog(Charles;Isn't it obvious, Arthur ?;Charles;false)
@@ -69,7 +69,8 @@ Dialog(Arthur;Her... mark ? So you mean ?;Player;false)
 
 FocusCamera(Charles)
 Dialog(Charles;The witch is real ! She has come to kill us all !;Charles;false)
-Dialog(Charles;Quick ! We have to start making offerings. Do you have anything one you that could work ?;Charles;false)
+Dialog(Charles;Quick ! We have to start making offerings. Do you have anything on you that could work ?;Charles;false)
+Dialog(Charles;Wine could do the trick. Or maybe blood. Or maybe gold. I read that witches like gold.;Charles;false)
 
 FocusCamera(Player)
 Dialog(Arthur;Wait, wait. Let's calm down a little bit...;Player;false)

@@ -8,11 +8,11 @@ Dialog(Arthur;<color=blue>Well, even I can't deny there is a witch mark here...<
 SetCameraBetween(Player;Daniel)
 
 FocusCamera(Player)
-Dialog(Arthur;Daniel, you seriously have to tell everything you know.;Player;false)
+Dialog(Arthur;Daniel, you seriously have to tell me everything you know.;Player;false)
 Dialog(Arthur;But first, I have to check the room.;Player;false)
 Dialog(Arthur;<color=blue>I'm going to add on my notebook every piece of evidence we find.</color>;NONE;false)
 Dialog(Arthur;<color=blue>I can access it using Tab.</color>;NONE;false)
-Dialog(Arthur;<color=blue>When all the evidence are gathered, I can begin deducing things using the notebook.</color>;NONE;false)
+Dialog(Arthur;<color=blue>When I'm done gathering evidence, I can begin deducing things using the notebook.</color>;NONE;false)
 Dialog(Arthur;Let's start our investigation.;Player;true)
 
 

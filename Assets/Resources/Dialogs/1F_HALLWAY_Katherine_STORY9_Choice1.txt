@@ -2,8 +2,8 @@ FocusCamera(Player)
 Dialog(Arthur;How are things going for you lately ?;Player;false)
 
 FocusCamera(Katherine)
-Dialog(Katherine;Me ? Well, not much honestly.;Katherine;false)
-Dialog(Katherine;I mostly have to your sister all day...;Katherine;false)
+Dialog(Katherine;Me ? Well, I guess things are going okay.;Katherine;false)
+Dialog(Katherine;I mostly have to talk to your sister all day...;Katherine;false)
 Dialog(Katherine;She keeps talking about this new man father introduced to her.;Katherine;false)
 
 FocusCamera(Player)
@@ -14,7 +14,7 @@ FocusCamera(Katherine)
 Dialog(Katherine;Well... She punched him as soon as he introduced himself...;Katherine;false)
 
 FocusCamera(Player)
-Dialog(Arthur;Right... How...predictible actually.;Player;false)
+Dialog(Arthur;Right... How...predictible, actually.;Player;false)
 Dialog(Arthur;<color=blue>Mary's always like that. I think she just don't want to get married.</color>;NONE;false)
 Dialog(Arthur;<color=blue>At least, we are on good terms. I wouldn't want to finish tied up to a tree...</color>;NONE;true)
 

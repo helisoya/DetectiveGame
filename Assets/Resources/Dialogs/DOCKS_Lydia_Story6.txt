@@ -5,7 +5,7 @@ Dialog(Arthur;I found the key. You dropped it near the well.;Player;false)
 
 FocusCamera(Lydia)
 Dialog(Lydia;Ah... I see. I suppose I was distracted.;Lydia;false)
-Dialog(Lydia;But thank you for finding it. I never knew you were such a gentleman.;Lydia;false)
+Dialog(Lydia;Thank you for finding it. I never knew you were such a gentleman.;Lydia;false)
 
 FocusCamera(Player)
 Dialog(Arthur;Eh. Don't mention it. I only did what I had to do.;Player;false)

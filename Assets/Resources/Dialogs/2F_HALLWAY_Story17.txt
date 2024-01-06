@@ -15,7 +15,7 @@ Dialog(Lydia;Were you alone ? Did you also drag your brother with you ?;Lydia;fa
 
 FocusCamera(Player)
 Dialog(Arthur;Well, as you can... see ?;Player;false)
-Dialog(Arthur;<color=blue>Wait, where did he go ? Leaving me alone in a time like this ?</color>;NONE;false)
+Dialog(Arthur;<color=blue>Wait, where did he go ? Leaving me alone at a time like this ?</color>;NONE;false)
 
 FocusCamera(Lydia)
 Dialog(Lydia;Anyway, I have to go find Grace in the garden.;Lydia;false)

@@ -15,7 +15,7 @@ FocusCamera(Player)
 Dialog(Arthur;Yes. Are my siblings already on the Island ?;Player;false)
 
 FocusCamera(Lydia)
-Dialog(Lydia;Yes. Daniel and your sisters are already living here so they weren't going anywhere.;Lydia;false)
+Dialog(Lydia;Yes. Daniel and your sisters are already living here. So they weren't going anywhere.;Lydia;false)
 Dialog(Lydia;As for James, he arrived three days ago with his wife and child.;Lydia;false)
 
 FocusCamera(Player)

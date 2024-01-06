@@ -30,6 +30,6 @@ FocusCamera(Player)
 Dialog(Arthur;Oh right, the war with Prussia. But you know I was stationned in Asia at the time.;Player;false)
 
 FocusCamera(James)
-Dialog(James;Always finding excuses to not help me. Typical.;James;false)
+Dialog(James;Always finding excuses not to help me. How typical of you.;James;false)
 Dialog(Arthur;<color=blue>I give up.</color>;NONE;true)
 
