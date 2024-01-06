@@ -339,6 +339,13 @@ public class NPC : MonoBehaviour
                 case "RefreshStoryObjects":
                     StoryObjectsManager.instance.RefreshAllStoryObjects();
                     break;
+                case "Play3DSound":
+                    AudioManager.instance.Play3DSFX(
+                        Resources.Load<AudioClip>("Audio/SFX/" + split[1]),
+                        transform.position,
+                        null
+                        );
+                    break;
             }
             yield return new WaitForEndOfFrame();
 

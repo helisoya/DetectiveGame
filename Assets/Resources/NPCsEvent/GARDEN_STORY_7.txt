@@ -1,4 +1,5 @@
 SetDestination(Doors)
 Hide()
+Play3DSound(Doors/openDoor)
 SetSaveItem(STORY;8)
 RefreshStoryObjects()

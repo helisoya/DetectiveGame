@@ -9,6 +9,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioSource sourceBGM;
     [SerializeField] private AudioSource sourceSFX;
     [SerializeField] private AudioMixer audioMixer;
+    [SerializeField] private GameObject sfxPrefab;
 
     public static AudioManager instance;
 
@@ -44,6 +45,25 @@ public class AudioManager : MonoBehaviour
     public void PlaySFX(AudioClip clip)
     {
         sourceSFX.PlayOneShot(clip);
+    }
+
+    /// <summary>
+    /// Plays a 3D sound effect
+    /// </summary>
+    /// <param name="clip">The audio clip</param>
+    /// <param name="position">The position of the sound effect</param>
+    /// <param name="parent">The parent of the sound effect</param>
+    public void Play3DSFX(AudioClip clip, Vector3 position, Transform parent)
+    {
+        GameObject obj = Instantiate(sfxPrefab, parent);
+        obj.name = "3D SFX - " + clip.name;
+        obj.transform.position = position;
+
+        AudioSource source = obj.GetComponent<AudioSource>();
+        source.clip = clip;
+        source.Play();
+
+        Destroy(obj, clip.length);
     }
 
 

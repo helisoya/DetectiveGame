@@ -71,6 +71,8 @@ MonoBehaviour:
   sourceBGM: {fileID: 1333999097822967370}
   sourceSFX: {fileID: 6967640035820506238}
   audioMixer: {fileID: 24100000, guid: 99373bfc440371049b8600329cec4896, type: 2}
+  sfxPrefab: {fileID: 7560517850532701856, guid: c8b305d89bbe1494e8e646be2f11de87,
+    type: 3}
 --- !u!82 &6967640035820506238
 AudioSource:
   m_ObjectHideFlags: 0
