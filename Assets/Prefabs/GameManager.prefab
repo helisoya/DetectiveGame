@@ -56,6 +56,7 @@ MonoBehaviour:
     resolutionH: 0
     refreshRate: 0
     quality: 0
+    typewritterSpeed: 0
 --- !u!114 &5030519964950151483
 MonoBehaviour:
   m_ObjectHideFlags: 0
