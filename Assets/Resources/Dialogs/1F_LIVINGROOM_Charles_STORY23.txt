@@ -1,0 +1,71 @@
+SetCameraBetween(Charles;Player)
+
+FocusCamera(Player)
+Dialog(Arthur;Father ? May I bother for a few minutes ?;Player;false)
+
+FocusCamera(Charles)
+Dialog(Charles;Who- James, is that you ?;Charles;false)
+
+FocusCamera(Player)
+Dialog(Arthur;No, this is Arthur. Can we talk ?;Player;false)
+Dialog(Arthur;<color=blue>I knew he isn't himself right now, but still... James ?</color>;NONE;false)
+
+FocusCamera(Charles)
+Dialog(Charles;Oh. Well, I suppose I can talk for a bit.;Charles;false)
+Dialog(Charles;But make it quick, I know I'm targeted now.;Charles;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Targeted ? By whom ?;Player;false)
+
+FocusCamera(Charles)
+Dialog(Charles;The witch of course ! It happened just this morning.;Charles;false)
+Dialog(Charles;I went to open the window, but it was already open !;Charles;false)
+Dialog(Charles;This is clearly black magic ! I'm doomed !;Charles;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Uh.... Maybe you just forgot to close it yesterday ?;Player;false)
+
+FocusCamera(Charles)
+Dialog(Charles;...;NONE;false)
+Dialog(Charles;No.;Charles;false)
+Dialog(Charles;Anyway, what did you want to talk about ?;Charles;false)
+
+FocusCamera(Player)
+Dialog(Arthur;<color=blue>... I won't even try to make sense of what he just said.</color>;NONE;false)
+Dialog(Arthur;Well, I have a few questions concerning... a guest ?;Player;false)
+Dialog(Arthur;I heard that someone is here, unbeknownst to us.;Player;false)
+
+FocusCamera(Charles)
+Dialog(Charles;Who... told you about this ?;Charles;false)
+
+FocusCamera(Player)
+Dialog(Arthur;I... overheard the domestics talk about it...;Player;false)
+Dialog(Arthur;<color=blue>I shouldn't tell him that Lydia told me that. Who knows how he will react.</color>;NONE;false)
+
+FocusCamera(Charles)
+Dialog(Charles;I... know nothing !;Charles;false)
+Dialog(Charles;The guest room isn't currently occupied by a fine lady ! This isn't true !;Charles;false)
+Dialog(Charles;I must go ! My new greek artefact needs to be analysed !;Charles;true)
+
+PositionCamera(STORY_23_CharlesExitPosition)
+FocusCamera(STORY_23_CharlesExitFocus)
+SetNPCRunning(Charles;true)
+
+SetNPCDestination(Charles;STORY_23_CharlesEndPos)
+
+SetNPCHidden(Charles;true)
+PlaySFX(Doors/openDoor)
+
+Wait(1)
+
+SetCameraBetween(Daniel;Player)
+
+FocusCamera(Daniel)
+Dialog(Daniel;He ran away ! And he's hiding something...;Daniel;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Yes. Quick, after him ! He probably went to his study.;Player;true)
+
+SetSaveItem(OBJECTIVE;18)
+SetSaveItem(STORY;24)
+RefreshStoryObjects()

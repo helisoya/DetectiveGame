@@ -1,0 +1,2 @@
+Dialog(Arthur;We can open the gate now.;Player;true)
+LoadMap(CLIFF)

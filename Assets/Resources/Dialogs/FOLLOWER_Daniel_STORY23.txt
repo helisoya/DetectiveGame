@@ -1,0 +1,5 @@
+SetCameraBetween(Daniel;Player)
+
+
+FocusCamera(Daniel)
+Dialog(Daniel;Father is in the living room. We should head there now.;Daniel;true)

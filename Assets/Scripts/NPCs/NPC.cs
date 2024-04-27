@@ -20,6 +20,8 @@ public class NPC : MonoBehaviour
     private Coroutine routineEvent;
     private string _currentEvent;
     private int _currentEventIndex;
+    private float walkSpeed = 3.5f;
+    private float runSpeed = 6f;
 
     [Header("Components")]
     [SerializeField] private NavMeshAgent agent;
@@ -208,6 +210,15 @@ public class NPC : MonoBehaviour
         agent.Warp(position);
     }
 
+    /// <summary>
+    /// Sets if the NPC is running or not
+    /// </summary>
+    /// <param name="running">Is the NPC running ?</param>
+    public void SetRunning(bool running)
+    {
+        animator.SetBool("Run", running);
+        agent.speed = running ? runSpeed : walkSpeed;
+    }
 
     void Update()
     {
@@ -319,6 +330,9 @@ public class NPC : MonoBehaviour
                     break;
                 case "SetRotation":
                     SetRotation(float.Parse(split[1]));
+                    break;
+                case "SetRunning":
+                    SetRunning(bool.Parse(split[1]));
                     break;
                 case "ChangeInteractionDialog":
                     if (interaction != null)

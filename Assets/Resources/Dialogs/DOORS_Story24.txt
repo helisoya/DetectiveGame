@@ -1,0 +1,1 @@
+Dialog(Arthur;Now is not the time. We have to find Father.;Player;true)

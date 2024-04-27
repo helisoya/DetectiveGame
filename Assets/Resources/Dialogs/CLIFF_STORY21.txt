@@ -57,7 +57,7 @@ Dialog(Arthur;<color=blue>I forgot she was here... It wasn't wise to speak aroun
 Dialog(Arthur;<color=blue>Oh well. I guess I can at least awnser her question.</color>;NONE;false)
 Dialog(Arthur;The witch is said to live on this island. She apparently hides in the mountain.;Player;false)
 Dialog(Arthur;According to Father, she is trying her best to scare him out of the island.;Player;false)
-Dialog(Lydia;Right. I remember him talking about someone opening and closing windows at nights.;Lydia;false)
+Dialog(Lydia;Right. I remember him talking about someone opening and closing windows at night.;Lydia;false)
 Dialog(Arthur;Yes. And a few years ago, a shrine appeared out of nowhere in a cave.;Player;false)
 Dialog(Arthur;And on this day forward, Father started doing research on witches.;Player;false)
 Dialog(Lydia;It just... appeared ? Now I'm actually getting scared.;Lydia;false)
@@ -73,7 +73,7 @@ Dialog(Arthur;I see. You can go without me, I'll stay here a little longer.;Play
 Dialog(Lydia;Okay. Wait, I have something to tell you before going.;Lydia;false)
 Dialog(Lydia;This purple piece of clothing you found, is it really the murderer's ?;Lydia;false)
 Dialog(Arthur;Yes, I can't see why it would be there otherwise. Mother didn't have a purple dress to my knowledge.;Player;false)
-Dialog(Lydia;I see. Well, did you know there is a VIP staying at the manor from time to time ?;Lydia;false)
+Dialog(Lydia;I see. Well, did you know there is a guest staying at the manor from time to time ?;Lydia;false)
 Dialog(Arthur;No. That's the first time I hear about this.;Player;false)
 Dialog(Lydia;Well, I don't know her well. But all I know for sure is that she wears a purple dress.;Lydia;false)
 Dialog(Lydia;But you'll have to ask your Father about her. He is the one who told us to hide she was here.;Lydia;false)
@@ -97,10 +97,7 @@ Dialog(???;...I'm sure you will... This will be interesting...;NONE;false)
 
 FadeBg(1;5)
 HideCG(5)
-Dialog( ;<color=red>This is the end of the demo. Thank you for playing.</color>;NONE;false)
-Dialog( ;<color=red>You can still play, but there is no content for now.</color>;NONE;false)
 FadeBg(0;5)
-
 
 Dialog(Arthur;Well. Time to get back to the manor. Lunch must be prepared by now.;Player;true)
 

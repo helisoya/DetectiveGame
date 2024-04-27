@@ -1,0 +1,44 @@
+
+SetCameraBetween(Daniel;Player)
+
+FocusCamera(Daniel)
+Dialog(Daniel;Oh ! There you are.;Daniel;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Daniel... How did you even manage to slip pass Lydia ?;Player;false)
+
+FocusCamera(Daniel)
+Dialog(Daniel;Simple ! I stayed in Mother's room. I knew she wouldn't look there.;Daniel;false)
+Dialog(Daniel;Plus, by the time I decided to come out, both of you were already gone.;Daniel;false)
+
+FocusCamera(Player)
+Dialog(Arthur;I... see.;Player;false)
+Dialog(Arthur;<color=blue>Well that explains it, I suppose.</color>;NONE;false)
+
+FocusCamera(Daniel)
+Dialog(Daniel;So, what happened with Lydia ? Did you tell her ?;Daniel;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Well, yes. I had no choice, she saw me exit the room.;Player;false)
+Dialog(Arthur;But it may turn in our favor. She gave me a few hints for our next target.;Player;false)
+
+FocusCamera(Daniel)
+Dialog(Daniel;Really ? Coming from her, that's quite surprising. She is scared of the witch.;Daniel;false)
+
+FocusCamera(Player)
+Dialog(Arthur;I think I managed to convince her that it wasn't one.;Player;false)
+Dialog(Arthur;But get this. Did you know that a guest is here, on this island, right now ?;Player;false)
+
+FocusCamera(Daniel)
+Dialog(Daniel;What are you talking about ? You mean... there is someone here, beside us I mean.;Daniel;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Apparently, she's a friend of Father. We need to talk to him about that.;Player;false)
+
+FocusCamera(Daniel)
+Dialog(Daniel;Yeah, because if what you say is true, we might have a new suspect.;Daniel;false)
+Dialog(Daniel;Alright, lead the way. I think Father is in the living room.;Daniel;true)
+
+SetSaveItem(OBJECTIVE;17)
+SetSaveItem(STORY;23)
+SetNPCFollowPlayer(Daniel;true)

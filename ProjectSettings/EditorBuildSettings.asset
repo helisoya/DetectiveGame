@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Indoors/1F/1F_DININGROOM.unity
     guid: 6f06f0015bb7d4642885eb080949cf11
   - enabled: 1
+    path: Assets/Scenes/Indoors/1F/1F_LIVINGROOM.unity
+    guid: 11030a360889987428fd2e46ba10a55c
+  - enabled: 1
     path: Assets/Scenes/Indoors/2F/2F_HALLWAY.unity
     guid: 93bea531a862a714f9d18bd1cf2de9b6
   - enabled: 1

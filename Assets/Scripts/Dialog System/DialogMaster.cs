@@ -347,6 +347,10 @@ public class DialogMaster : MonoBehaviour
                             args = split[1].Split(';');
                             npcs[args[0]].SetRotation(float.Parse(args[1]));
                             break;
+                        case "SetNPCRunning":
+                            args = split[1].Split(';');
+                            npcs[args[0]].SetRunning(bool.Parse(args[1]));
+                            break;
                         case "SetNPCDestination":
                             args = split[1].Split(';');
                             npcs[args[0]].SetDestination(npcWaypoints[args[1]].position);

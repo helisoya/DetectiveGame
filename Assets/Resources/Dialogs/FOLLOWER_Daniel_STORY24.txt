@@ -1,0 +1,5 @@
+SetCameraBetween(Daniel;Player)
+
+
+FocusCamera(Daniel)
+Dialog(Daniel;Father probably retreated to his study, it's on the first floor.;Daniel;true)
