@@ -1,0 +1,15 @@
+SetCameraBetween(Lydia;Player)
+
+FocusCamera(Lydia)
+Dialog(Lydia;Hello Arthur. What are you planning to do this afternoon ?;Lydia;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Hello Lydia. I plan to check out the witch's shrine.;Player;false)
+Dialog(Arthur;I may find valuable clues there.;Player;false)
+
+FocusCamera(Lydia)
+Dialog(Lydia;I see. But do be careful. The storm is coming.;Lydia;false)
+Dialog(Lydia;You don't want to be out when it arrives. Trust me.;Lydia;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Don't worry. It won't take long.;Player;true)

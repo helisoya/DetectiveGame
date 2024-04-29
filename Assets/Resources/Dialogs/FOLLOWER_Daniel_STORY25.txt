@@ -1,0 +1,5 @@
+SetCameraBetween(Daniel;Player)
+
+
+FocusCamera(Daniel)
+Dialog(Daniel;The witch's shrine is located in the mountains. We should head there.;Daniel;true)

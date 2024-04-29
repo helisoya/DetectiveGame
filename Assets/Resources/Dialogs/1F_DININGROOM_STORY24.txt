@@ -1,0 +1,40 @@
+PositionPlayer(STORY24_PlayerPosition)
+TeleportNPC(Daniel;STORY24_DanielPosition)
+
+
+SetCameraBetween(Daniel;Player)
+
+FocusCamera(Daniel)
+Dialog(Daniel;Lunch was great, right ?;Daniel;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Yes, Peter outdid himself once again.;Player;false)
+Dialog(Arthur;... But enough small talk, we should define our next move.;Player;false)
+
+FocusCamera(Daniel)
+Dialog(Daniel;Right... Father didn't come out of his study to eat.;Daniel;false)
+Dialog(Daniel;We really struck a nerve back there, I think.;Daniel;false)
+
+FocusCamera(Player)
+Dialog(Arthur;True, I think we should let him be a little longer.;Player;false)
+Dialog(Arthur;We have another thing to investigate : the witch's shrine.;Player;false)
+
+FocusCamera(Daniel)
+Dialog(Daniel;You mean, the one that's inside the mountain ?;Daniel;false)
+
+FocusCamera(Player)
+Dialog(Arthur;This very shrine. I want to know more about it.;Player;false)
+Dialog(Arthur;If the witch isn't real, it is highly probable that the person behind the "witch" built it.;Player;false)
+
+FocusCamera(Daniel)
+Dialog(Daniel;And we might find clues there. I get it.;Daniel;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Right. The more clues we get, the better. Hence why we need to investigate.;Player;false)
+
+FocusCamera(Daniel)
+Dialog(Daniel;Alright, lead the way. We can get to the mountain by taking the right gate in the garden.;Daniel;true)
+
+SetSaveItem(OBJECTIVE;19)
+SetSaveItem(STORY;25)
+RefreshStoryObjects()

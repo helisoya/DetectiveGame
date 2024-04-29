@@ -1,2 +1,59 @@
-Dialog(Arthur;We can open the gate now.;Player;true)
-LoadMap(CLIFF)
+Dialog(Arthur;Father ? Are you there ?;Player;false)
+Dialog(Arthur;The door is locked...;Player;false)
+
+
+TeleportNPC(Daniel;STORY_24_DanielPosition)
+SetCameraBetween(Daniel;Player)
+
+FocusCamera(Player)
+Dialog(Arthur;Well, any ideas on how to get in ?;Player;false)
+
+FocusCamera(Daniel)
+Dialog(Daniel;... Knowing him, he'll probably stay locked in for the day.;Daniel;false)
+Dialog(Daniel;We could try the door to his room, upstairs. It's linked directly to his study.;Daniel;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Yes... But he probably locked the door too. We may have to lockpick it.;Player;false)
+
+FocusCamera(Daniel)
+Dialog(Daniel;We could get in a lot of troubles if we do that, you know ?;Daniel;false)
+Dialog(Daniel;This isn't like our other break in. We get caught, we get in trouble.;Daniel;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Of course. But think of it as a last resort move. He may very well come out in a few hours.;Player;false)
+Dialog(Arthur;If he does, we'll try to talk to him again. If he doesn't, we'll have to break in.;Player;false)
+
+
+SetNPCHidden(Lydia;false)
+SetCameraBetween(Lydia;Player)
+
+FocusCamera(Lydia)
+Dialog(Lydia;Arthur ? Lunch is ready.;Lydia;false)
+Dialog(Lydia;... Is there something wrong with Master Charles ?;Lydia;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Well, nothing too important. He locked himself his study.;Player;false)
+
+FocusCamera(Lydia)
+Dialog(Lydia;Ah... I see.;Lydia;false)
+Dialog(Lydia;Did... did you ask him about the guest I told you about ?;Lydia;false)
+
+FocusCamera(Player)
+Dialog(Arthur;... Yes. And he's hiding something. I intend to what out what exactly.;Player;false)
+
+FocusCamera(Lydia)
+Dialog(Lydia;Right. Just be careful. Master Charles can be scary sometimes.;Lydia;false)
+
+SetCameraBetween(Daniel;Player)
+
+FocusCamera(Daniel)
+Dialog(Daniel;Don't worry ! With me, nothing can go wrong.;Daniel;false)
+Dialog(Daniel;I'll convince him to tell us everything. Just watch.;Daniel;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Sure...;Player;false)
+Dialog(Arthur;Alright, let's go get lunch. We'll figure out what to do next afterwards.;Player;true)
+
+FadeBg(1;5)
+
+LoadMap(1F_DININGROOM)

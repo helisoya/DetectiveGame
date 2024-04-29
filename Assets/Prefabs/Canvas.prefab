@@ -10562,6 +10562,7 @@ MonoBehaviour:
   - Go to the dining room (1F)
   - Talk to Charles in the living room (1F)
   - Find Charles in his study (1F)
+  - Examine the witch's shrine
   objectiveText: {fileID: 6223012684798228497}
 --- !u!1 &3863310492533987716
 GameObject:

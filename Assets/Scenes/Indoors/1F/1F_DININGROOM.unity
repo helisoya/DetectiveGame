@@ -5256,6 +5256,130 @@ Transform:
   m_Father: {fileID: 175162193}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &847548125
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1711308188}
+    m_Modifications:
+    - target: {fileID: 1658999304971101631, guid: 486e93ccf06db704eb7ad0d36c6084f2,
+        type: 3}
+      propertyPath: dialogToLoad
+      value: 1F_DININGROOM_Lydia_STORY25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2309916246801662156, guid: 486e93ccf06db704eb7ad0d36c6084f2,
+        type: 3}
+      propertyPath: storyObject
+      value: 
+      objectReference: {fileID: 847548128}
+    - target: {fileID: 3551631758089170357, guid: 486e93ccf06db704eb7ad0d36c6084f2,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551631758089170357, guid: 486e93ccf06db704eb7ad0d36c6084f2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.0456543
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551631758089170357, guid: 486e93ccf06db704eb7ad0d36c6084f2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.821278
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551631758089170357, guid: 486e93ccf06db704eb7ad0d36c6084f2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.38363647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551631758089170357, guid: 486e93ccf06db704eb7ad0d36c6084f2,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9959004
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551631758089170357, guid: 486e93ccf06db704eb7ad0d36c6084f2,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551631758089170357, guid: 486e93ccf06db704eb7ad0d36c6084f2,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.090456754
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551631758089170357, guid: 486e93ccf06db704eb7ad0d36c6084f2,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551631758089170357, guid: 486e93ccf06db704eb7ad0d36c6084f2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551631758089170357, guid: 486e93ccf06db704eb7ad0d36c6084f2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 10.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551631758089170357, guid: 486e93ccf06db704eb7ad0d36c6084f2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3946093601894419009, guid: 486e93ccf06db704eb7ad0d36c6084f2,
+        type: 3}
+      propertyPath: storyObj
+      value: 
+      objectReference: {fileID: 847548128}
+    - target: {fileID: 3946093601894419009, guid: 486e93ccf06db704eb7ad0d36c6084f2,
+        type: 3}
+      propertyPath: followPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3946093601894419009, guid: 486e93ccf06db704eb7ad0d36c6084f2,
+        type: 3}
+      propertyPath: ignoreSaveSystem
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4179972573986486031, guid: 486e93ccf06db704eb7ad0d36c6084f2,
+        type: 3}
+      propertyPath: m_Name
+      value: Lydia
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2309916246801662156, guid: 486e93ccf06db704eb7ad0d36c6084f2, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 486e93ccf06db704eb7ad0d36c6084f2, type: 3}
+--- !u!4 &847548126 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3551631758089170357, guid: 486e93ccf06db704eb7ad0d36c6084f2,
+    type: 3}
+  m_PrefabInstance: {fileID: 847548125}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &847548127 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4179972573986486031, guid: 486e93ccf06db704eb7ad0d36c6084f2,
+    type: 3}
+  m_PrefabInstance: {fileID: 847548125}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &847548128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 847548127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 281b188a4be419340948619ae0d774b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enablingConditions:
+  - STORY;=;24
+  - STORY;=;25
+  needAll: 0
+  refreshOnStart: 1
 --- !u!1001 &879850133
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16516,6 +16640,51 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1293058635
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1293058636}
+  - component: {fileID: 1293058637}
+  m_Layer: 0
+  m_Name: STORY24_DanielPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1293058636
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293058635}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 9.98, y: -6.727062, z: 5.26}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1711308188}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1293058637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293058635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d21b3d6a6ddaf474eb8108d8d254bf36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  referenceName: STORY24_DanielPosition
 --- !u!1001 &1303042978
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18012,6 +18181,51 @@ Transform:
   m_Father: {fileID: 1539698688}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1552462315
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1552462316}
+  - component: {fileID: 1552462317}
+  m_Layer: 0
+  m_Name: STORY24_PlayerPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1552462316
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552462315}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.53, y: -6.727062, z: 4.89}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1711308188}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1552462317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552462315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d21b3d6a6ddaf474eb8108d8d254bf36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  referenceName: STORY24_PlayerPosition
 --- !u!1 &1580421565
 GameObject:
   m_ObjectHideFlags: 0
@@ -18550,6 +18764,40 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1711308187
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1711308188}
+  m_Layer: 0
+  m_Name: STORY_24
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1711308188
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1711308187}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 145.67213, y: 6.907062, z: 211.2386}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1552462316}
+  - {fileID: 1293058636}
+  - {fileID: 847548126}
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1713093203
 GameObject:
   m_ObjectHideFlags: 0
