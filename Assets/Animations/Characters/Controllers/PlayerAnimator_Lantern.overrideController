@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: PlayerAnimator_Lantern
+  m_Controller: {fileID: 9100000, guid: c3fce4796ecbc7744a6b7ed79c16ad95, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 851824534d362fa469b93ad4f3e34719, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: b7aa555e5ebfd674cb8db618d410d320, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: d1eaacd8c2cc2f847bd94d240ea1c8a7, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 683dfa411a9f1a244a529764d64cd545, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: a1cb98b344e3abe45895f6eca5bfae4e, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: a72203d10227f1844a96635796db291d, type: 2}

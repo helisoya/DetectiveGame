@@ -657,7 +657,7 @@ GameObject:
   - component: {fileID: 190237945}
   - component: {fileID: 190237944}
   - component: {fileID: 190237943}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Face
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12620,7 +12620,7 @@ GameObject:
   - component: {fileID: 527761657}
   - component: {fileID: 527761656}
   - component: {fileID: 527761655}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Exit-Domestics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14344,7 +14344,7 @@ GameObject:
   - component: {fileID: 776636639}
   - component: {fileID: 776636638}
   - component: {fileID: 776636637}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Exit-DiningRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14793,7 +14793,7 @@ GameObject:
   m_Component:
   - component: {fileID: 858805411}
   - component: {fileID: 858805412}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15142,7 +15142,7 @@ GameObject:
   - component: {fileID: 1003969489}
   - component: {fileID: 1003969488}
   - component: {fileID: 1003969487}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Exit-2F
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16341,7 +16341,7 @@ GameObject:
   - component: {fileID: 1205903863}
   - component: {fileID: 1205903864}
   - component: {fileID: 1205903865}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16405,7 +16405,7 @@ GameObject:
   - component: {fileID: 1209760832}
   - component: {fileID: 1209760831}
   - component: {fileID: 1209760830}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Exit-GARDEN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31248,7 +31248,7 @@ GameObject:
   - component: {fileID: 1547749653}
   - component: {fileID: 1547749652}
   - component: {fileID: 1547749651}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Exit-Library
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58059,7 +58059,7 @@ GameObject:
   - component: {fileID: 1842354748}
   - component: {fileID: 1842354747}
   - component: {fileID: 1842354746}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Face
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58257,7 +58257,7 @@ GameObject:
   - component: {fileID: 1844533395}
   - component: {fileID: 1844533394}
   - component: {fileID: 1844533393}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Exit-Study
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58584,7 +58584,7 @@ GameObject:
   - component: {fileID: 1899893212}
   - component: {fileID: 1899893211}
   - component: {fileID: 1899893210}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Exit-LivingRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59457,7 +59457,7 @@ GameObject:
   - component: {fileID: 2019353267}
   - component: {fileID: 2019353266}
   - component: {fileID: 2019353265}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Face
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59609,7 +59609,7 @@ GameObject:
   - component: {fileID: 2067759043}
   - component: {fileID: 2067759044}
   - component: {fileID: 2067759045}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}

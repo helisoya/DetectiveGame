@@ -199,7 +199,7 @@ GameObject:
   - component: {fileID: 255102857}
   - component: {fileID: 255102856}
   - component: {fileID: 255102855}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Face
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1573,7 +1573,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1299464826}
   - component: {fileID: 1299464828}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1622,7 +1622,7 @@ GameObject:
   - component: {fileID: 1375441572}
   - component: {fileID: 1375441571}
   - component: {fileID: 1375441570}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Exit-HALLWAY
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -11,6 +11,8 @@ public class PlayerDetectiveVision : MonoBehaviour
     private float currentValue = 0f;
     [SerializeField] private float speed;
     [SerializeField] private List<Material> materials;
+    [SerializeField] private int layer;
+    [SerializeField] private Volume volume;
     private bool inDetectiveMode = false;
     private bool foundRenderers = false;
 
@@ -39,6 +41,7 @@ public class PlayerDetectiveVision : MonoBehaviour
             if (renderer.material.shader.name.Contains("DetectiveVision"))
             {
                 materials.Add(renderer.material);
+                renderer.gameObject.layer = layer;
             }
         }
     }
@@ -52,6 +55,7 @@ public class PlayerDetectiveVision : MonoBehaviour
         {
             mat.SetFloat("_LerpValue", currentValue);
         }
+        volume.weight = currentValue;
     }
 
     void Update()

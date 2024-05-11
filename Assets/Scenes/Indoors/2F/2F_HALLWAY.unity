@@ -252,7 +252,7 @@ GameObject:
   - component: {fileID: 33655163}
   - component: {fileID: 33655162}
   - component: {fileID: 33655161}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Exit-Ann
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -692,7 +692,7 @@ GameObject:
   - component: {fileID: 131013280}
   - component: {fileID: 131013282}
   - component: {fileID: 131013281}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: default (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1177,7 +1177,7 @@ GameObject:
   - component: {fileID: 382959054}
   - component: {fileID: 382959053}
   - component: {fileID: 382959052}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Exit-VIP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2105,7 +2105,7 @@ GameObject:
   - component: {fileID: 603788260}
   - component: {fileID: 603788259}
   - component: {fileID: 603788258}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Exit-Arthur
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12790,7 +12790,7 @@ GameObject:
   - component: {fileID: 1045695468}
   - component: {fileID: 1045695467}
   - component: {fileID: 1045695466}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Exit-Katherine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13035,7 +13035,7 @@ GameObject:
   - component: {fileID: 1209760832}
   - component: {fileID: 1209760831}
   - component: {fileID: 1209760830}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Exit-1F
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13302,7 +13302,7 @@ GameObject:
   - component: {fileID: 1375441572}
   - component: {fileID: 1375441571}
   - component: {fileID: 1375441570}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Exit-Daniel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14146,7 +14146,7 @@ GameObject:
   - component: {fileID: 1744397300}
   - component: {fileID: 1744397299}
   - component: {fileID: 1744397298}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Exit-Charles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14272,7 +14272,7 @@ GameObject:
   - component: {fileID: 1759039464}
   - component: {fileID: 1759039463}
   - component: {fileID: 1759039462}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Exit-James
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14910,7 +14910,7 @@ GameObject:
   - component: {fileID: 1981217225}
   - component: {fileID: 1981217224}
   - component: {fileID: 1981217223}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Exit-Mary
   m_TagString: Untagged
   m_Icon: {fileID: 0}

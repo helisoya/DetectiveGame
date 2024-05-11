@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 278429}
   - component: {fileID: 278428}
   - component: {fileID: 278427}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Face
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -388,7 +388,7 @@ GameObject:
   - component: {fileID: 59632961}
   - component: {fileID: 59632960}
   - component: {fileID: 59632959}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -483,7 +483,7 @@ GameObject:
   - component: {fileID: 72177084}
   - component: {fileID: 72177083}
   - component: {fileID: 72177082}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Face
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2616,7 +2616,7 @@ GameObject:
   - component: {fileID: 413588456}
   - component: {fileID: 413588455}
   - component: {fileID: 413588454}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Face
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2736,7 +2736,7 @@ GameObject:
   - component: {fileID: 428306005}
   - component: {fileID: 428306007}
   - component: {fileID: 428306006}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3038,7 +3038,7 @@ GameObject:
   - component: {fileID: 488192568}
   - component: {fileID: 488192567}
   - component: {fileID: 488192566}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Face
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3419,7 +3419,7 @@ GameObject:
   - component: {fileID: 549444844}
   - component: {fileID: 549444843}
   - component: {fileID: 549444842}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Face
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3795,7 +3795,7 @@ GameObject:
   - component: {fileID: 609789165}
   - component: {fileID: 609789164}
   - component: {fileID: 609789163}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4881,7 +4881,7 @@ GameObject:
   - component: {fileID: 760331272}
   - component: {fileID: 760331271}
   - component: {fileID: 760331270}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4977,7 +4977,7 @@ GameObject:
   - component: {fileID: 776636639}
   - component: {fileID: 776636638}
   - component: {fileID: 776636637}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Exit-Hallway
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6089,7 +6089,7 @@ GameObject:
   - component: {fileID: 973878396}
   - component: {fileID: 973878398}
   - component: {fileID: 973878397}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15683,7 +15683,7 @@ GameObject:
   - component: {fileID: 1056285121}
   - component: {fileID: 1056285120}
   - component: {fileID: 1056285119}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Face
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15887,7 +15887,7 @@ GameObject:
   - component: {fileID: 1090354069}
   - component: {fileID: 1090354068}
   - component: {fileID: 1090354067}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Face
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16209,7 +16209,7 @@ GameObject:
   - component: {fileID: 1189966207}
   - component: {fileID: 1189966209}
   - component: {fileID: 1189966208}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16334,7 +16334,7 @@ GameObject:
   - component: {fileID: 1205903863}
   - component: {fileID: 1205903864}
   - component: {fileID: 1205903865}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17075,7 +17075,7 @@ GameObject:
   - component: {fileID: 1391817173}
   - component: {fileID: 1391817172}
   - component: {fileID: 1391817171}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Face
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17587,7 +17587,7 @@ GameObject:
   - component: {fileID: 1443535721}
   - component: {fileID: 1443535723}
   - component: {fileID: 1443535722}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18655,7 +18655,7 @@ GameObject:
   - component: {fileID: 1707205129}
   - component: {fileID: 1707205128}
   - component: {fileID: 1707205127}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Face
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19359,7 +19359,7 @@ GameObject:
   - component: {fileID: 1842354748}
   - component: {fileID: 1842354747}
   - component: {fileID: 1842354746}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Face
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20158,7 +20158,7 @@ GameObject:
   - component: {fileID: 1965511679}
   - component: {fileID: 1965511681}
   - component: {fileID: 1965511680}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20732,7 +20732,7 @@ GameObject:
   - component: {fileID: 2005149989}
   - component: {fileID: 2005149991}
   - component: {fileID: 2005149990}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21004,7 +21004,7 @@ GameObject:
   - component: {fileID: 2067759043}
   - component: {fileID: 2067759044}
   - component: {fileID: 2067759045}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21067,7 +21067,7 @@ GameObject:
   - component: {fileID: 2067883610}
   - component: {fileID: 2067883609}
   - component: {fileID: 2067883608}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Face
   m_TagString: Untagged
   m_Icon: {fileID: 0}

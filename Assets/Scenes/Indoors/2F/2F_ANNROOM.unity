@@ -1278,7 +1278,7 @@ GameObject:
   - component: {fileID: 843713899}
   - component: {fileID: 843713898}
   - component: {fileID: 843713897}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: STORY15_Cloth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1408,7 +1408,7 @@ GameObject:
   - component: {fileID: 871896511}
   - component: {fileID: 871896510}
   - component: {fileID: 871896509}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: STORY15_Mark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2681,7 +2681,7 @@ GameObject:
   - component: {fileID: 1375441572}
   - component: {fileID: 1375441571}
   - component: {fileID: 1375441570}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Exit-HALLWAY
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11153,7 +11153,7 @@ GameObject:
   - component: {fileID: 2125741894}
   - component: {fileID: 2125741893}
   - component: {fileID: 2125741892}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: STORY15_Ann
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -15,7 +15,7 @@ public class InteractableObject : MonoBehaviour
     /// <summary>
     /// Handles the OnMouseEnter event
     /// </summary>
-    public virtual void OnMouseEnter()
+    public virtual void OnEnter()
     {
         InteractionManager.instance.SetCurrentObject(this);
     }
@@ -23,7 +23,7 @@ public class InteractableObject : MonoBehaviour
     /// <summary>
     /// Handles the OnMouseExit event
     /// </summary>
-    public virtual void OnMouseExit()
+    public virtual void OnExit()
     {
         InteractionManager.instance.RemoveCurrentObject(this);
     }

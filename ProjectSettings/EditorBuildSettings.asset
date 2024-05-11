@@ -21,6 +21,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Outdoors/CLIFF.unity
     guid: c86f904ae2516fc4fa26ac810afbd013
   - enabled: 1
+    path: Assets/Scenes/Outdoors/MOUNTAIN.unity
+    guid: 1ec90d1bd2107624ea0203e24e403ea8
+  - enabled: 1
+    path: Assets/Scenes/Outdoors/CAVERN.unity
+    guid: 9a5c796db7f97784e93156f583abe2b0
+  - enabled: 1
     path: Assets/Scenes/Indoors/1F/1F_HALLWAY.unity
     guid: 30688d3a2dd55054ca12c728a66ad8e3
   - enabled: 1

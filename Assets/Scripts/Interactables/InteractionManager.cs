@@ -9,8 +9,10 @@ public class InteractionManager : MonoBehaviour
 {
     [SerializeField] private PlayerCameraManager cameraManager;
     [SerializeField] private float minimumDistance;
+    [SerializeField] private LayerMask exitMask;
     private InteractableObject currentInteractable;
     private Transform playerPos;
+    private Transform cam;
     public static InteractionManager instance;
 
 
@@ -19,6 +21,11 @@ public class InteractionManager : MonoBehaviour
         playerPos = cameraManager.transform;
         instance = this;
         CursorManager.ChangeCursorTex(null);
+    }
+
+    void Start()
+    {
+        cam = Camera.main.transform;
     }
 
     /// <summary>
@@ -31,6 +38,7 @@ public class InteractionManager : MonoBehaviour
 
         currentInteractable = current;
         CursorManager.ChangeCursorTex(current.hoverSprite);
+        Cursor.visible = true;
     }
 
     /// <summary>
@@ -80,18 +88,34 @@ public class InteractionManager : MonoBehaviour
             return;
         }
 
-        if (currentInteractable != null)
+        RaycastHit hit;
+        if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit,
+            minimumDistance + Vector3.Distance(playerPos.position, cam.position), exitMask))
         {
+            InteractableObject obj = hit.transform.GetComponent<InteractableObject>();
 
-            bool distanceOk = DistanceRequired();
-            Cursor.visible = cameraManager.isInFirstPerson ? distanceOk : true;
-
-            if (currentInteractable != null && !cameraManager.isInFirstPerson)
+            if ((!obj || obj != currentInteractable) && currentInteractable)
             {
-                CursorManager.ChangeCursorTex(distanceOk ? currentInteractable.hoverSprite : null);
+                currentInteractable.OnExit();
             }
 
-            if (distanceOk && Input.GetMouseButtonDown(0))
+            if (obj)
+            {
+                obj.OnEnter();
+            }
+        }
+        else
+        {
+            if (currentInteractable)
+            {
+                currentInteractable.OnExit();
+            }
+        }
+
+
+        if (currentInteractable != null)
+        {
+            if (Input.GetMouseButtonDown(0))
             {
                 currentInteractable.OnInteraction();
                 RemoveCurrentObject(currentInteractable, true);

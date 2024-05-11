@@ -34,11 +34,11 @@ public class NPCInteractable : InteractableObject
     /// <summary>
     /// Handles the OnMouseEnter event if free
     /// </summary>
-    public override void OnMouseEnter()
+    public override void OnEnter()
     {
         if (!npc.isProcessingEvent)
         {
-            base.OnMouseEnter();
+            base.OnEnter();
         }
 
     }
@@ -46,11 +46,11 @@ public class NPCInteractable : InteractableObject
     /// <summary>
     /// Handles the OnMouseExit event if free
     /// </summary>
-    public override void OnMouseExit()
+    public override void OnExit()
     {
         if (!npc.isProcessingEvent)
         {
-            base.OnMouseExit();
+            base.OnExit();
         }
 
     }

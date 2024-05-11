@@ -29,6 +29,8 @@ public class SkyManager : MonoBehaviour
     [SerializeField] private SkyData nightData;
     [SerializeField] private SkyData cloudData;
     [SerializeField] private SkyData stormData;
+    [SerializeField] private bool lanternShouldBeUsed;
+    [SerializeField] private bool ignoreWeatherForMap;
 
 
     public static SkyManager instance;
@@ -40,7 +42,12 @@ public class SkyManager : MonoBehaviour
 
     void Start()
     {
-        ChangeSkybox(System.Enum.Parse<SkyType>(GameManager.instance.save_currentWeather));
+        if (!ignoreWeatherForMap)
+        {
+            ChangeSkybox(System.Enum.Parse<SkyType>(GameManager.instance.save_currentWeather));
+        }
+
+        PlayerMovements.instance.SetUsingLantern(lanternShouldBeUsed);
     }
 
     /// <summary>

@@ -29,6 +29,12 @@ public class PlayerMovements : MonoBehaviour
     [SerializeField] private FootstepSwapper footstepSwapper;
     [SerializeField] private FootstepSource footstepSource;
 
+    [Header("Lantern")]
+    [SerializeField] private GameObject lanternRoot;
+    [SerializeField] private RuntimeAnimatorController controllerNormal;
+    [SerializeField] private RuntimeAnimatorController controllerLantern;
+    private bool usingLantern;
+
     public static PlayerMovements instance;
 
     public Vector3 position
@@ -49,6 +55,17 @@ public class PlayerMovements : MonoBehaviour
         cam = Camera.main.transform;
         camManager = GetComponent<PlayerCameraManager>();
         FindStartingPoint();
+    }
+
+    /// <summary>
+    /// Changes if the player is using a lantern or not
+    /// </summary>
+    /// <param name="value">Is the player using a lantern ?</param>
+    public void SetUsingLantern(bool value)
+    {
+        usingLantern = value;
+        lanternRoot.SetActive(value);
+        animator.runtimeAnimatorController = value ? controllerLantern : controllerNormal;
     }
 
     /// <summary>

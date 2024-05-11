@@ -794,7 +794,7 @@ GameObject:
   - component: {fileID: 462909829}
   - component: {fileID: 462909828}
   - component: {fileID: 462909827}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Face
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2878,7 +2878,7 @@ GameObject:
   - component: {fileID: 850511389}
   - component: {fileID: 850511391}
   - component: {fileID: 850511390}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3129,17 +3129,17 @@ PrefabInstance:
     - target: {fileID: 7720391608949689652, guid: 1ae079d84730e1b45a457630e6a4767f,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.7512631
+      value: -0.751263
       objectReference: {fileID: 0}
     - target: {fileID: 7720391608949689652, guid: 1ae079d84730e1b45a457630e6a4767f,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.11655656
+      value: -0.11655653
       objectReference: {fileID: 0}
     - target: {fileID: 7720391608949689652, guid: 1ae079d84730e1b45a457630e6a4767f,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.6419493
+      value: -0.64194936
       objectReference: {fileID: 0}
     - target: {fileID: 7720391608949689652, guid: 1ae079d84730e1b45a457630e6a4767f,
         type: 3}
@@ -8771,7 +8771,7 @@ GameObject:
   - component: {fileID: 1494907393}
   - component: {fileID: 1494907392}
   - component: {fileID: 1494907391}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Exit-CLIFF
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11150,7 +11150,7 @@ GameObject:
   - component: {fileID: 1863397627}
   - component: {fileID: 1863397626}
   - component: {fileID: 1863397625}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Exit-GARDEN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
