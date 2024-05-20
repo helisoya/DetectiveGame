@@ -1,0 +1,1 @@
+Dialog(Arthur;The witch's shrine. I wonder who built it...;Player;true)

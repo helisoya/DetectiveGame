@@ -1,0 +1,5 @@
+SetCameraBetween(Daniel;Player)
+
+
+FocusCamera(Daniel)
+Dialog(Daniel;Quick ! After that mysterious person !;Daniel;true)

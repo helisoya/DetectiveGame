@@ -10641,6 +10641,8 @@ MonoBehaviour:
   - Talk to Charles in the living room (1F)
   - Find Charles in his study (1F)
   - Examine the witch's shrine
+  - Go back to the manor
+  - Pursue the mysterious person
   objectiveText: {fileID: 6223012684798228497}
 --- !u!1 &3863310492533987716
 GameObject:

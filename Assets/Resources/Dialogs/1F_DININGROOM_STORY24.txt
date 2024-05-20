@@ -16,7 +16,7 @@ Dialog(Daniel;Right... Father didn't come out of his study to eat.;Daniel;false)
 Dialog(Daniel;We really struck a nerve back there, I think.;Daniel;false)
 
 FocusCamera(Player)
-Dialog(Arthur;True, I think we should let him be a little longer.;Player;false)
+Dialog(Arthur;True, I think we should leave him be a little longer.;Player;false)
 Dialog(Arthur;We have another thing to investigate : the witch's shrine.;Player;false)
 
 FocusCamera(Daniel)

@@ -71,7 +71,14 @@ public class PlayerCameraManager : MonoBehaviour
     /// </summary>
     void RefreshOverlayCameras()
     {
-        if (overlayCams == null || (overlayCams.Length != 0 && !overlayCams[0])) return;
+        if (overlayCams == null || (overlayCams.Length != 0 && !overlayCams[0]))
+        {
+            if (overlayCams == null)
+            {
+                overlayCams = Camera.main.GetComponentsInChildren<Camera>();
+            }
+            return;
+        }
 
         float fov = Camera.main.fieldOfView;
         float clipNear = Camera.main.nearClipPlane;

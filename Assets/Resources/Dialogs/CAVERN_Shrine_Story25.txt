@@ -1,0 +1,42 @@
+Dialog(Arthur;Here it is, the witch's shrine.;Player;false)
+Dialog(Arthur;The symbol on the fabric is the same that the one inside Mother's room. We're on the right track.;Player;false)
+Dialog(Arthur;Candles are also lit. There is an offering too. I wonder who did this.;Player;false)
+
+SetCameraBetween(Daniel;Player)
+
+FocusCamera(Daniel)
+Dialog(Daniel;It must be Father. He comes here often to "pay tribute".;Daniel;false)
+Dialog(Daniel;Last week, he told me he gave the witch his lunch.;Daniel;false)
+Dialog(Daniel;I guess he thinks it's enough for the witch to not target him.;Daniel;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Yes. But look at that, that is even a painting of the witch.;Player;false)
+
+PositionCamera(STORY25_PaintingPosition)
+FocusCamera(STORY25_PaintingRotation)
+
+Dialog(Daniel;Oh right. But it's not very detailled. We can't see her face.;Daniel;false)
+Dialog(Arthur;Right. At least we know what she looks like.;Player;false)
+Dialog(Daniel;But something bothers me...;Daniel;false)
+Dialog(Arthur;What's wrong ? Do you know this person ?;Player;false)
+Dialog(Daniel;No... But don't you think she looks... normal ?;Daniel;false)
+Dialog(Daniel;I mean... When you tell me witch, I don't think of this kind of thing.;Daniel;false)
+Dialog(Daniel;She looks like your average girl posing for a portrait.;Daniel;false)
+Dialog(Arthur;Uh... I see. I guess you're right, she looks too normal.;Player;false)
+Dialog(Arthur;Maybe it was a prank all along... Father just happened to fall for it.;Player;false)
+
+SetCameraBetween(Daniel;Player)
+
+FocusCamera(Daniel)
+Dialog(Daniel;Yeah... Aside from that, there isn't much to see here.;Daniel;false)
+Dialog(Daniel;Should we go ? The storm is coming soon, and you don't want to be out when it does.;Daniel;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Alright. Nothing seems to be out of the ordinary here. No clues either...;Player;false)
+Dialog(Arthur;Let's head back to the manor, and plan our next move.;Player;false)
+
+FocusCamera(Daniel)
+Dialog(Daniel;Okay, lead the way.;Daniel;true)
+
+SetSaveItem(OBJECTIVE;20)
+SetSaveItem(STORY;26)

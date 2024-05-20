@@ -1,0 +1,60 @@
+# ========= Handling Choice 
+
+Choice
+OPTION1;FILE_TO_LOAD
+Option2;EXIT
+
+
+# ========= If
+
+=, <, >
+
+If(VARIABLE;=;X)FILE_TO_LOAD
+
+
+# ========= Functions
+
+Dialog(CHARACTER_NAME;DIALOG;SPEAKER'S ANIMATOR ID;HIDE_DIALOG_BOX_AFTERWARDS ?)
+
+PositionPlayer(WAYPOINT_NAME)
+RotationPlayer(ANGLE)
+
+FocusCamera(FOCUSABLE_NAME)
+PositionCamera(FOCUSABLE_NAME)
+SetCameraInFrontOf(FOCUSABLE_NAME)
+SetCameraBetween(FOCUSABLE1_NAME;FOCUSABLE2_NAME)
+
+LoadFile(FILE_TO_LOAD)
+LoadMap(MAP_NAME)
+
+UnlockBio(CHARACTER)
+UnlockEvidence(EVIDENCE)
+StartCase(CASE)
+EndCase(CASE)
+SetSaveItem(ITEM;VALUE)
+
+ChangeWeather(WEATHER)
+
+StartLockPickMiniGame(FILE_TO_LOAD_AFTERWARDS)
+
+SetNPCFollowPlayer(NPC_NAME;SHOULD FOLLOW ?)
+SetNPCRotation(NPC_NAME;ANGLE)
+SetNPCRunning(NPC_NAME;SHOULD RUN ?)
+SetNPCDestination(NPC_NAME;WAYPOINT_NAME)
+TeleportNPC(NPC_NAME;WAYPOINT_NAME)
+TurnNPCToward(NPC_NAME;FOCUSABLE_NAME)
+SetNPCHidden(NPC_NAME;SHOULD BE HIDDEN ?)
+StartNPCEvent(NPC_NAME;FILE_TO_LOAD)
+
+FadeBg(TO;SPEED)
+FadeFg(TO;SPEED)
+
+ShowCG(SPRITE_NAME;SPEED)
+HideCG(SPEED)
+
+RefreshStoryObjects()
+
+PlaySFX(SFX_NAME)
+
+WAIT(SECONDS)
+

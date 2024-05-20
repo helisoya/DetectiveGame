@@ -1,0 +1,2 @@
+If(STORY;=;25)CAVERN_Shrine_Story25
+LoadFile(CAVERN_Shrine_Default)

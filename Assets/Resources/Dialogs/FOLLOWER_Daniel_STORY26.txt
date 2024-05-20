@@ -1,0 +1,5 @@
+SetCameraBetween(Daniel;Player)
+
+
+FocusCamera(Daniel)
+Dialog(Daniel;Let's get out of here now. This place is too dark...;Daniel;true)
