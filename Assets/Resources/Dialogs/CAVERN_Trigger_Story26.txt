@@ -1,0 +1,20 @@
+Dialog(Arthur;Uh ?;Player;true)
+
+SetNPCHidden(Rose;false)
+PositionCamera(STORY26_CameraPosition)
+FocusCamera(Rose)
+SetNPCDestination(Rose;Exit)
+SetNPCHidden(Rose;true)
+Wait(1)
+
+SetCameraBetween(Daniel;Player)
+
+FocusCamera(Daniel)
+Dialog(Daniel;Someone followed us ?;Daniel;false)
+
+FocusCamera(Player)
+Dialog(Arthur;Seems so... Quick, after them !;Player;true)
+
+SetSaveItem(OBJECTIVE;21)
+SetSaveItem(STORY;27)
+RefreshStoryObjects()
