@@ -241,10 +241,16 @@ public class NPC : MonoBehaviour
             {
                 agent.SetDestination(playerRef.position);
 
-                if (Vector3.Distance(transform.position, playerRef.position) < startFollowingAfterMeters)
+                float distanceToPlayer = Vector3.Distance(transform.position, playerRef.position);
+
+                if (distanceToPlayer < startFollowingAfterMeters)
                 {
                     animator.SetFloat("Speed", 0);
                     agent.isStopped = true;
+                }
+                else
+                {
+                    SetRunning(distanceToPlayer >= startFollowingAfterMeters * 3);
                 }
             }
         }
@@ -322,8 +328,7 @@ public class NPC : MonoBehaviour
                     }
 
                     SetDestination(DialogMaster.instance.npcWaypoints[split[1]].position);
-                    yield return new WaitForEndOfFrame();
-                    while (!arrivedAtDestination)
+                    while (agent.pathPending || !arrivedAtDestination)
                     {
                         yield return new WaitForEndOfFrame();
                     }

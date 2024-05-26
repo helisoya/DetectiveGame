@@ -1,0 +1,1 @@
+Dialog(Arthur;Now is not the time. We need to pursue this mysterious person.;Player;true)

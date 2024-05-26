@@ -1,0 +1,5 @@
+SetRunning(true)
+SetDestination(EXIT_RUINS)
+Hide()
+SetSaveItem(STORY;28)
+RefreshStoryObjects()

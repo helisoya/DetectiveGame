@@ -40,4 +40,5 @@ Dialog(Daniel;Okay, lead the way.;Daniel;true)
 
 SetSaveItem(OBJECTIVE;20)
 SetSaveItem(STORY;26)
+ChangeWeather(EVENING)
 RefreshStoryObjects()

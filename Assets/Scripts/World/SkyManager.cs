@@ -54,7 +54,7 @@ public class SkyManager : MonoBehaviour
     /// Changes the current sky
     /// </summary>
     /// <param name="data">The new sky data</param>
-    void ChangeValues(SkyData data)
+    private void ChangeValues(SkyData data)
     {
         RenderSettings.skybox = data.skybox;
         sun.transform.eulerAngles = data.sunRotation;
@@ -70,6 +70,8 @@ public class SkyManager : MonoBehaviour
     /// <param name="type">The type of sky</param>
     public void ChangeSkybox(SkyType type)
     {
+        if (ignoreWeatherForMap) return;
+
         GameManager.instance.save_currentWeather = type.ToString();
         switch (type)
         {
