@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a5990022ebae7f84db2720794c07c3b4, type: 3}
-  m_Name: SkyData_Day
+  m_Name: STORM
   m_EditorClassIdentifier: 
-  skybox: {fileID: 2100000, guid: efd1c33efd2d58340b88804268e6833f, type: 2}
+  skybox: {fileID: 2100000, guid: 2039a0ad0a9d05549928b70362f54902, type: 2}
   sunIntensity: 2
-  sunColor: {r: 1, g: 1, b: 1, a: 1}
-  sunRotation: {x: 50, y: -100, z: 0}
+  sunColor: {r: 0.5058824, g: 0.5764706, b: 0.6156863, a: 1}
+  sunRotation: {x: 27, y: -180, z: 0}
+  rain: 1

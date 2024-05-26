@@ -51,20 +51,6 @@ public class SkyManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Changes the current sky
-    /// </summary>
-    /// <param name="data">The new sky data</param>
-    private void ChangeValues(SkyData data)
-    {
-        RenderSettings.skybox = data.skybox;
-        sun.transform.eulerAngles = data.sunRotation;
-        sun.color = data.sunColor;
-        sun.intensity = data.sunIntensity;
-
-        rain.SetActive(data.rain);
-    }
-
-    /// <summary>
     /// Changes the skybox
     /// </summary>
     /// <param name="type">The type of sky</param>
@@ -72,26 +58,16 @@ public class SkyManager : MonoBehaviour
     {
         if (ignoreWeatherForMap) return;
 
+        SkyData data = Resources.Load<SkyData>("SkyDatas/" + type.ToString());
         GameManager.instance.save_currentWeather = type.ToString();
-        switch (type)
-        {
-            case SkyType.DAY:
-                ChangeValues(dayData);
-                break;
-            case SkyType.EVENING:
-                ChangeValues(eveningData);
-                break;
-            case SkyType.NIGHT:
-                ChangeValues(nightData);
-                break;
-            case SkyType.CLOUD:
-                ChangeValues(cloudData);
-                break;
-            case SkyType.STORM:
-                ChangeValues(stormData);
-                // Rain
-                break;
-        }
+
+
+        RenderSettings.skybox = data.skybox;
+        sun.transform.eulerAngles = data.sunRotation;
+        sun.color = data.sunColor;
+        sun.intensity = data.sunIntensity;
+
+        rain.SetActive(data.rain);
     }
 
 }

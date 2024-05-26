@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a5990022ebae7f84db2720794c07c3b4, type: 3}
-  m_Name: SkyData_Evening
+  m_Name: DAY
   m_EditorClassIdentifier: 
-  skybox: {fileID: 2100000, guid: c52c5d7968fa6c9499b0b5752f899bfb, type: 2}
+  skybox: {fileID: 2100000, guid: efd1c33efd2d58340b88804268e6833f, type: 2}
   sunIntensity: 2
-  sunColor: {r: 0.754717, g: 0.64519, b: 0.46564615, a: 1}
-  sunRotation: {x: 27, y: -220, z: 0}
-  rain: 0
+  sunColor: {r: 1, g: 1, b: 1, a: 1}
+  sunRotation: {x: 50, y: -100, z: 0}

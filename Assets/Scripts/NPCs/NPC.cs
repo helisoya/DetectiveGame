@@ -250,7 +250,7 @@ public class NPC : MonoBehaviour
                 }
                 else
                 {
-                    SetRunning(distanceToPlayer >= startFollowingAfterMeters * 3);
+                    SetRunning(distanceToPlayer >= startFollowingAfterMeters * 2);
                 }
             }
         }
